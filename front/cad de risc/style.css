@@ -116,5 +116,12 @@ body {
     border-style: solid;
     border-color: #FFB800;
     background-color: #FFB800;
-    font-size: 2em;
+    font-size: 1.4em;
+    font-family: sans-serif;
+}
+.button:hover {
+    background-color: yellow;
+    border-color: yellow;
+    border-radius: 10px;
+    cursor: pointer;
 }
