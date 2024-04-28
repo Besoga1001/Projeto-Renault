@@ -45,36 +45,52 @@ body {
 .linha1 {
     display: flex;
     justify-content: space-evenly;
+    margin-right: 70px;
     
 }
 .linha2 {
     display: flex;
     justify-content: space-evenly;
+    margin-right: 70px;
 }
 .linha3 {
     display: flex;
     justify-content: space-evenly   ;
+    margin-right: 70px;
 }
 .linha4 {
     display: flex;
-    justify-content: space-evenly   ;
+    justify-content: center;
+    
     
 }
-#input {
-    width: 200px;
+.input {
+    width: 350px;
+    height: 200px;
+    border-radius: 10px;
+    margin-top: 10px;
 }
 .select {
-    width: 300px;
+    width: 350px;
     margin: 15px;
     border-radius: 10px;
+    height: 40px;
 }
 .impcons {
     width: 200px;
     height: 150px;
-    color: grey;
     margin-top: 20px;
     border-radius: 20px;
+    margin-left: 140px;
+    margin-right: 130px;
 }
 .metier {
-    margin-right: px;
+    margin-right: 205px;
+    margin-left: 130px;
+}
+.jalon {
+    margin-left: 180px;
+}
+.formulario{
+    margin-left: 0px;
 }
