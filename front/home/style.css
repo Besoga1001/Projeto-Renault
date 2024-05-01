@@ -1,108 +1,98 @@
 /* Configurações gerais */
 
 :root {
-  --fundo: #FCFCFB;
-  --bs-body-bg: var(--fundo);
-  --bs-table-border-color: #000000;
   --sombreamento: rgba(0, 0, 0, 0.30) 0px 2px 10px 0px;
+  --poppins: 'Poppins', sans-serif;
 }
 
-html, body {
-  height: 100%;
+.principal {
+  height: 100vh;
+  width: 100vw;
+  max-width: none;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  width: 100%;
-  background-color: var(--fundo);
+.shadow-container {
+  box-shadow: var(--sombreamento);
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
 
-.container-separator {
-  width: 100%;
-  height: 100%;
-}
+/* Cabeçalho */
 
-.container-menu {
-  background-color: #1A1A1A;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  margin-right: 50px;
-  max-width: 350px;
-  display: block;
-  padding: 0px 50px;
-}
-
-.col{
-  flex: 1;
-}
-
-/* Nav Bar*/
-
-.container-menu .btn {
-  font-family: 'Poppins', 'Roboto', sans-serif;
-}
-
-.active-btn,
-.container-menu .btn:hover {
-  color: #FFB800;
-}
-
-.btn {
-  color: #FFF;
-}
-
-.menu-options {
-  margin-top: 460px;
+.superior-bar {
   height: 100px;
 }
 
-/* Área de perfil */
-
-.container-perfil {
-  /* background-color: violet; */
-  height: 10%;
-  padding: 0;
+#welcomeUser {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #00000050;
 }
 
-.welcome {
-  font-size: 32px;
-  font-weight: bold;
-  height: 100%;
+.welcome{
+  font-family: var(--poppins);
+  font-size: 30px;
+  font-weight: 600;
+  color: #1A1A1A;
 }
 
-.name-text {
-  color: #00000036;
+#profile{
+  font-family: var(--poppins);
+  font-size: 16px;
+  font-weight: 400;
+  color: #818181;
+}
+
+#profile img{
+  height: 40px;
+  width: 40px;
+}
+
+/* Área de Cards */
+
+.card{
+  background-color: #FFB800;
+  border: none;
+}
+
+.card-title{
+  font-family: var(--poppins);
+  font-size: 18px;
   font-weight: 500;
 }
 
-.container-line {
-  height: 100%;
+.card-text {
+  font-size: 50px ;
+  font-weight: bold;
 }
 
-/* Área dos riscos */
+/* Área gráficos */
 
-.table-hover {
+.risks{
+  font-size: 18px;
+  font-weight: 500;
+  font-family: var(--poppins);
+}
+
+/* Área tabela */
+
+th{
+  font-family: var(--poppins);
+  font-weight: 300;
+  font-size: 14px;
+  color: #818181 !important;
+}
+
+tbody tr {
+  height: 64px !important;
+  
+}
+
+tr:hover{
   cursor: pointer;
 }
 
-.conteudo {
-  height: 100%;
-}
-
-.table-container {
-  padding: 10px;
-  height: 100%;
-  border-radius: 7px;
-  box-shadow: var(--sombreamento);
-  margin-top: 10px;
-}
-
-.teste-espaco {
-  background-color: blue;
+td > img {
+  height: 47px;
+  width: 71px;
 }
