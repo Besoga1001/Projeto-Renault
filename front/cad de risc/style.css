@@ -45,7 +45,7 @@ body {
     justify-content: space-evenly;
     margin-right: 70px;
     color: #818181;
-    
+    margin-right: 76px;
 }
 .linha2 {
     display: flex;
@@ -55,7 +55,7 @@ body {
 }
 .linha3 {
     display: flex;
-    justify-content: space-evenly   ;
+    justify-content: space-evenly;
     margin-right: 70px;
     color: #818181;
 }
@@ -66,13 +66,14 @@ body {
     
 }
 .input {
-    width: 350px;
+    width: 358px;
     height: 200px;
     border-radius: 10px;
     margin-top: 10px;
-    background-color:#ececec ;
+    background-color:#ececec;
     border-style: solid;
     border-color: #ececec;
+    
 }
 .select {
     width: 350px;
@@ -83,6 +84,7 @@ body {
     border-color: #ececec;
     color:#818181;
     background-color: #ececec;
+    margin-top: 0px;
     
 }
 .impcons {
@@ -154,4 +156,7 @@ body {
     font-size: 2em;
     font-family: sans-serif;
     font-weight: 600;
+}
+p {
+    margin-left: 17px;
 }
