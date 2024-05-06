@@ -30,11 +30,7 @@
             <div class = "formulario">
                 <div class="linha1">
                     <div class="descrisco">
-                        <p>Descrição do risco</p>
-                        <input class="select1" type="text" placeholder="Resumo do risco a ser cadastrado">
-                    </div>
-                    <div>
-                        <p>Tipo de Risco</p>
+                        <p>Estratégia</p>
                         <label for="imsg">
                             <select class="select" name="Risk" id="Risco">
                                 <option value="Selecione" selected class="escrita">Selecione Uma Opção</option>
@@ -47,7 +43,20 @@
                         </label>
                     </div>
                     <div>
-                        <p>Probabilidade</p>
+                        <p>Probabilidade Residual</p>
+                        <label for="imsg">
+                            <select class="select" name="Risk" id="Risco">
+                                <option value="Selecione" selected class="escrita">Selecione Uma Opção</option>
+                                <option value="conf">Conformity</option>
+                                <option value="HR">Human Resources</option>
+                                <option value="OP">Operacional</option>
+                                <option value="strat">Strategic</option>
+                                <option value="none">Vazia</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div>
+                        <p>Impacto Residual</p>
                         <label for="imsg">
                             <select  class="select" name="Probabilidade" id="Prob">
                                 <option value="Selecione" selected class="escrita">Selecione Uma Opção</option>
@@ -62,7 +71,7 @@
                 </div>
                 <div class="linha2">
                     <div>
-                        <p>Area Responsável</p>
+                        <p>Validação da Ação</p>
                         <label for="imsg">
                             <select class="select" name="area resp" id="aresp">
                                 <option value="Selecione" selected class="escrita">Selecione Uma Opção</option>
@@ -79,7 +88,7 @@
                         </label>
                     </div>
                     <div>
-                        <p>Classificação do risco</p>
+                        <p>Validação do Risco</p>
                         <label for="imsg">
                             <select class="select" name="Classificação do risco" id="cla-risc">
                                 <option value="Selecione" selected>Selecione Uma Opção</option>
@@ -91,36 +100,25 @@
                         </label>
                     </div>
                     <div>
-                        <p>Projeto</p>
-                        <label for="imsg">
-                            <select class="select" name="Projeto" id="proj">
-                                <option value="Selecione" selected>Selecione Uma Opção</option>
-                                <option value="car1">Carro 1</option>
-                                <option value="car2">Carro 2</option>
-                                <option value="car3">Carro 3</option>
-                                <option value="car4">Carro 4</option>
-                                <option value="car5">Carro 5</option>
-                                <option value="car6">Carro 6</option>
-                                <option value="car7">Carro 7</option>
-                                <option value="car8">Carro 8</option>
-                                <option value="car9">Carro 9</option>
-                                <option value="car10">Carro 10</option>
-                                <option value="car11">Carro 11</option>
-                                <option value="car12">Carro 12</option>
-                                <option value="car13">Carro 13</option>
-                                <option value="car14">Carro 14</option>
-                                <option value="car15">Carro 15</option>
-                            </select>
-                        </label>
+                        <p>Data do Alerta</p>
+                        <input class="select2" type="datetime-local" placeholder="DD/MM/AAAA">
                     </div>
                 </div>
                     <div class="linha3">
                         <div>
-                            <p>Data do alerta</p>
-                            <input class="select2" type="datetime-local" placeholder="DD/MM/AAAA">
+                            <p>Nome do Piloto</p>
+                            <label for="imsg">
+                                <select class="select" name="Impacto (Renault)" id="impreno">
+                                    <option value="Selecione" selected>Selecione Uma Opção</option>
+                                    <option value="K1">K1</option>
+                                    <option value="K2">K2</option>
+                                    <option value="K3">K3</option>
+                                    <option value="K4">K4</option>
+                                </select>
+                            </label>
                         </div>
                         <div>
-                        <p>Impacto</p>
+                        <p>ID do Piloto</p>
                         <label for="imsg">
                             <select class="select" name="Impacto" id="imp">
                                 <option value="Selecione" selected>Selecione Uma Opção</option>
@@ -131,7 +129,20 @@
                                 <option value="Veryhigh">Very High</option>
                             </select>
                         </label>
-                                        </div>
+                        </div>
+                        <h2>Switch Sim/Não</h2>
+
+                        <label class="switch">
+                        <input type="checkbox" onclick="toggleSwitch()">
+                        <span class="slider"></span>
+                        </label>
+                        <span id="switchText" class="onofflabel">Não</span>
+
+
+
+
+
+
                         <div>
                         <p>Impacto (Renault)</p>
                             <label for="imsg">
