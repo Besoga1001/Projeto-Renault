@@ -34,11 +34,10 @@
                         <label for="imsg">
                             <select class="select" name="Risk" id="Risco">
                                 <option value="Selecione" selected class="escrita">Selecione Uma Opção</option>
-                                <option value="conf">Conformity</option>
-                                <option value="HR">Human Resources</option>
-                                <option value="OP">Operacional</option>
-                                <option value="strat">Strategic</option>
-                                <option value="none">Vazia</option>
+                                <option value="acc">Accept</option>
+                                <option value="avo">Avoid</option>
+                                <option value="mit">Mitigate</option>
+                                <option value="trans">Transfer</option>
                             </select>
                         </label>
                     </div>
@@ -47,11 +46,8 @@
                         <label for="imsg">
                             <select class="select" name="Risk" id="Risco">
                                 <option value="Selecione" selected class="escrita">Selecione Uma Opção</option>
-                                <option value="conf">Conformity</option>
-                                <option value="HR">Human Resources</option>
-                                <option value="OP">Operacional</option>
-                                <option value="strat">Strategic</option>
-                                <option value="none">Vazia</option>
+                                <option value="hi">High</option>
+                                <option value="low">Low</option>
                             </select>
                         </label>
                     </div>
@@ -60,11 +56,8 @@
                         <label for="imsg">
                             <select  class="select" name="Probabilidade" id="Prob">
                                 <option value="Selecione" selected class="escrita">Selecione Uma Opção</option>
-                                <option value="VL">Very Low</option>
                                 <option value="L">Low</option>
                                 <option value="Med">Medium</option>
-                                <option value="Hi">High</option>
-                                <option value="Vh">Very High</option>
                             </select>
                         </label>
                     </div>
@@ -75,15 +68,8 @@
                         <label for="imsg">
                             <select class="select" name="area resp" id="aresp">
                                 <option value="Selecione" selected class="escrita">Selecione Uma Opção</option>
-                                <option value="APO">APO</option>
-                                <option value="DEA-TD">DEA-TD</option>
-                                <option value="DEA-TD (A.NEVES)">DEA-TD(A. Neves)</option>
-                                <option value="DEA-TD (J.PEREIRA)">DEA-TD (J.Pereira)</option>
-                                <option value="DEA-TD (K.TUDISCO)">DEA-TD (K.Tudisco)</option>
-                                <option value="DEA-TD (M.FANGUEIRO)">DEA-TD (M.Fangueiro)</option>
-                                <option value="DEA-TD (M.RIZZO)">DEA-TD (M.Rizzo)</option>
-                                <option value="DEA-TD (N.SILVEIRA)">DEA-TD (N.Silveira)</option>
-                                <option value="DEA-TD (W.SILVEIRA)">DEA-TD(W.Silveira)</option>
+                                <option value="dnay">Does Not Apply Yet</option>
+                                <option value="res">Resolved</option>
                             </select>
                         </label>
                     </div>
@@ -92,10 +78,8 @@
                         <label for="imsg">
                             <select class="select" name="Classificação do risco" id="cla-risc">
                                 <option value="Selecione" selected>Selecione Uma Opção</option>
-                                <option value="sust">Susteinable</option>
-                                <option value="mod">Moderate</option>
-                            <option value="sev">Severe</option>
-                            <option value="crit">Critical</option>
+                                <option value="prob">Problem</option>
+                                <option value="resol">Resolved</option>
                         </select>
                         </label>
                     </div>
@@ -108,103 +92,44 @@
                         <div>
                             <p>Nome do Piloto</p>
                             <label for="imsg">
-                                <select class="select" name="Impacto (Renault)" id="impreno">
-                                    <option value="Selecione" selected>Selecione Uma Opção</option>
-                                    <option value="K1">K1</option>
-                                    <option value="K2">K2</option>
-                                    <option value="K3">K3</option>
-                                    <option value="K4">K4</option>
-                                </select>
+                                <input class="nomepiloto" type="text" placeholder="Digite o nome do piloto">
                             </label>
                         </div>
                         <div>
                         <p>ID do Piloto</p>
                         <label for="imsg">
-                            <select class="select" name="Impacto" id="imp">
-                                <option value="Selecione" selected>Selecione Uma Opção</option>
-                                <option value="verylow">Very Low</option>
-                                <option value="low">Low</option>
-                                <option value="medium">Medium</option>
-                                <option value="High">High</option>
-                                <option value="Veryhigh">Very High</option>
-                            </select>
+                            <input class="nomepiloto" type="text" placeholder="ID">
                         </label>
                         </div>
-                        <h2>Switch Sim/Não</h2>
-
-                        <label class="switch">
-                        <input type="checkbox" onclick="toggleSwitch()">
-                        <span class="slider"></span>
-                        </label>
-                        <span id="switchText" class="onofflabel">Não</span>
-
-
-
-
-
-
+                        <div class="switch">
+                            <P>Capitalização</P>
+                            <label class="switch">
+                            <input type="checkbox" onclick="toggleSwitch()">
+                            <span class="slider"></span>
+                            </label>
+                        </div>
                         <div>
-                        <p>Impacto (Renault)</p>
+                        <p>Inicio do Plano de ação</p>
                             <label for="imsg">
-                                <select class="select" name="Impacto (Renault)" id="impreno">
-                                    <option value="Selecione" selected>Selecione Uma Opção</option>
-                                    <option value="K1">K1</option>
-                                    <option value="K2">K2</option>
-                                    <option value="K3">K3</option>
-                                    <option value="K4">K4</option>
-                                </select>
+                                <input class="select2" type="datetime-local" placeholder="DD/MM/AAAA">
                             </label>
                         </div>
                     </div>
                     <div class="linha4">
                         <div class="impcons">
-                            <label for="imsg">Impacto/Consequências</label><br>
-                            <input class="input" type="Impacto/Consequencias no andamento da produção">
+                            <label for="imsg">Ação</label><br>
+                            <input class="input" type="Ação">
                         </div>
                         <div class="jalon">
-                        <p>Jalón Afetado</p>
+                        <p>Comentário</p>
                         <label for="jalon">
-                            <select  class="select" name="Estado" id="Status">
-                                <option value="Selecione" selected>Selecione Uma Opção</option>
-                                <option value="ABDLot-Cp">ABDLot-Cp</option>
-                                <option value="ABP">ABP</option>
-                                <option value="ABPT">ABPT</option>
-                                <option value="ABVC">ABVC</option>
-                                <option value="CO">CO</option>
-                                <option value="Cp">CP</option>
-                                <option value="Doccompletion">Doc Completion</option>
-                                <option value="Docserie">Doc Série</option>
-                                <option value="MA">MA</option>
-                                <option value="PPC">PPC</option>
-                                <option value="TDU">TDU</option>
-                                <option value="TGA">TGA</option>
-                                <option value="Todosind">Todos industriais</option>
-                                <option value="Todos">Todos</option>
-                                <option value="none">Nenhum</option>
-                            </select>
+                            <input class="input" type="Ação">
                         </label>
                         </div>
                         <div class="metier">
-                        <p>Metier</p>
+                        <p>Data da Resolução</p>
                         <label for="imsg">
-                            <select class="select" name="Metier" id="met">
-                                <option value="Selecione" selected>Selecione Uma Opção</option>
-                                <option value="apo">APO</option>
-                                <option value="dea-gop">DEA-GOP</option>
-                                <option value="dea-mm">DEA-MM</option>
-                                <option value="dea-pe">DEA-PE</option>
-                                <option value="dea-sc">DEA-SC</option>
-                                <option value="dea-sisasm">DEA-SI/SA/SM</option>
-                                <option value="dea-td">DEA-TD</option>
-                                <option value="dea-va">DEA-VA </option>
-                                <option value="dea-vd">DEA-VD</option>
-                                <option value="de-vb">DE-VB</option>
-                                <option value="de-vd">DE-VD</option>
-                                <option value="ica">ICA</option>
-                                <option value="marketing">Marketing</option>
-                                <option value="suppchain">Supply Chain</option>
-                                <option value="none">Nenhum</option>
-                            </select>
+                            <input class="select2" type="datetime-local" placeholder="DD/MM/AAAA">
                         </label>
                         </div>
                     </div>
