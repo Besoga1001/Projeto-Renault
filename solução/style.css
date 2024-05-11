@@ -6,6 +6,7 @@
     display: grid;
     color: rgb(255, 255, 255);
     margin: 0;
+    font-family: sans-serif;
     
 }
 .modal {
@@ -56,7 +57,7 @@ body {
 .linha3 {
     display: flex;
     justify-content: space-evenly;
-    margin-right: 70px;
+    margin-right: 180px;
     color: #818181;
 }
 .linha4 {
@@ -97,7 +98,7 @@ body {
     margin-right: 130px;
 }
 .metier {
-    margin-right: 205px;
+    margin-right: 198px;
     margin-left: 130px;
     margin-bottom: 130px;
 }
@@ -208,7 +209,7 @@ p {
     bottom: 0;
     background-color: #ccc;
     transition: .4s;
-    border-radius: 17px; /* Adicionando borda arredondada */
+    border-radius: 17px; 
 }
 
 .slider:before {
@@ -220,7 +221,7 @@ p {
     bottom: 4px;
     background-color: white;
     transition: .4s;
-    border-radius: 50%; /* Adicionando borda arredondada */
+    border-radius: 50%; 
 }
 
 input:checked + .slider {
@@ -239,17 +240,54 @@ input:checked + .slider:before {
     color: #888;
 }
   .nomepiloto {
-    width:  325px;
+    width:  350px;
     margin: 15px;
     border-radius: 10px;
-    height: 45px;
+    height: 50px;
     border-style: solid;
     border-color: #ececec;
     color:#818181;
     background-color: #ececec;
     margin-top: 0px;
+    margin-left: 14px;
   }
   .switch {
-    align-items: center;
+   margin-left: 0px;
+  }
+  .id {
+    width: 100px;
+    margin: 15px;
+    border-radius: 10px;
+    height: 22px;
+    border-style: solid;
+    border-color: #ececec;
+    color:#818181;
+    background-color: #ececec;
+    margin-top: 0px;
+    padding: 13px;
+    margin-right: 80px;
+  }
+  .switchinput {
+    display: flex;
+    margin-left: 52px;
+    margin-right: 40px;
+  }
+  .Comentário {
+    margin-bottom: 4px;
+    text-align: left;
+    margin-left: 2px;
+  }
+  .ação{
+    margin-left: 3px;
   }
   
+  .cap{
+    margin-left: 0px;
+   
+  }
+  .name {
+    margin-left: 200px;
+  }
+  .idpilot {
+    
+  }

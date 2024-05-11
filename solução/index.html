@@ -89,24 +89,26 @@
                     </div>
                 </div>
                     <div class="linha3">
-                        <div>
+                        <div class="name">
                             <p>Nome do Piloto</p>
                             <label for="imsg">
                                 <input class="nomepiloto" type="text" placeholder="Digite o nome do piloto">
                             </label>
                         </div>
-                        <div>
-                        <p>ID do Piloto</p>
-                        <label for="imsg">
-                            <input class="nomepiloto" type="text" placeholder="ID">
-                        </label>
-                        </div>
-                        <div class="switch">
-                            <P>Capitalização</P>
-                            <label class="switch">
-                            <input type="checkbox" onclick="toggleSwitch()">
-                            <span class="slider"></span>
+                        <div class="switchinput">
+                            <div class="idpilot">
+                            <p>ID do Piloto</p>
+                            <label for="imsg">
+                                <input class="id" type="text" placeholder="ID">
                             </label>
+                            </div>
+                            <div class="switch">
+                                <P class="cap">Capitalização</P>
+                                <label class="switch">
+                                <input type="checkbox" onclick="toggleSwitch()">
+                                <span class="slider"></span>
+                                </label>
+                            </div>
                         </div>
                         <div>
                         <p>Inicio do Plano de ação</p>
@@ -117,13 +119,13 @@
                     </div>
                     <div class="linha4">
                         <div class="impcons">
-                            <label for="imsg">Ação</label><br>
-                            <input class="input" type="Ação">
+                            <label class="ação" for="imsg">Ação</label><br>
+                            <textarea class="input" name="comments" id=""></textarea>
                         </div>
                         <div class="jalon">
-                        <p>Comentário</p>
+                        <p class="Comentário">Comentário</p>
                         <label for="jalon">
-                            <input class="input" type="Ação">
+                            <textarea class="input" name="comments" id=""></textarea>
                         </label>
                         </div>
                         <div class="metier">
