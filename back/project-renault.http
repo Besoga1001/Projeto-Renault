@@ -1,0 +1,6 @@
+@project_renault_HostAddress = http://localhost:5042
+
+GET {{project_renault_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
