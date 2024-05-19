@@ -56,7 +56,7 @@ riscos.forEach(risco => {
   cellData.innerHTML = dataFinal;
 
   // Incluir classe
-  cellRisco.className = "text-start text-wrap"
+  cellRisco.className = "text-start text-wrap";
 
   // Incluir Atributo
   cellImage.setAttribute('scope', 'row');

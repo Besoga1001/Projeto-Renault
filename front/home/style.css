@@ -15,6 +15,20 @@
   box-shadow: var(--sombreamento);
 }
 
+/* Área Menu */
+
+.text-menu {
+  font-family: var(--poppins);
+  font-size: 17px;
+}
+
+.menu-selected {
+  color:#FFB800;
+}
+
+.menu-button {
+  cursor: pointer;
+}
 
 /* Cabeçalho */
 
@@ -96,3 +110,6 @@ td > img {
   height: 47px;
   width: 71px;
 }
+
+
+
