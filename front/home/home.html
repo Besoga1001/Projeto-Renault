@@ -46,8 +46,8 @@
       <div class="row m-0 p-0 h-100">
         <!-- Menu a esquerda -->
         <div
-          class="col-md-3 m-0 p-0"
-          style="background-color: #1a1a1a; max-width: 300px; border: solid 3px blueviolet;"
+          class="col-md-3 m-0 p-0 position-relative"
+          style="background-color: #1a1a1a; max-width: 300px; color: white"
         >
           <!-- Logo principal -->
           <img
@@ -55,7 +55,7 @@
             class="mt-5"
             alt="Logo Renault"
           />
-          <div class="container mt-5 mb-auto" style="color: white; border: solid 3px blue;">
+          <div class="container mt-5 mb-auto">
             <!-- Menu Inicio -->
             <div class="row menu-selected my-5 menu-button text-menu">
               <div class="col-3 text-end">
@@ -95,9 +95,9 @@
               </div>
             </div>
           </div>
-          <div class="container" style="color: red; border: solid 3px orange;">
+          <div class="container position-absolute content-ajuda">
             <!-- Menu Ajuda -->
-            <div class="row my-3 menu-button text-menu">
+            <div class="row my-5 menu-button text-menu">
               <div class="col-3 text-end">
                 <img
                   src="../images/menu-lateral/ajuda_branco.png"
@@ -110,7 +110,7 @@
             </div>
             <!-- Menu Sair -->
             <div
-              class="row my-3 menu-button text-menu"
+              class="row my-5 menu-button text-menu"
               onclick='location.href="../login/login.html"'
             >
               <div class="col-3 text-end">
@@ -126,8 +126,8 @@
           </div>
         </div>
         <!-- Container conteudo principal -->
-        <div class="col-md-9 m-0 p-0">
-          <div class="row m-0 pt-2 pb-5 px-5 h-100">
+        <div class="col-md-10 m-0 p-0">
+          <div class="row m-0 pt-2 pb-5 px-5 h-100 w-100">
             <!-- Cabeçalho -->
             <div class="col-md-12 m-0 p-0 pe-4 superior-bar">
               <div class="row h-100 w-100 p-0 m-0">
@@ -154,9 +154,12 @@
             <!-- Área de conteudo -->
             <div class="row pt-5" style="height: calc(100% - 100px)">
               <!-- Área Cards -->
-              <div class="col-md-7 m-0 p-0 pe-4">
+              <div
+                class="col-md-7 m-0 p-0 pe-4 position-relative"
+              >
                 <div class="row m-0 w-100">
-                  <div class="col-6 ps-0">
+                  <!-- Card 1 -->
+                  <div class="col-6">
                     <div class="card shadow-container">
                       <div class="card-body">
                         <p class="card-title">Riscos da semana</p>
@@ -164,6 +167,7 @@
                       </div>
                     </div>
                   </div>
+                  <!-- Card 2 -->
                   <div class="col-6 pe-0">
                     <div class="card shadow-container">
                       <div class="card-body">
@@ -174,7 +178,8 @@
                   </div>
                 </div>
                 <div class="row pt-4 m-0 w-100 mb-5">
-                  <div class="col-6 ps-0">
+                  <!-- Card 3 -->
+                  <div class="col-6">
                     <div class="card shadow-container">
                       <div class="card-body">
                         <p class="card-title">Card 3</p>
@@ -182,6 +187,7 @@
                       </div>
                     </div>
                   </div>
+                  <!-- Card 4 -->
                   <div class="col-6 pe-0">
                     <div class="card shadow-container">
                       <div class="card-body">
@@ -192,29 +198,35 @@
                   </div>
                 </div>
                 <!-- Área gráfico -->
-                <p class="text-start risks">Riscos recentes</p>
-                <div class="rounded-3 shadow-container ">
-                  <img
-                    class="img-fluid"
-                    src="../images/home/exemplo-dashboard.png"
-                    alt="Gráfico"
-                  />
+                <div class="row p-0 m-0">
+                  <div class="position-absolute" style="bottom: 0px">
+                    <p class="text-start risks">Riscos recentes</p>
+                    <div class="rounded-3 shadow-container w-100">
+                      <img
+                        class="img-fluid"
+                        src="../images/home/exemplo-dashboard.png"
+                        alt="Gráfico"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
               <!-- Área Table -->
-              <div class="col-md-5 m-0 py-2 px-4 rounded-3 shadow-container">
-                <table class="table table-hover " id="tbVeiculos">
-                  <thead>
-                    <tr>
-                      <th scope="col" class="text-start">Veículo</th>
-                      <th scope="col">Risco</th>
-                      <th scope="col" class="text-end">Data Final</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <!-- Lista de todos os riscos do usuário -->
-                  </tbody>
-                </table>
+              <div class="col-md-5 m-0" >
+                <div class="rounded-3 shadow-container h-100 px-4">
+                  <table class="table table-hover" id="tbVeiculos">
+                    <thead>
+                      <tr>
+                        <th scope="col" class="text-start">Veículo</th>
+                        <th scope="col">Risco</th>
+                        <th scope="col" class="text-end">Data Final</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Lista de todos os riscos do usuário -->
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>

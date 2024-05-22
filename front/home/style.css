@@ -15,6 +15,11 @@
   box-shadow: var(--sombreamento);
 }
 
+.content-ajuda{
+  bottom: 0;
+	right: 0;
+}
+
 /* Área Menu */
 
 .text-menu {
@@ -111,5 +116,11 @@ td > img {
   width: 71px;
 }
 
-
-
+.limited-height {
+  max-height: 100px !important; /* Define a altura máxima */
+  overflow: hidden; /* Esconde o texto que ultrapassar o limite */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5; /* Define o número máximo de linhas visíveis */
+  white-space: normal; /* Permite quebra de linha */
+  display: table;
+}

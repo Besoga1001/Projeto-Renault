@@ -21,7 +21,7 @@ const riscos = [
   {
     id: '001',
     imgSrc: '../images/veiculos/kwid.png',
-    risco: 'Ausência de critério TCS ou presença ...',
+    risco: 'Ausência de critério TCS ou presença para ver se vai aumentar aqui ou nao tem que testar com o lorem pelo jeito pq é texto demais...',
     dataFinal: '15/05/2024'
   },
   {
@@ -56,7 +56,7 @@ riscos.forEach(risco => {
   cellData.innerHTML = dataFinal;
 
   // Incluir classe
-  cellRisco.className = "text-start text-wrap";
+  cellRisco.className = "text-start";
 
   // Incluir Atributo
   cellImage.setAttribute('scope', 'row');
