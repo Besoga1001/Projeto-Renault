@@ -1,0 +1,126 @@
+/* Configurações gerais */
+
+:root {
+  --sombreamento: rgba(0, 0, 0, 0.30) 0px 2px 10px 0px;
+  --poppins: 'Poppins', sans-serif;
+}
+
+.principal {
+  height: 100vh;
+  width: 100vw;
+  max-width: none;
+}
+
+.shadow-container {
+  box-shadow: var(--sombreamento);
+}
+
+.content-ajuda{
+  bottom: 0;
+	right: 0;
+}
+
+/* Área Menu */
+
+.text-menu {
+  font-family: var(--poppins);
+  font-size: 17px;
+}
+
+.menu-selected {
+  color:#FFB800;
+}
+
+.menu-button {
+  cursor: pointer;
+}
+
+/* Cabeçalho */
+
+.superior-bar {
+  height: 100px;
+}
+
+#welcomeUser {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #00000050;
+}
+
+.welcome{
+  font-family: var(--poppins);
+  font-size: 30px;
+  font-weight: 600;
+  color: #1A1A1A;
+}
+
+#profile{
+  font-family: var(--poppins);
+  font-size: 16px;
+  font-weight: 400;
+  color: #818181;
+}
+
+#profile img{
+  height: 40px;
+  width: 40px;
+}
+
+/* Área de Cards */
+
+.card{
+  background-color: #FFB800;
+  border: none;
+}
+
+.card-title{
+  font-family: var(--poppins);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.card-text {
+  font-size: 50px ;
+  font-weight: bold;
+}
+
+/* Área gráficos */
+
+.risks{
+  font-size: 18px;
+  font-weight: 500;
+  font-family: var(--poppins);
+}
+
+/* Área tabela */
+
+th{
+  font-family: var(--poppins);
+  font-weight: 300;
+  font-size: 14px;
+  color: #818181 !important;
+}
+
+tbody tr {
+  height: 64px !important;
+  
+}
+
+tr:hover{
+  cursor: pointer;
+}
+
+td > img {
+  height: 47px;
+  width: 71px;
+}
+
+.limited-height {
+  max-height: 100px !important; /* Define a altura máxima */
+  overflow: hidden; /* Esconde o texto que ultrapassar o limite */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5; /* Define o número máximo de linhas visíveis */
+  white-space: normal; /* Permite quebra de linha */
+  display: table;
+}
