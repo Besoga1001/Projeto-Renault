@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\projetosTestes\\project-renault\\project-renault.csproj": {}
+    "C:\\ProjetosProgramação\\Projeto-Renault\\back\\project-renault.csproj": {}
   },
   "projects": {
-    "C:\\projetosTestes\\project-renault\\project-renault.csproj": {
+    "C:\\ProjetosProgramação\\Projeto-Renault\\back\\project-renault.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projetosTestes\\project-renault\\project-renault.csproj",
+        "projectUniqueName": "C:\\ProjetosProgramação\\Projeto-Renault\\back\\project-renault.csproj",
         "projectName": "project-renault",
-        "projectPath": "C:\\projetosTestes\\project-renault\\project-renault.csproj",
-        "packagesPath": "C:\\Users\\Bernardo Garcia\\.nuget\\packages\\",
-        "outputPath": "C:\\projetosTestes\\project-renault\\obj\\",
+        "projectPath": "C:\\ProjetosProgramação\\Projeto-Renault\\back\\project-renault.csproj",
+        "packagesPath": "C:\\Users\\Administrador\\.nuget\\packages\\",
+        "outputPath": "C:\\ProjetosProgramação\\Projeto-Renault\\back\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Bernardo Garcia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrador\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -49,13 +49,17 @@
               "target": "Package",
               "version": "[8.0.5, )"
             },
-            "MySql.EntityFrameworkCore": {
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.3.7, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[8.0.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.6.1, )"
+              "version": "[6.6.2, )"
             }
           },
           "imports": [
