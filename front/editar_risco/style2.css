@@ -1,0 +1,118 @@
+body{
+  background-color: #FCFCFB;
+}
+
+h3{
+  color: #FCFCFB;
+}
+
+.sidebar {
+    background-color: #1A1A1A;
+    padding: 20px;
+    height: 100vh;
+  }
+
+main{
+  padding-top: 30px;
+}
+
+label{
+    color: #818181;
+}
+
+.input{
+    color: #818181;
+    background-color: #ECECEC;
+    border: none;
+    margin-bottom: 20px;
+    width: 350px;
+}
+
+.textarea{
+  color: #818181;
+  background-color: #ECECEC;
+  border: none;
+  width: 350px;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Poppins, Arial;
+  margin-bottom: 25px;
+}
+
+header img{
+  margin-left: 10px;
+  height: 35px;
+  width: 35px;
+}
+
+h1{
+  font-weight: 600;
+}
+
+span{
+  color: #818181;
+  font-weight: 500;
+}
+
+.botoes{
+  display: flex;
+  justify-content: end;
+}
+
+.botoes2{
+  width: 150px;
+}
+
+.btnEdit{
+  height: 45px;
+  background-color: transparent;
+  border: #FFB800 2px solid;
+  border-radius: 4px;
+  color: #FFB800;
+  font-family: Poppins, Arial;
+  font-weight: 500;
+  transition-duration: 0.2s;
+}
+
+.btnSolu{
+  height: 45px;
+  background-color: #FDECC1;
+  border: none;
+  border-radius: 4px;
+  color: #D89C00;
+  font-family: Poppins, Arial;
+  font-weight: 500;
+  transition-duration: 0.2s;
+}
+
+.btnSave{
+  height: 45px;
+  background-color: #FFB800;
+  color: #1A1A1A;
+  border: none;
+  border-radius: 4px;
+  font-family: Poppins, Arial;
+  font-weight: 500;
+  transition-duration: 0.2s;
+}
+
+.btnEdit:hover{
+  border-color: #fad473;
+  color: #fad473;
+}
+
+.btnSolu:hover{
+  background-color: #faeed1;
+  color: #e9bc4b;
+}
+
+.btnSave:hover{
+  background-color: #ffb700bc;
+  color: #1a1a1ae7;
+}
+
+
