@@ -1,142 +1,89 @@
 /* Configurações gerais */
 
 :root {
-  --fundo: #FCFCFB;
-  --bs-body-bg: var(--fundo);
-  --bs-table-border-color: #000000;
   --sombreamento: rgba(0, 0, 0, 0.30) 0px 2px 10px 0px;
+  --poppins: 'Poppins', sans-serif;
 }
 
-html, body {
-  height: 100%;
+.principal {
+  height: 100vh;
+  width: 100vw;
+  max-width: none;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  width: 100%;
-  background-color: var(--fundo);
+.shadow-container {
+  box-shadow: var(--sombreamento);
 }
 
-a {
-  text-decoration: none;
-  color: black;
+.content-ajuda{
+  bottom: 0;
+	right: 0;
 }
 
-.container-separator {
-  width: 100%;
-  height: 100%;
+/* Área Menu */
+
+.text-menu {
+  font-family: var(--poppins);
+  font-size: 17px;
 }
 
-.container-menu {
-  background-color: #1A1A1A;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  margin-right: 50px;
-  max-width: 350px;
-  display: block;
-  padding: 0px 50px;
+.menu-selected {
+  color:#FFB800;
 }
 
-.col{
-  flex: 1;
-}
-
-/* Nav Bar*/
-
-.container-menu .btn {
-  font-family: 'Poppins', 'Roboto', sans-serif;
-}
-
-.active-btn,
-.container-menu .btn:hover {
-  color: #FFB800;
-}
-
-.btn {
-  color: #FFF;
-}
-
-.menu-options {
-  margin-top: 460px;
-  height: 100px;
-}
-
-/* Área de perfil */
-
-.container-perfil {
-  height: 10%;
-  padding: 0;
-}
-
-.welcome {
-  font-size: 32px;
-  font-weight: bold;
-  height: 100%;
-}
-
-.name-text {
-  color: #00000036;
-  font-weight: 500;
-}
-
-.container-line {
-  height: 100%;
-}
-
-/* Área Formulário */
-
-form {
-  border: 1px solid #999999;
-  border-radius: 7px;
-  margin-bottom: 40px;
-}
-
-.form-control:focus {
-  background-color: #ECECEC;
-}
-
-.title {
-  font-size: 18px;
-  font-weight: bold;
-  color: #747474;
-}
-
-.container-options input,
-.container-options select,
-.container-options ::placeholder {
-  font-size: 12px;
-  text-align: center;
-  color: #818181 !important;
-  background-color: #ECECEC;
-  border: none;
-}
-
-.container-options select,
-tbody td {
+.menu-button {
   cursor: pointer;
 }
 
-.container-options option {
-  text-align: start;
+/* Cabeçalho */
+
+.superior-bar {
+  height: 100px;
 }
 
-.secondary-color {
-  color: #818181 !important;
+#welcomeUser {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #00000050;
 }
 
-tbody tr {
-  height: 60px;
+.welcome{
+  font-family: var(--poppins);
+  font-size: 30px;
+  font-weight: 600;
+  color: #1A1A1A;
 }
 
-
-
-.teste-espaco {
-  background-color: blue;
-  height: 50px;
+#profile{
+  font-family: var(--poppins);
+  font-size: 16px;
+  font-weight: 400;
+  color: #818181;
 }
 
-.teste-espaco2 {
-  background-color: red;
-  height: 100%;
+#profile img{
+  height: 40px;
+  width: 40px;
+}
+
+/* Filtros */
+
+.form-select:focus {
+  border-color: #FFB800;
+  box-shadow: 0 0 0 0.25rem rgba(255,184,0,.25)
+}
+
+#containerFiltro {
+  border: 1px solid #999999; 
+  max-height: 120px;
+}
+
+/* Tabela */
+.title {
+  color:#818181 !important;
+}
+
+tr:hover{
+  cursor: pointer;
 }

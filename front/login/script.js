@@ -2,13 +2,14 @@ function rememberMeState() {
     const checkbox = document.getElementById("rememberMe");
     const isChecked = checkbox.checked;
     if (isChecked == true) {
-        saveData();
+        saveDataLocal();
+        saveDataSession();
     } else {
         localStorage.removeItem('dados');
     }
 }
 
-function saveData(){
+function saveDataLocal(){
     const user = document.getElementById("login");
     const password = document.getElementById("senha");
 
@@ -18,6 +19,12 @@ function saveData(){
     }
 
     localStorage.setItem('dados', JSON.stringify(dados));
+}
+
+function saveDataSession(){
+    const nome = "Natasha Fonseca";
+
+    sessionStorage.setItem('nome', nome);
 }
 
 function autoFill() {

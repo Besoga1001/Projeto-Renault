@@ -1,7 +1,6 @@
 function substituirNomeUsuario() {
-
-  // Definir a variável com o nome do usuário
-  var nome = "Natasha Fonseca";
+  // Coletar o nome do usuário salvo no Session Storage
+  var nome = coletarNomeUsuario();
 
   // Selecionar todos os elementos com a classe 'nome'
   var elementos = document.querySelectorAll(".nome");
@@ -15,22 +14,32 @@ function substituirNomeUsuario() {
 // Evento para rodar a função quando a página carregar
 window.addEventListener('DOMContentLoaded', substituirNomeUsuario);
 
+fetch('http://localhost:8080/risco')
+  .then(response => response.json())
+  .then(data => {
+    const riscos = data;
+  })
+  .catch(error => {
+    console.log('Deu erro');
+  });
+
+
 
 // Gerar lista de riscos para teste
-const riscos = [
-  {
-    id: '001',
-    imgSrc: '../images/veiculos/kwid.png',
-    risco: 'Ausência de critério TCS ou presença para ver se vai aumentar aqui ou nao tem que testar com o lorem pelo jeito pq é texto demais...',
-    dataFinal: '15/05/2024'
-  },
-  {
-    id: '002',
-    imgSrc: '../images/veiculos/duster.png',
-    risco: 'Presença de critério ABS ou ausência ...',
-    dataFinal: '20/05/2024'
-  },
-];
+// const riscos = [
+//   {
+//     id: '001',
+//     imgSrc: '../images/veiculos/kwid.png',
+//     risco: 'Ausência de critério TCS ou presença para ver se vai aumentar aqui ou nao tem que testar com o lorem pelo jeito pq é texto demais...',
+//     dataFinal: '15/05/2024'
+//   },
+//   {
+//     id: '002',
+//     imgSrc: '../images/veiculos/duster.png',
+//     risco: 'Presença de critério ABS ou ausência ...',
+//     dataFinal: '20/05/2024'
+//   },
+// ];
 
 // Incluir cada risco em uma linha da tabela
 riscos.forEach(risco => {
