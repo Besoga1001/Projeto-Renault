@@ -1,188 +1,299 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    
+
     <!-- Links BootStrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
 
     <!-- Link Fonte Roboto -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Link Fonte Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Link css -->
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="d-flex container-separator">
-      <div class="container-menu">
-        <img src="../images/renault/logo-com-nome-branco.png" alt="Logo Renault" class="d-block mx-auto mt-4 mb-5">
-        <div class="menu-telas">
-          <div class="btn-group-vertical d-block mx-auto text-start" role="group" aria-label="Vertical button group">
-            <button type="button" class="btn dark text-start mt-4">
-              <img src="../images/menu-lateral/inicio-amarelo.png" alt="Ícone Home">
-              <span class="active-btn ps-4">Início</span>
-            </button>
-            <button type="button" class="btn dark text-start mt-4">
-              <img src="../images/menu-lateral/cadastro-risco-branco.png" alt="Ícone Cadastro">
-              <span class="ps-4">Cadastro de risco</span>
-            </button>
-            <button type="button" class="btn dark text-start mt-4">
-              <img src="../images/menu-lateral/riscos-branco.png" alt="Ícone Riscos">
-              <span class="ps-4">Riscos</span>
-            </button>
-          </div>
-        </div>
-        <div class="menu-options">
-          <div class="btn-group-vertical d-block mx-auto text-start" role="group" aria-label="Vertical button group">
-            <button type="button" class="btn dark text-start mt-4">
-              <img src="../images/menu-lateral/ajuda_branco.png" alt="Ícone Ajuda">
-              <span class="ps-4">Ajuda</span>
-            </button>
-            <button type="button" class="btn dark text-start mt-4">
-              <img src="../images/menu-lateral/sair-branco.png" alt="Ícone Sair">
-              <span class="ps-4">Sair</span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="container p-0 m-0 pt-4" style="width: 100%;">
-        <div class="container-perfil">
-          <div class="row row-cols-1 m-0 container-line" style="height: 100%">
-            <div class="col m-0 p-0 float-left">
-              <p class="name-text">Olá, João da Silva</p>
-              <p class="m-0 welcome">Bem vindo!</p>
-            </div>
-            <div class="col m-0 p-0 text-end my-auto">
-              <span class="m-0">João da Silva</span>
-              <img src="../images/home/foto-perfil.png" alt="Foto de perfil">
-            </div>
-          </div>
-        </div>
-        <form action="" class="p-3">
-          <div class="d-flex">
-            <div class="container">
-              <div class="row text-center title">
-                <div class="col-2">
-                  <p>Risco</p>
-                </div>
-                <div class="col-2">
-                  <p>Veículo</p>
-                </div>
-                <div class="col-2">
-                  <p>Impacto</p>
-                </div>
-                <div class="col-2">
-                  <p>Metier</p>
-                </div>
-                <div class="col-2">
-                  <p>Jalón</p>
-                </div>
-                <div class="col-2">
-                  <p>Status</p>
-                </div>
+    <div class="container m-0 p-0 text-center principal">
+      <div class="row m-0 p-0 h-100">
+        <!-- Menu a esquerda -->
+        <div
+          class="col-md-3 m-0 p-0 position-relative"
+          style="background-color: #1a1a1a; max-width: 300px; color: white"
+        >
+          <!-- Logo principal -->
+          <img
+            src="../images/renault/logo-com-nome-branco.png"
+            class="mt-5"
+            alt="Logo Renault"
+          />
+          <div class="container mt-5 mb-auto">
+            <!-- Menu Inicio -->
+            <div
+              class="row menu-selected my-5 menu-button text-menu"
+              onclick='location.href="../home/home.html"'
+            >
+              <div class="col-3 text-end">
+                <img
+                  src="../images/menu-lateral/inicio-amarelo.png"
+                  alt="Ícone Início"
+                />
               </div>
-              <div class="row m-0 container-options">
-                <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Digite uma palavra" aria-label="Username" aria-describedby="addon-wrapping"
-                    placeholder-color="#747474">
-                  </10px;lass=>
-                </div>
-                <div class="col-2">
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected class="text-center">Escolha um veículo</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                </div>
-                <div class="col-2">
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected class="text-center">Escolha um impacto</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                </div>
-                <div class="col-2">
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected class="text-center">Escolha um Metier</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                </div>
-                <div class="col-2">
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected class="text-center">Escolha um Jalón</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                </div>
-                <div class="col-2">
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected class="text-center">Escolha um Status</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                </div>
+              <div class="col-9 align-items-center">
+                <p class="text-start align-items-center m-0">Inicio</p>
               </div>
             </div>
-            <div class="align-bottom teste-espaco">
-              <img src="../images/riscos/pesquisa.png" alt="Ícone de Pesquisa" class="align-bottom">
+            <!-- Menu Cadastro de Risco -->
+            <div class="row my-5 menu-button text-menu"
+            onclick='location.href="../risks/risks.html"'>
+              <div class="col-3 text-end">
+                <img
+                  src="../images/menu-lateral/cadastro-risco-branco.png"
+                  alt="Ícone de alerta"
+                />
+              </div>
+              <div class="col-9">
+                <p class="text-start align-items-center m-0">
+                  Cadastro de Risco
+                </p>
+              </div>
+            </div>
+            <!-- Menu Riscos (Histórico) -->
+            <div
+              class="row my-5 menu-button text-menu"
+              onclick='location.href="../risks/risks.html"'
+            >
+              <div class="col-3 text-end">
+                <img
+                  src="../images/menu-lateral/riscos-branco.png"
+                  alt="Ícone Histórico"
+                />
+              </div>
+              <div class="col-9">
+                <p class="text-start align-items-center m-0">Riscos</p>
+              </div>
             </div>
           </div>
-        </form>
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th scope="col" class="col-1 text-center"></th>
-              <th scope="col" class="col-4 text-start title" style="color:#818181">Risco</th>
-              <th scope="col" class="col-2 text-center title" style="color: #818181">Veículo</th>
-              <th scope="col" class="col-1 text-center title" style="color: #818181">Impacto</th>
-              <th scope="col" class="col-1 text-center title" style="color: #818181">Metier</th>
-              <th scope="col" class="col-1 text-center title" style="color: #818181">Jalón</th>
-              <th scope="col" class="col-1 text-center title" style="color: #818181">Status</th>
-              <th scope="col" class="col-1 text-center"></th>
-            </tr>
-          </thead>
-          <tbody class="text-start">
-            <tr onclick="location.href='../home/home.html'">
-              <td scope="row" class="text-center">
-                <img src="../images/veiculos/kwid.png" alt="Kwid">
-              </td>
-              <td class="align-middle">Ausência de critério TCS ou presença de critério</td>
-              <td class="secondary-color align-middle text-center">Carro 1</td>
-              <td class="secondary-color align-middle text-center">K1</td>
-              <td class="secondary-color align-middle text-center">DEA-VA</td>
-              <td class="secondary-color align-middle text-center">ABPT</td>
-              <td class="secondary-color align-middle text-center">Aberto</td>
-              <td class="align-middle text-end pe-4"><img src="../images/riscos/acessar_risco.png" alt="Ícone de acessar risco"></td>
-            </tr>
-            <tr onclick="location.href='../home/home.html'">
-              <td scope="row" class="align-middle text-center">
-                <img src="../images/veiculos/duster.png" alt="Kwid">
-              </td>
-              <td class="align-middle">Diferença das informações presentes nas Definições Produto U79 Ph2 DaG e U79 Ph2...</td>
-              <td class="secondary-color align-middle text-center">Carro 2</td>
-              <td class="secondary-color align-middle text-center">K1</td>
-              <td class="secondary-color align-middle text-center">DEA-VA</td>
-              <td class="secondary-color align-middle text-center">ABPT</td>
-              <td class="secondary-color align-middle text-center">Aberto</td>
-              <td class="align-middle text-end pe-4"><img src="../images/riscos/acessar_risco.png" alt="Ícone de acessar risco"></td>
-            </tr>
-          </tbody>
-        </table>
+          <div class="container position-absolute content-ajuda">
+            <!-- Menu Ajuda -->
+            <div class="row my-5 menu-button text-menu">
+              <div class="col-3 text-end">
+                <img
+                  src="../images/menu-lateral/ajuda_branco.png"
+                  alt="Ícone Ajuda"
+                />
+              </div>
+              <div class="col-9">
+                <p class="text-start align-items-center m-0">Ajuda</p>
+              </div>
+            </div>
+            <!-- Menu Sair -->
+            <div
+              class="row my-5 menu-button text-menu"
+              onclick='location.href="../login/login.html"'
+            >
+              <div class="col-3 text-end">
+                <img
+                  src="../images/menu-lateral/sair-branco.png"
+                  alt="Ícone Sair"
+                />
+              </div>
+              <div class="col-9">
+                <p class="text-start align-items-center m-0">Sair</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Container conteudo principal -->
+        <div class="col-md-10 m-0 p-0">
+          <div class="row m-0 pt-2 pb-5 px-5 h-100 w-100">
+            <!-- Cabeçalho -->
+            <div class="col-md-12 m-0 p-0 pe-4 superior-bar">
+              <div class="row h-100 w-100 p-0 m-0">
+                <div class="col-md-6 p-0">
+                  <p class="m-0 pt-2 text-start" id="welcomeUser">
+                    Olá, <span class="nome"></span>
+                  </p>
+                  <p class="m-0 pt-2 text-start welcome">Bem vindo!</p>
+                </div>
+                <div class="col-md-6">
+                  <div
+                    class="d-flex justify-content-end h-100 align-items-center"
+                    id="profile"
+                  >
+                    <span class="pe-2 nome" id="testeNome"></span>
+                    <img
+                      src="../images/home/foto-perfil.png"
+                      alt="Foto de perfil"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Área de conteudo -->
+            <div class="row p-0 m-0" style="height: calc(100% - 100px); border: 2px solid red;">
+              <!-- Área Filtro -->
+              <div class="container rounded-3 w-100 h-25 p-0" id="containerFiltro">
+                <!-- Filtro de Risco -->
+                <div class="row h-100 p-0 m-0">
+                  <!-- Filtro de Risco -->
+                  <div class="col h-100">
+                    <div class="row h-50 w-100">
+                      <div class="col d-flex align-items-center justify-content-center" >
+                        <p class="p-0 m-0 ">Risco</p>
+                      </div>
+                    </div>
+                    <div class="row h-50 w-100">
+                      <div class="col d-flex align-items-center justify-content-center" >
+                        <select class="form-select" aria-label="Default select example" id="selectRisk">
+                          <option selected>Selecione</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Filtro de Veículo -->
+                  <div class="col h-100">
+                    <div class="row h-50 w-100">
+                      <div class="col d-flex align-items-center justify-content-center">
+                        <p class="p-0 m-0 ">Veículo</p>
+                      </div>
+                    </div>
+                    <div class="row h-50 w-100">
+                      <div class="col d-flex align-items-center justify-content-center">
+                        <select class="form-select" aria-label="Default select example" id="selectVehicle">
+                          <option selected>Selecione</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Filtro de Impacto -->
+                  <div class="col h-100">
+                    <div class="row h-50 w-100">
+                      <div class="col d-flex align-items-center justify-content-center">
+                        <p class="p-0 m-0 ">Impacto</p>
+                      </div>
+                    </div>
+                    <div class="row h-50 w-100">
+                      <div class="col d-flex align-items-center justify-content-center">
+                        <select class="form-select" aria-label="Default select example" id="selectImpact">
+                          <option selected>Selecione</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Filtro de Metier -->
+                  <div class="col h-100">
+                    <div class="row h-50 w-100">
+                      <div class="col d-flex align-items-center justify-content-center">
+                        <p class="p-0 m-0 ">Metier</p>
+                      </div>
+                    </div>
+                    <div class="row h-50 w-100">
+                      <div class="col d-flex align-items-center justify-content-center">
+                        <select class="form-select" aria-label="Default select example" id="selectMetier">
+                          <option selected>Selecione</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Filtro de Status -->
+                  <div class="col h-100">
+                    <div class="row h-50 w-100">
+                      <div class="col d-flex align-items-center justify-content-center">
+                        <p class="p-0 m-0 ">Status</p>
+                      </div>
+                    </div>
+                    <div class="row h-50 w-100">
+                      <div class="col d-flex align-items-center justify-content-center">
+                        <select class="form-select" aria-label="Default select example" id="selectStatus">
+                          <option selected>Selecione</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Inicio tabela de riscos -->
+              <div class="w-100 p-0 px-3" id="containerTable" style="border: 2px solid green;">
+                <table class="table table-hover px-5">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="col-1 text-center"></th>
+                      <th scope="col" class="col-4 text-start title" >Risco</th>
+                      <th scope="col" class="col-2 text-center title" >Veículo</th>
+                      <th scope="col" class="col-1 text-center title" >Impacto</th>
+                      <th scope="col" class="col-1 text-center title" >Metier</th>
+                      <th scope="col" class="col-1 text-center title" >Jalón</th>
+                      <th scope="col" class="col-1 text-center title" >Status</th>
+                      <th scope="col" class="col-1 text-center"></th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-start">
+                    <tr onclick="location.href='../home/home.html'">
+                      <td scope="row" class="text-center">
+                        <img src="../images/veiculos/kwid.png" alt="Kwid">
+                      </td>
+                      <td class="align-middle">Ausência de critério TCS ou presença de critério</td>
+                      <td class="secondary-color align-middle text-center">Carro 1</td>
+                      <td class="secondary-color align-middle text-center">K1</td>
+                      <td class="secondary-color align-middle text-center">DEA-VA</td>
+                      <td class="secondary-color align-middle text-center">ABPT</td>
+                      <td class="secondary-color align-middle text-center">Aberto</td>
+                      <td class="align-middle text-end pe-4"><img src="../images/riscos/acessar_risco.png" alt="Ícone de acessar risco"></td>
+                    </tr>
+                    <tr onclick="location.href='../home/home.html'">
+                      <td scope="row" class="align-middle text-center">
+                        <img src="../images/veiculos/duster.png" alt="Kwid">
+                      </td>
+                      <td class="align-middle">Diferença das informações presentes nas Definições Produto U79 Ph2 DaG e U79 Ph2...</td>
+                      <td class="secondary-color align-middle text-center">Carro 2</td>
+                      <td class="secondary-color align-middle text-center">K1</td>
+                      <td class="secondary-color align-middle text-center">DEA-VA</td>
+                      <td class="secondary-color align-middle text-center">ABPT</td>
+                      <td class="secondary-color align-middle text-center">Aberto</td>
+                      <td class="align-middle text-end pe-4"><img src="../images/riscos/acessar_risco.png" alt="Ícone de acessar risco"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
+  <script src="script.js"></script>
+  <script src="../scriptGeral.js"></script>
 </html>
