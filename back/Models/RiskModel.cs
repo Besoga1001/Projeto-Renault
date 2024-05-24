@@ -3,24 +3,23 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace project_renault.Models
 {
-    [Table("risco")]
     public class RiskModel
     {
         [Key]
-        public int id_Risco { get; set; }
-        public string descricao_risco { get; set; }
-        public string tipo_Risco { get; set; }
-        public string probabilidade { get; set; }
-        public string area_Responsavel { get; set; }
-        public string classificacao_risco { get; set; }
-        public string projeto { get; set; }
-        public DateTime data_Entrada_Risco { get; set; }
-        public string impacto { get; set; }
-        public string impacto_Renault { get; set; }
-        public string? consequencias { get; set; }
-        public string? jalon_Afetado { get; set; }
-        public string? metier { get; set; } 
-        public int status { get; set; }
+        public int Id { get; set; }
+        public string? DescricaoRisco { get; set; } 
+        public string? Tipo { get; set; }
+        public string? Probabilidade { get; set; }
+        public string? AreaResponsavel { get; set; }
+        public string? ClassificacaoRisco { get; set; }
+        public string? Projeto { get; set; }
+        public DateTime DataEntradaRisco { get; set; }
+        public string? Impacto { get; set; }
+        public string? ImpactoRenault { get; set; }
+        public string? Consequencias { get; set; }
+        public string? JalonAfetado { get; set; }
+        public string? Metier { get; set; } 
+        public int Status { get; set; }
       
     }
 }

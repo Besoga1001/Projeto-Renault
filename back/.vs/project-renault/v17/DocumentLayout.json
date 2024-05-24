@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\ProjetosPrograma\u00E7\u00E3o\\Projeto-Renault\\back\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E866807A-B5D9-4699-B12B-DFEEB1E5572D}|project-renault.csproj|c:\\projetosprograma\u00E7\u00E3o\\projeto-renault\\back\\models\\riskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E866807A-B5D9-4699-B12B-DFEEB1E5572D}|project-renault.csproj|solutionrelative:models\\riskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E866807A-B5D9-4699-B12B-DFEEB1E5572D}|project-renault.csproj|c:\\projetosprograma\u00E7\u00E3o\\projeto-renault\\back\\controllers\\riskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E866807A-B5D9-4699-B12B-DFEEB1E5572D}|project-renault.csproj|solutionrelative:controllers\\riskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -18,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,28 +22,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "RiskController.cs",
               "DocumentMoniker": "C:\\ProjetosPrograma\u00E7\u00E3o\\Projeto-Renault\\back\\Controllers\\RiskController.cs",
               "RelativeDocumentMoniker": "Controllers\\RiskController.cs",
               "ToolTip": "C:\\ProjetosPrograma\u00E7\u00E3o\\Projeto-Renault\\back\\Controllers\\RiskController.cs",
               "RelativeToolTip": "Controllers\\RiskController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAA1AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T00:56:35.193Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RiskModel.cs",
-              "DocumentMoniker": "C:\\ProjetosPrograma\u00E7\u00E3o\\Projeto-Renault\\back\\Models\\RiskModel.cs",
-              "RelativeDocumentMoniker": "Models\\RiskModel.cs",
-              "ToolTip": "C:\\ProjetosPrograma\u00E7\u00E3o\\Projeto-Renault\\back\\Models\\RiskModel.cs",
-              "RelativeToolTip": "Models\\RiskModel.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAgwBcAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T23:44:41.503Z",
+              "WhenOpened": "2024-05-23T22:14:04.933Z",
               "EditorCaption": ""
             }
           ]
