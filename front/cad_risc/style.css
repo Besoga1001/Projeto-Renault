@@ -43,31 +43,30 @@ body {
 .linha1 {
     display: flex;
     justify-content: space-evenly;
-    margin-right: 70px;
     color: #818181;
-    margin-right: 76px;
+    margin-bottom: 10px;
 }
 .linha2 {
     display: flex;
     justify-content: space-evenly;
-    margin-right: 70px;
     color: #818181;
+    margin-bottom: 10px;
 }
 .linha3 {
     display: flex;
     justify-content: space-evenly;
-    margin-right: 70px;
     color: #818181;
+    margin-bottom: 10px;
 }
 .linha4 {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     color: #818181;
-    
+    margin-bottom: 10px;
 }
 .input {
-    width: 358px;
-    height: 200px;
+    width: 350px;
+    height: 150px;
     border-radius: 10px;
     margin-top: 10px;
     background-color:#ececec;
@@ -93,22 +92,21 @@ body {
     height: 150px;
     margin-top: 20px;
     border-radius: 20px;
-    margin-left: 140px;
-    margin-right: 130px;
+    margin-right: 143px;
+    margin-left: 11px;
 }
 .metier {
-    margin-right: 205px;
-    margin-left: 130px;
-    margin-bottom: 130px;
+    margin-bottom: 100px;
 }
 .jalon {
-    margin-left: 180px;
+    margin-left: 28px;
 }
 .btn {
     display: flex;
     justify-content: end;
-    margin-right: 250px;
+    margin-right: 95px;
     align-items: end;
+    margin-top: 0px;
 }
 .button {
     width: 300px;
@@ -145,7 +143,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     flex-wrap: nowrap;
-    margin-left: 127px;
+    margin-left: 60px;
     height: 150px;
 }
 .imagem {
@@ -162,6 +160,7 @@ body {
 }
 p {
     margin-left: 17px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .select1 {
@@ -188,6 +187,12 @@ p {
     margin-top: 0px;
 }
 .sendrisk {
-        margin-bottom: 0px;
         font-size: 1.5em;
+        margin-bottom: 0px;
+      }
+      .coluna2{
+        margin-left: 80px;
+      }
+      .coluna3{
+        margin-left: 80px;
       }
