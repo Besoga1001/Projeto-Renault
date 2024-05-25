@@ -30,6 +30,7 @@ window.addEventListener('DOMContentLoaded', substituirNomeUsuario);
 window.addEventListener('resize', ajustarTamanhoContainerTable);
 window.addEventListener('DOMContentLoaded', ajustarTamanhoContainerTable);
 
+
 const riscos = [
 	{
 		"id": 1,
