@@ -21,6 +21,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors("http://localhost:5501");
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
