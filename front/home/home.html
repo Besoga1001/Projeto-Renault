@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RisquEnault - Inicio</title>
+    <!-- Link Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- Link Bootstrap -->
     <link
@@ -204,11 +206,7 @@
                   <div class="position-absolute" style="bottom: 0px">
                     <p class="text-start risks">Riscos recentes</p>
                     <div class="rounded-3 shadow-container w-100">
-                      <img
-                        class="img-fluid"
-                        src="../images/home/exemplo-dashboard.png"
-                        alt="Gráfico"
-                      />
+                      <canvas id="myChart"></canvas>
                     </div>
                   </div>
                 </div>
