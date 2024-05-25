@@ -14,45 +14,64 @@ function substituirNomeUsuario() {
 // Evento para rodar a função quando a página carregar
 window.addEventListener('DOMContentLoaded', substituirNomeUsuario);
 
-fetch('http://localhost:8080/risco')
-  .then(response => response.json())
-  .then(data => {
-    const riscos = data;
-  })
-  .catch(error => {
-    console.log('Deu erro');
-  });
+// fetch('http://localhost:8080/risk/getAll')
+//   .then(response => response.json())
+//   .then(data => {
+//     const riscos = data;
+//   })
+//   .catch(error => {
+//     console.log('Deu erro');
+//   });
 
+const riscos = [
+	{
+		"id": 1,
+		"descricaoRisco": "Descrição do risco 1",
+		"tipo": "Tipo 1",
+		"probabilidade": "Alta",
+		"areaResponsavel": "Área 1",
+		"classificacaoRisco": "Classe 1",
+		"projeto": "Projeto 1",
+		"dataEntradaRisco": "2024-05-22T00:00:00",
+		"impacto": "Alto",
+		"impactoRenault": "Alto",
+		"consequencias": "Consequências 1",
+		"jalonAfetado": "Jalon 1",
+		"metier": "Metier 1",
+		"status": 1
+	},
+	{
+		"id": 2,
+		"descricaoRisco": "Descrição do risco 2",
+		"tipo": "Tipo 2",
+		"probabilidade": "Média",
+		"areaResponsavel": "Área 2",
+		"classificacaoRisco": "Classe 2",
+		"projeto": "Projeto 2",
+		"dataEntradaRisco": "2024-05-23T00:00:00",
+		"impacto": "Médio",
+		"impactoRenault": "Médio",
+		"consequencias": "Consequências 2",
+		"jalonAfetado": "Jalon 2",
+		"metier": "Metier 2",
+		"status": 2
+	}
+]
 
-
-// Gerar lista de riscos para teste
-// const riscos = [
-//   {
-//     id: '001',
-//     imgSrc: '../images/veiculos/kwid.png',
-//     risco: 'Ausência de critério TCS ou presença para ver se vai aumentar aqui ou nao tem que testar com o lorem pelo jeito pq é texto demais...',
-//     dataFinal: '15/05/2024'
-//   },
-//   {
-//     id: '002',
-//     imgSrc: '../images/veiculos/duster.png',
-//     risco: 'Presença de critério ABS ou ausência ...',
-//     dataFinal: '20/05/2024'
-//   },
-// ];
+console.log(riscos);
 
 // Incluir cada risco em uma linha da tabela
 riscos.forEach(risco => {
   // Definir os valores das variárveis
-  var image = risco.imgSrc;
-  var descricao = risco.risco;
+  var image = risco.projeto.replace(" ", "");
+  var descricao = risco.descricaoRisco;
   var dataFinal = risco.dataFinal;
+
   
   // Criar nova linha na memoria
   const tb = document.querySelector('#tbVeiculos tbody');
   var qtdLinhas = tb.rows.length;
   var linha = tb.insertRow(qtdLinhas);
-  console.log(`Número da linha inserida: ${qtdLinhas}`);
 
   // Identificar as colunas
   var cellImage = linha.insertCell(0);
@@ -60,7 +79,7 @@ riscos.forEach(risco => {
   var cellData = linha.insertCell(2);
 
   // Atribuir valor nas colunas
-  cellImage.innerHTML = `<td scope="row"><img src="${image}" alt="Imagem Kwid"></td>`;
+  cellImage.innerHTML = `<td scope="row"><img src="../images/veiculos/${image}.png" alt="Imagem ${image}"></td>`;
   cellRisco.innerHTML = descricao;
   cellData.innerHTML = dataFinal;
 
@@ -69,6 +88,6 @@ riscos.forEach(risco => {
 
   // Incluir Atributo
   cellImage.setAttribute('scope', 'row');
-  linha.setAttribute('onclick', 'location.href="inicio2.html"');
+  linha.setAttribute('onclick', 'location.href="../editar_risco/index.html"');
   linha.id = qtdLinhas+1;
 });

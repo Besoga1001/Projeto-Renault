@@ -1,30 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid</title>
+    <title>Cadastro de Risco</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
-        <div class="red"></div>
+        <div class="modal"></div>
         <div style="text-align: end;
-        margin-right: 20px;" class="blue">
-            <p>ola</p>
+        margin-right: 20px;" class="cabeçalho">
+            <div class="headinginfo">
+                <div class="infoonhead">
+                    <div class="cadastrarrisco">
+                         <h1>Cadastrar risco</h1>
+                    </div>
+                    <p>Certifique-se de preencher todas as informações.</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=HZli8pArLSE" target="_blank">
+                    <div class="perfil">
+                        <p>Seu Perfil</p>
+                        <div class="imagem">
+                            <img style="width: 30px;" height="30px" margin-left: 5px;
+                                src="../images/home/foto-perfil.png" alt="img foto do pefil">
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="green">
-            <div class = "formulario">
+        <div class="principal">
+            <div class="formulario">
                 <div class="linha1">
                     <div class="descrisco">
                         <p>Descrição do risco</p>
-                        <input class="select" type="text" placeholder="Resumo do risco a ser cadastrado">
+                        <input class="select1" type="text" placeholder="Resumo do risco a ser cadastrado">
                     </div>
                     <div>
                         <p>Tipo de Risco</p>
                         <label for="imsg">
                             <select class="select" name="Risk" id="Risco">
-                                <option value="Selecione" selected>Selecione Uma Opção</option>
+                                <option value="Selecione" selected class="escrita">Selecione Uma Opção</option>
                                 <option value="conf">Conformity</option>
                                 <option value="HR">Human Resources</option>
                                 <option value="OP">Operacional</option>
@@ -36,8 +54,8 @@
                     <div>
                         <p>Probabilidade</p>
                         <label for="imsg">
-                            <select  class="select" name="Probabilidade" id="Prob">
-                                <option value="Selecione" selected>Selecione Uma Opção</option>
+                            <select class="select" name="Probabilidade" id="Prob">
+                                <option value="Selecione" selected class="escrita">Selecione Uma Opção</option>
                                 <option value="VL">Very Low</option>
                                 <option value="L">Low</option>
                                 <option value="Med">Medium</option>
@@ -52,7 +70,7 @@
                         <p>Area Responsável</p>
                         <label for="imsg">
                             <select class="select" name="area resp" id="aresp">
-                                <option value="Selecione" selected>Selecione Uma Opção</option>
+                                <option value="Selecione" selected class="escrita">Selecione Uma Opção</option>
                                 <option value="APO">APO</option>
                                 <option value="DEA-TD">DEA-TD</option>
                                 <option value="DEA-TD (A.NEVES)">DEA-TD(A. Neves)</option>
@@ -72,9 +90,9 @@
                                 <option value="Selecione" selected>Selecione Uma Opção</option>
                                 <option value="sust">Susteinable</option>
                                 <option value="mod">Moderate</option>
-                            <option value="sev">Severe</option>
-                            <option value="crit">Critical</option>
-                        </select>
+                                <option value="sev">Severe</option>
+                                <option value="crit">Critical</option>
+                            </select>
                         </label>
                     </div>
                     <div>
@@ -101,12 +119,12 @@
                         </label>
                     </div>
                 </div>
-                    <div class="linha3">
-                        <div>
-                            <p>Data do alerta</p>
-                            <input class="select" type="datetime-local" placeholder="DD/MM/AAAA">
-                        </div>
-                        <div>
+                <div class="linha3">
+                    <div>
+                        <p>Data do alerta</p>
+                        <input class="select2" type="datetime-local" placeholder="DD/MM/AAAA">
+                    </div>
+                    <div>
                         <p>Impacto</p>
                         <label for="imsg">
                             <select class="select" name="Impacto" id="imp">
@@ -118,29 +136,29 @@
                                 <option value="Veryhigh">Very High</option>
                             </select>
                         </label>
-                                        </div>
-                                        <div>
-                        <p>Impacto (Renault)</p>
-                            <label for="imsg">
-                                <select class="select" name="Impacto (Renault)" id="impreno">
-                                    <option value="Selecione" selected>Selecione Uma Opção</option>
-                                    <option value="K1">K1</option>
-                                    <option value="K2">K2</option>
-                                    <option value="K3">K3</option>
-                                    <option value="K4">K4</option>
-                                </select>
-                            </label>
-                                        </div>
                     </div>
-                    <div class="linha4">
-                        <div>
-                            <label for="imsg">Impacto/Consequências</label><br>
-                            <input class="impcons" type="Impacto/Consequencias no andamento da produção">
-                        </div>
-                        <div>
+                    <div>
+                        <p>Impacto (Renault)</p>
+                        <label for="imsg">
+                            <select class="select" name="Impacto (Renault)" id="impreno">
+                                <option value="Selecione" selected>Selecione Uma Opção</option>
+                                <option value="K1">K1</option>
+                                <option value="K2">K2</option>
+                                <option value="K3">K3</option>
+                                <option value="K4">K4</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <div class="linha4">
+                    <div class="impcons">
+                        <label for="imsg">Impacto/Consequências</label><br>
+                        <input class="input" type="Impacto/Consequencias no andamento da produção">
+                    </div>
+                    <div class="jalon">
                         <p>Jalón Afetado</p>
                         <label for="jalon">
-                            <select  class="select" name="Estado" id="Status">
+                            <select class="select" name="Estado" id="Status">
                                 <option value="Selecione" selected>Selecione Uma Opção</option>
                                 <option value="ABDLot-Cp">ABDLot-Cp</option>
                                 <option value="ABP">ABP</option>
@@ -159,8 +177,8 @@
                                 <option value="none">Nenhum</option>
                             </select>
                         </label>
-                        </div>
-                        <div class="metier">
+                    </div>
+                    <div class="metier">
                         <p>Metier</p>
                         <label for="imsg">
                             <select class="select" name="Metier" id="met">
@@ -182,11 +200,16 @@
                                 <option value="none">Nenhum</option>
                             </select>
                         </label>
-                        </div>
                     </div>
+                </div>
+                <div class="btn">
+                    <a href="https://www.youtube.com/watch?v=XXYlFuWEuKI" target="_blank"><button
+                            class="button">CADASTRAR </button></a>
+                </div>
             </div>
         </div>
-        
+
     </div>
 </body>
+
 </html>
