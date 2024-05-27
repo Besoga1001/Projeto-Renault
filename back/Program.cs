@@ -2,16 +2,15 @@ using project_renault;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 var mySqlConnector = builder.Configuration.GetConnectionString("DefaultConnection");
 // Add services to the container.
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(name: MyAllowSpecificOrigins,
+    options.AddPolicy(name: "_myAllowSpecificOrigins",
                       policy =>
                       {
-                          policy.WithOrigins("http://localhost:5501");
+                          policy.WithOrigins("http://localhost:5501").AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
                       });
 });
 
@@ -32,7 +31,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors(MyAllowSpecificOrigins);
+app.UseCors("_myAllowSpecificOrigins");
 
 app.UseHttpsRedirection();
 
