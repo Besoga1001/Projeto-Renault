@@ -1,177 +1,7 @@
-// fetch('http://localhost:8080/risk/getAll')
-//   .then(response => response.json())
-//   .then(data => {
-//     const riscos = data;
-//   })
-//   .catch(error => {
-//     console.log('Deu erro');
-//   });
-function coletarDados(){
-	const riscos = [
-		{
-			"id": 1,
-			"descricaoRisco": "Descrição do risco 1",
-			"tipo": "Tipo 1",
-			"probabilidade": "Alta",
-			"areaResponsavel": "Área 1",
-			"classificacaoRisco": "Classe 1",
-			"projeto": "Projeto 1",
-			"dataEntradaRisco": "2024-05-22T00:00:00",
-			"impacto": "Alto",
-			"impactoRenault": "Alto",
-			"consequencias": "Consequências 1",
-			"jalonAfetado": "Jalon 1",
-			"metier": "Metier 1",
-			"status": 1
-		},
-		{
-			"id": 2,
-			"descricaoRisco": "Descrição do risco 2",
-			"tipo": "Tipo 2",
-			"probabilidade": "Média",
-			"areaResponsavel": "Área 2",
-			"classificacaoRisco": "Classe 2",
-			"projeto": "Projeto 2",
-			"dataEntradaRisco": "2024-05-23T00:00:00",
-			"impacto": "Médio",
-			"impactoRenault": "Médio",
-			"consequencias": "Consequências 2",
-			"jalonAfetado": "Jalon 2",
-			"metier": "Metier 2",
-			"status": 2
-		},
-		{
-			"id": 1,
-			"descricaoRisco": "Descrição do risco 1",
-			"tipo": "Tipo 1",
-			"probabilidade": "Alta",
-			"areaResponsavel": "Área 1",
-			"classificacaoRisco": "Classe 1",
-			"projeto": "Projeto 1",
-			"dataEntradaRisco": "2024-05-22T00:00:00",
-			"impacto": "Alto",
-			"impactoRenault": "Alto",
-			"consequencias": "Consequências 1",
-			"jalonAfetado": "Jalon 1",
-			"metier": "Metier 1",
-			"status": 1
-		},
-		{
-			"id": 2,
-			"descricaoRisco": "Descrição do risco 2",
-			"tipo": "Tipo 2",
-			"probabilidade": "Média",
-			"areaResponsavel": "Área 2",
-			"classificacaoRisco": "Classe 2",
-			"projeto": "Projeto 2",
-			"dataEntradaRisco": "2024-05-23T00:00:00",
-			"impacto": "Médio",
-			"impactoRenault": "Médio",
-			"consequencias": "Consequências 2",
-			"jalonAfetado": "Jalon 2",
-			"metier": "Metier 2",
-			"status": 2
-		}
-		,
-		{
-			"id": 2,
-			"descricaoRisco": "Descrição do risco 2",
-			"tipo": "Tipo 2",
-			"probabilidade": "Média",
-			"areaResponsavel": "Área 2",
-			"classificacaoRisco": "Classe 2",
-			"projeto": "Projeto 3",
-			"dataEntradaRisco": "2024-05-23T00:00:00",
-			"impacto": "Médio",
-			"impactoRenault": "Médio",
-			"consequencias": "Consequências 2",
-			"jalonAfetado": "Jalon 2",
-			"metier": "Metier 2",
-			"status": 2
-		},
-		{
-			"id": 1,
-			"descricaoRisco": "Descrição do risco 1",
-			"tipo": "Tipo 1",
-			"probabilidade": "Alta",
-			"areaResponsavel": "Área 1",
-			"classificacaoRisco": "Classe 1",
-			"projeto": "Projeto 2",
-			"dataEntradaRisco": "2024-05-22T00:00:00",
-			"impacto": "Alto",
-			"impactoRenault": "Alto",
-			"consequencias": "Consequências 1",
-			"jalonAfetado": "Jalon 1",
-			"metier": "Metier 1",
-			"status": 1
-		},
-		{
-			"id": 2,
-			"descricaoRisco": "Descrição do risco 2",
-			"tipo": "Tipo 2",
-			"probabilidade": "Média",
-			"areaResponsavel": "Área 2",
-			"classificacaoRisco": "Classe 2",
-			"projeto": "Projeto 2",
-			"dataEntradaRisco": "2024-05-23T00:00:00",
-			"impacto": "Médio",
-			"impactoRenault": "Médio",
-			"consequencias": "Consequências 2",
-			"jalonAfetado": "Jalon 2",
-			"metier": "Metier 2",
-			"status": 2
-		},
-		{
-			"id": 1,
-			"descricaoRisco": "Descrição do risco 1",
-			"tipo": "Tipo 1",
-			"probabilidade": "Alta",
-			"areaResponsavel": "Área 1",
-			"classificacaoRisco": "Classe 1",
-			"projeto": "Projeto 2",
-			"dataEntradaRisco": "2024-05-22T00:00:00",
-			"impacto": "Alto",
-			"impactoRenault": "Alto",
-			"consequencias": "Consequências 1",
-			"jalonAfetado": "Jalon 1",
-			"metier": "Metier 1",
-			"status": 1
-		},
-		{
-			"id": 2,
-			"descricaoRisco": "Descrição do risco 2",
-			"tipo": "Tipo 2",
-			"probabilidade": "Média",
-			"areaResponsavel": "Área 2",
-			"classificacaoRisco": "Classe 2",
-			"projeto": "Projeto 4",
-			"dataEntradaRisco": "2024-05-23T00:00:00",
-			"impacto": "Médio",
-			"impactoRenault": "Médio",
-			"consequencias": "Consequências 2",
-			"jalonAfetado": "Jalon 2",
-			"metier": "Metier 2",
-			"status": 2
-		},
-		{
-			"id": 2,
-			"descricaoRisco": "Descrição do risco 2",
-			"tipo": "Tipo 2",
-			"probabilidade": "Média",
-			"areaResponsavel": "Área 2",
-			"classificacaoRisco": "Classe 2",
-			"projeto": "Projeto 5",
-			"dataEntradaRisco": "2024-05-23T00:00:00",
-			"impacto": "Médio",
-			"impactoRenault": "Médio",
-			"consequencias": "Consequências 2",
-			"jalonAfetado": "Jalon 2",
-			"metier": "Metier 2",
-			"status": 2
-		}
-	]
-
-	return riscos;
+async function coletarDados(){
+	let response  = await fetch('https://api-risk-manager-renault.onrender.com/risk/getAll');
+	let dados = await response.json();
+	return dados;
 }
 
 function substituirNomeUsuario() {
@@ -190,9 +20,9 @@ function substituirNomeUsuario() {
 // Evento para rodar a função quando a página carregar
 window.addEventListener('DOMContentLoaded', substituirNomeUsuario);
 
-function inserirGrafico(){
+async function inserirGrafico(){
 	// Puxar os dados necessários
-	const dados = coletarDados();
+	let dados = await coletarDados();
 
 	// Criar um Object com os nomes dos projetos
 	var nomeInfo = gerarLabel(dados);
@@ -268,16 +98,15 @@ function alterarLarguraContainerGrafico() {
 
 	// Alterar o tamanho da largura
 	contGrafico.style.width = larguraContCard + "px";
-
 }
 
 // Evento para rodar a função quando a página carregar
 window.addEventListener('DOMContentLoaded', alterarLarguraContainerGrafico);
 
 // Incluir riscos na tabela
-function popularTabela(){
+async function popularTabela(){
 	// Obter dados
-	const riscos = coletarDados();
+	const riscos = await coletarDados();
 
 	// Incluir cada risco em uma linha da tabela
 	riscos.forEach(risco => {
@@ -314,3 +143,23 @@ function popularTabela(){
 
 // Evento para rodar a função quando a página carregar
 window.addEventListener('DOMContentLoaded', popularTabela);
+
+function ajustarTamanhoContainerTable () {
+  // Coletar o elemento do Container Table
+  const containerTabela = document.getElementById("containerTable");
+
+  // Coletar a altura atual do container do filtro
+  var alturaContainerFiltro = document.getElementById("containerFiltro").offsetHeight;
+  var alturaContainerconteudo = document.getElementById("containerConteudo").offsetHeight;
+
+  console.log(alturaContainerconteudo);
+  console.log(alturaContainerFiltro);
+  console.log(alturaContainerconteudo - alturaContainerFiltro);
+
+  // Alterar o valor da Altura
+  containerTabela.style.maxHeight = `calc(${alturaContainerconteudo}px - ${alturaContainerFiltro}px)`;
+}
+
+// Evento para quando alterar o tamanho da tela ajustar o tamanho do container
+window.addEventListener('resize', ajustarTamanhoContainerTable);
+window.addEventListener('DOMContentLoaded', ajustarTamanhoContainerTable);
