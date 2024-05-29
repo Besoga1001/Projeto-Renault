@@ -11,7 +11,7 @@ function rememberMeState() {
 
 function saveDataLocal(){
     const user = document.getElementById("login");
-    const password = document.getElementById("senha");
+    const password = document.getElementById("password");
 
     const dados = {
         usuario: user.value,

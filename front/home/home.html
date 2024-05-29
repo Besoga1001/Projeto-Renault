@@ -157,63 +157,65 @@
             </div>
             <!-- Área de conteudo -->
             <div class="row pt-5" style="height: calc(100% - 100px)">
-              <!-- Área Cards -->
+              <!-- Área Card e Gráfico -->
               <div
-                class="col-md-7 m-0 p-0 pe-4 position-relative"
+              id="containerConteudo"  
+              class="col-md-7 m-0 py-0 px-4 position-relative"
               >
-                <div class="row m-0 w-100">
-                  <!-- Card 1 -->
-                  <div class="col-6">
-                    <div class="card shadow-container">
-                      <div class="card-body">
-                        <p class="card-title">Riscos da semana</p>
-                        <p class="card-text" id="valueCard1">36</p>
+                <!-- Área dos cards -->
+                <div id="containerCard">
+                  <div class="row m-0 w-100 p-0">
+                    <!-- Card 1 -->
+                    <div class="col-6 p-0 pe-2">
+                      <div class="card shadow-container">
+                        <div class="card-body">
+                          <p class="card-title">Riscos da semana</p>
+                          <p class="card-text" id="valueCard1">36</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-6 p-0 ps-2">
+                      <div class="card shadow-container">
+                        <div class="card-body">
+                          <p class="card-title">Riscos críticos</p>
+                          <p class="card-text" id="valueCard2">15</p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <!-- Card 2 -->
-                  <div class="col-6 pe-0">
-                    <div class="card shadow-container">
-                      <div class="card-body">
-                        <p class="card-title">Riscos críticos</p>
-                        <p class="card-text" id="valueCard2">15</p>
+                  <div class="row pt-4 m-0 w-100">
+                    <!-- Card 3 -->
+                    <div class="col-6 p-0 pe-2">
+                      <div class="card shadow-container">
+                        <div class="card-body">
+                          <p class="card-title">Card 3</p>
+                          <p class="card-text" id="valueCard3">22</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="row pt-4 m-0 w-100 mb-5">
-                  <!-- Card 3 -->
-                  <div class="col-6">
-                    <div class="card shadow-container">
-                      <div class="card-body">
-                        <p class="card-title">Card 3</p>
-                        <p class="card-text" id="valueCard3">22</p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Card 4 -->
-                  <div class="col-6 pe-0">
-                    <div class="card shadow-container">
-                      <div class="card-body">
-                        <p class="card-title">Card 4</p>
-                        <p class="card-text" id="valueCard4">48</p>
+                    <!-- Card 4 -->
+                    <div class="col-6 p-0 ps-2">
+                      <div class="card shadow-container">
+                        <div class="card-body">
+                          <p class="card-title">Card 4</p>
+                          <p class="card-text" id="valueCard4">48</p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <!-- Área gráfico -->
-                <div class="row p-0 m-0">
-                  <div class="position-absolute" style="bottom: 0px">
-                    <p class="text-start risks">Riscos recentes</p>
-                    <div class="rounded-3 shadow-container w-100">
-                      <canvas id="myChart"></canvas>
-                    </div>
+                <div id="containerGrafico" class="position-absolute w-100" style="bottom: 0px">
+                  <p class="text-start risks">Riscos recentes</p>
+                  <div id="grafico" class="rounded-3 shadow-container " style="height: 360px">
+                    <canvas id="myChart" class="w-100 px-2"></canvas>
                   </div>
                 </div>
               </div>
               <!-- Área Table -->
-              <div class="col-md-5 m-0" >
-                <div class="rounded-3 shadow-container h-100 px-4">
+              <div class="col-md-5 m-0 mh-100" id="containerTable" style="border: 2px solid green;">
+                <div id="containerInfoTable" class="rounded-3 shadow-container h-100 px-4" style="overflow: auto; max-height: 735px;">
                   <table class="table table-hover" id="tbVeiculos">
                     <thead>
                       <tr>
@@ -223,6 +225,36 @@
                       </tr>
                     </thead>
                     <tbody>
+                      <!-- <tr id="1">
+                        <td scope="row"><img src="../images/veiculos/Projeto1.png" alt="Imagem Projeto1"></td>
+                        <td class="text-start">Descrição do risco 1</td>
+                        <td>undefined</td>
+                      </tr>
+                      <tr id="1">
+                        <td scope="row"><img src="../images/veiculos/Projeto1.png" alt="Imagem Projeto1"></td>
+                        <td class="text-start">Descrição do risco 1</td>
+                        <td>undefined</td>
+                      </tr>
+                      <tr id="1">
+                        <td scope="row"><img src="../images/veiculos/Projeto1.png" alt="Imagem Projeto1"></td>
+                        <td class="text-start">Descrição do risco 1</td>
+                        <td>undefined</td>
+                      </tr>
+                      <tr id="1">
+                        <td scope="row"><img src="../images/veiculos/Projeto1.png" alt="Imagem Projeto1"></td>
+                        <td class="text-start">Descrição do risco 1</td>
+                        <td>undefined</td>
+                      </tr>
+                      <tr id="1">
+                        <td scope="row"><img src="../images/veiculos/Projeto1.png" alt="Imagem Projeto1"></td>
+                        <td class="text-start">Descrição do risco 1</td>
+                        <td>undefined</td>
+                      </tr>
+                      <tr id="1">
+                        <td scope="row"><img src="../images/veiculos/Projeto1.png" alt="Imagem Projeto1"></td>
+                        <td class="text-start">Descrição do risco 1</td>
+                        <td>undefined</td>
+                      </tr> -->
                       <!-- Lista de todos os riscos do usuário -->
                     </tbody>
                   </table>
