@@ -1,66 +1,58 @@
 body{
   background-color: #FCFCFB;
 }
-
+  
 h3{
   color: #FCFCFB;
 }
-
+  
 .sidebar {
-    background-color: #1A1A1A;
-    padding: 20px;
-    height: 100vh;
-  }
-
-main{
-  padding-top: 30px;
-}
-
-label{
-    color: #818181;
-}
-
-.input{
-    color: #818181;
-    background-color: #ECECEC;
-    border: none;
-    margin-bottom: 20px;
-    width: 350px;
-}
-
-.textarea{
-  color: #818181;
-  background-color: #ECECEC;
-  border: none;
-  width: 350px;
+  background-color: #1A1A1A;
+  padding: 20px;
+  height: 100vh;
 }
 
 header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   font-family: Poppins, Arial;
-  margin-bottom: 25px;
-}
-
-header img{
-  margin-left: 10px;
-  height: 35px;
-  width: 35px;
+  padding-top: 30px;
 }
 
 h1{
   font-weight: 600;
 }
 
-span{
+p{
   color: #818181;
-  font-weight: 500;
 }
 
-.botoes{
-  display: flex;
-  justify-content: end;
+span{
+  font-weight: 500;
+  color: #818181;
+}
+
+img{
+  margin-left: 5px;
+}
+
+label{
+  font-size: 18px;
+  font-family: Roboto, Arial;
+}
+
+.botoes2 a{
+  text-align: center;
+  text-justify: center;
+}
+
+.input{
+  color: #818181;
+  font-size: 17px;
+  font-family: Roboto, Arial;
+  background-color: #ECECEC;
+  border: none;
+  margin-bottom: 40px;
+  transition-duration: 0.2s;
+  height: 45px;
 }
 
 .botoes2{
@@ -68,29 +60,39 @@ span{
 }
 
 .btnEdit{
-  height: 45px;
+  height: 50px;
   background-color: transparent;
   border: #FFB800 2px solid;
   border-radius: 4px;
+  transition-duration: 0.2s;
+}
+
+.btnEdit span{
   color: #FFB800;
   font-family: Poppins, Arial;
   font-weight: 500;
-  transition-duration: 0.2s;
 }
 
 .btnSolu{
-  height: 45px;
+  height: 50px;
   background-color: #FDECC1;
   border: none;
   border-radius: 4px;
-  color: #D89C00;
-  font-family: Poppins, Arial;
-  font-weight: 500;
   transition-duration: 0.2s;
 }
 
+.btnSolu span{
+  color: #D89C00;
+  font-family: Poppins, Arial;
+  font-weight: 500;
+}
+
+.icone{
+  padding-right: 6px;
+}
+
 .btnSave{
-  height: 45px;
+  height: 50px;
   background-color: #FFB800;
   color: #1A1A1A;
   border: none;
@@ -115,4 +117,9 @@ span{
   color: #1a1a1ae7;
 }
 
+.input:focus {
+  background-color: #f5f5f5;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem #ffb70061;
+}
 
