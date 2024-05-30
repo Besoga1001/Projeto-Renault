@@ -67,51 +67,29 @@
   width: 40px;
 }
 
-/* Área de Cards */
+/* Filtros */
 
-.card{
-  background-color: #FFB800;
+.form-select:focus,
+.form-control:focus {
+  border-color: #FFB800;
+  box-shadow: 0 0 0 0.25rem rgba(255,184,0,.25)
+}
+
+#containerFiltro {
+  border: 1px solid #999999; 
+  max-height: 120px;
+}
+
+button {
   border: none;
+  background-color: transparent;
 }
 
-.card-title{
-  font-family: var(--poppins);
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.card-text {
-  font-size: 50px ;
-  font-weight: bold;
-}
-
-/* Área gráficos */
-
-.risks{
-  font-size: 18px;
-  font-weight: 500;
-  font-family: var(--poppins);
-}
-
-/* Área tabela */
-
-th{
-  font-family: var(--poppins);
-  font-weight: 300;
-  font-size: 14px;
-  color: #818181 !important;
-}
-
-tbody tr {
-  height: 64px !important;
-  
+/* Tabela */
+.title {
+  color:#818181 !important;
 }
 
 tr:hover{
   cursor: pointer;
-}
-
-td > img {
-  height: 47px;
-  width: 71px;
 }

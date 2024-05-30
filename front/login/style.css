@@ -32,6 +32,7 @@ body,
 
 .form-check-input:checked{
   background-color: #FFB800;
+  border-color: #FFB800;
 }
 
 .form-control:focus,
