@@ -6,142 +6,158 @@
   <title>Edição de risco</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style2.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com"> 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<div class="container-fluid">
-  <div class="row">
-    <nav class="col-md-2 d-none d-md-block sidebar">
-      <div class="sidebar-item">
-        <h3>Menu</h3>
-      </div>
-    </nav>
-    <main role="main" class="col-md-10 ml-sm-auto col-lg-10 px-md-5">
-      <header>
-        <h1>Risco</h1>
-        <span>
-          João da silva
-          <img src="../images/home/foto-perfil.png" alt="">
-        </span>
-      </header>
-      <form>
-        <div class="form-row">
-          <div class="form-group col-md-4"> <!--PARA DEFINIR UM PADDING NA DIREITA COLOCAR PR-4-->
-            <label for="risco">Descrição do risco</label>
-            <input type="text" class="form-control input" id="risco" placeholder="Resumo do risco a ser cadastrado">
-          </div>
-          <div class="form-group col-md-4">
-            <label for="tipoRisco">Tipo de risco</label>
-            <select class="form-control form-select input" id="tipoRisco">
-              <option selected>Selecione uma opção</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-            </select>
-          </div>
-          <div class="form-group col-md-4">
-            <label for="probabilidade">Probabilidade</label>
-            <select class="form-control form-select input" id="probabilidade">
-              <option selected>Selecione uma opção</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-            </select>
-          </div>
-          <div class="form-group col-md-4">
-            <label for="responsavel">Área Responsável</label>
-            <select class="form-control form-select input" id="responsavel">
-              <option selected>Selecione uma opção</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-            </select>
-          </div>
-          <div class="form-group col-md-4">
-            <label for="classificacao">Classificação do risco</label>
-            <select class="form-control form-select input" id="classificacao">
-              <option selected>Selecione uma opção</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-            </select>
-          </div>
-          <div class="form-group col-md-4">
-            <label for="projeto">Projeto</label>
-            <select class="form-control form-select input" id="projeto">
-              <option selected>Selecione uma opção</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-            </select>
-          </div>
-          <div class="form-group col-md-4">
-            <label for="data">Data do alerta</label>
-            <input type="date" class="form-control input" id="data">
-          </div>
-          <div class="form-group col-md-4">
-            <label for="impacto">Impacto</label>
-            <select class="form-control form-select input" id="impacto">
-              <option selected>Selecione uma opção</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-            </select>
-          </div>
-          <div class="form-group col-md-4">
-            <label for="impactoRenault">Impacto (Renault)</label>
-            <select class="form-control form-select input" id="impactoRenault">
-              <option selected>Selecione uma opção</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-            </select>
-          </div>
-          <div class="form-group col-md-4">
-            <label for="campo3">Impacto/Consequências</label>
-            <textarea name="" id="" cols="30" rows="5" class="form-control textarea"></textarea>
-          </div>
-          <div class="form-group col-md-4">
-            <label for="jalon">Jalón Afetado</label>
-            <select class="form-control form-select input" id="jalon">
-              <option selected>Selecione uma opção</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-            </select>
-          </div>
-          <div class="form-group col-md-4">
-            <label for="metier">Metier</label>
-            <select class="form-control form-select input" id="metier">
-              <option selected>Selecione uma opção</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-            </select>
-          </div>
+  <div class="container-fluid">
+    <!--Menu lateral-->
+    <div class="row">
+      <nav class="col-md-2 d-none d-md-block sidebar">
+        <div class="sidebar-item pt-1">
+          <h3>Menu</h3>
         </div>
-      </form>
-      <div class="form-row botoes">
-        <div class="form-group col-md-2 botoes2">
-          <button type="submit" class="btn-block btnEdit">EDITAR</button>
-        </div>
-        <div class="form-group col-md-2 botoes2">
-          <button type="reset" class="btn-block btnSolu">SOLUÇÃO</button>
-        </div>
-        <div class="form-group col-md-2 botoes2">
-          <button type="reset" class="btn-block btnSave">SALVAR</button>
-        </div>
+      </nav>
+
+      <!--Header-->
+      <div class="col-md-10 px-5 py-3 ">
+        <header class="d-flex justify-content-between align-items-center">
+          <div>
+            <h1>Risco</h1>
+            <p>Atualize as informações e contribua com uma solução.</p>
+          </div>
+          <span>
+            João da Silva
+            <img src="../images/home/foto-perfil.png" alt="Foto de perfil" class="img-fluid rounded-circle" style="width: 40px; height: 40px;">
+          </span>
+        </header>
+
+        <!--Formulario-->
+        <form>
+          <div class="row pt-3 py-5">
+              <div class="col-md-4">
+                <label for="risco">Descrição do risco</label>
+                <input type="text" class="form-control input editar" id="descRisco" placeholder="Resumo do risco a ser cadastrado">
+              </div>
+              <div class="col-md-4">
+                <label for="tipoRisco">Tipo de risco</label>
+                <select class="form-control form-select input" id="tipoRisco">
+                  <option selected>Selecione uma opção</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label for="probabilidade">Probabilidade</label>
+                <select class="form-control form-select input" id="probabilidade">
+                  <option selected>Selecione uma opção</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+              </div>
+            <div class="col-md-4">
+              <label for="responsavel">Área Responsável</label>
+              <select class="form-control form-select input" id="Input">
+                <option selected>Selecione uma opção</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="classificacao">Classificação do risco</label>
+              <select class="form-control form-select input" id="classificacao">
+                <option selected>Selecione uma opção</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="projeto">Projeto</label>
+              <select class="form-control form-select input" id="projeto">
+                <option selected>Selecione uma opção</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="data">Data do alerta</label>
+              <input type="date" class="form-control input" id="data">
+            </div>
+            <div class="col-md-4">
+              <label for="impacto">Impacto</label>
+              <select class="form-control form-select input" id="impacto">
+                <option selected>Selecione uma opção</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="impactoRenault">Impacto (Renault)</label>
+              <select class="form-control form-select input" id="impactoRenault">
+                <option selected>Selecione uma opção</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="impacto/consequencia">Impacto/Consequências</label>
+              <textarea placeholder="Digite o impacto" id="impacto/consequencia" cols="30" rows="5" class="form-control input"></textarea>
+            </div>
+            <div class="col-md-4">
+              <label for="jalon">Jalón Afetado</label>
+              <select class="form-control form-select input" id="jalon">
+                <option selected>Selecione uma opção</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="metier">Metier</label>
+              <select class="form-control form-select input" id="metier">
+                <option selected>Selecione uma opção</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </div>
+          </div>
+        </form>
+        
+        <!--Botoes-->
+        <div class="form-row d-flex justify-content-end">
+          <div class="col-md-1.5 botoes2">
+            <button type="submit" class="btn-block btnEdit">
+              <img src="../images/editar-risco/buttonEdit.png" class="icone" alt="">
+              <span>EDITAR</span>
+            </button>
+          </div>
+          <div class="col-md-1.5 botoes2">
+            <button type="submit" class="btn-block btnSolu">
+              <img src="../images/editar-risco/buttonSolucao.png" class="icone" alt="">
+              <span>SOLUÇÃO</span>
+            </button>
+          </div>
+          <div class="col-md-2 botoes2">
+            <button type="submit" class="btn-block btnSave">SALVAR</button>
+          </div>
       </div>
     </div>
   </div>
