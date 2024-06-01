@@ -153,7 +153,7 @@
               <!-- Área Filtro -->
               <div class="container rounded-3 w-100 h-25 p-0" id="containerFiltro">
                 <!-- Filtros -->
-                <form class="h-100" action="#">
+                <form class="h-100" action="#" onsubmit="coletarFiltros()">
                   <div class="row h-100 p-0 m-0">
                     <!-- Filtro de Risco -->
                     <div class="col h-100">
@@ -178,10 +178,8 @@
                       <div class="row h-50 w-100">
                         <div class="col d-flex align-items-center justify-content-center pe-0">
                           <select class="form-select" aria-label="Default select example" id="selectVehicle">
-                            <option selected>Selecione</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option value="0" selected>Selecione</option>
+                            <!-- Opções de Veículos -->
                           </select>
                         </div>
                       </div>
@@ -196,7 +194,7 @@
                       <div class="row h-50 w-100">
                         <div class="col d-flex align-items-center justify-content-center pe-0">
                           <select class="form-select" aria-label="Default select example" id="selectImpact">
-                            <option selected>Selecione</option>
+                            <option value="0" selected>Selecione</option>
                             <option value="1">Muito baixo</option>
                             <option value="2">Baixo</option>
                             <option value="3">Médio</option>
@@ -216,10 +214,8 @@
                       <div class="row h-50 w-100">
                         <div class="col d-flex align-items-center justify-content-center pe-0">
                           <select class="form-select" aria-label="Default select example" id="selectMetier">
-                            <option selected>Selecione</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option value="0" selected>Selecione</option>
+                            <!-- Opções de Metier -->
                           </select>
                         </div>
                       </div>
@@ -228,15 +224,14 @@
                     <div class="col h-100">
                       <div class="row h-50 w-100">
                         <div class="col d-flex align-items-center justify-content-center">
-                          <label class="p-0 m-0" for="selectStatus">Jalón</ç>
+                          <label class="p-0 m-0" for="selectJalon">Jalón</ç>
                         </div>
                       </div>
                       <div class="row h-50 w-100">
                         <div class="col d-flex align-items-center justify-content-center pe-0">
-                          <select class="form-select" aria-label="Default select example" id="selectStatus">
-                            <option selected>Selecione</option>
-                            <option value="1">Muito baixo</option>
-                            <option value="2">Baixo</option>
+                          <select class="form-select" aria-label="Default select example" id="selectJalon">
+                            <option value="0" selected>Selecione</option>
+                            <!-- Opções de Jalón -->
                           </select>
                         </div>
                       </div>
@@ -251,7 +246,7 @@
                       <div class="row h-50 w-100">
                         <div class="col d-flex align-items-center justify-content-center pe-0">
                           <select class="form-select" aria-label="Default select example" id="selectStatus">
-                            <option selected>Selecione</option>
+                            <option value="0" selected>Selecione</option>
                             <option value="1">Em aberto</option>
                             <option value="2">Solucionado</option>
                             <option value="3">Abandonado</option>
@@ -274,12 +269,12 @@
                   <thead>
                     <tr>
                       <th scope="col" class="col-1 text-center"></th>
-                      <th scope="col" class="col-4 text-start title" >Risco</th>
-                      <th scope="col" class="col-2 text-center title" >Veículo</th>
-                      <th scope="col" class="col-1 text-center title" >Impacto</th>
-                      <th scope="col" class="col-1 text-center title" >Metier</th>
-                      <th scope="col" class="col-1 text-center title" >Jalón</th>
-                      <th scope="col" class="col-1 text-center title" >Status</th>
+                      <th scope="col" class="col-4 text-start title">Risco</th>
+                      <th scope="col" class="col-2 text-center title">Veículo</th>
+                      <th scope="col" class="col-1 text-center title">Impacto</th>
+                      <th scope="col" class="col-1 text-center title">Metier</th>
+                      <th scope="col" class="col-1 text-center title">Jalón</th>
+                      <th scope="col" class="col-1 text-center title">Status</th>
                       <th scope="col" class="col-1 text-center"></th>
                     </tr>
                   </thead>

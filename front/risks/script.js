@@ -1,8 +1,22 @@
+let todosRegistros;
+
+var arrayFiltro = {
+  'descricaoRisco': '', 
+  'projeto': 'Selecione',
+  'impacto': 'Selecione',
+  'metier': 'Selecione',
+  'jalonAfetado': 'Selecione',
+  'status': 'Selecione',
+};
+
 async function coletarDados(){
 	const response  = await fetch('https://api-risk-manager-renault.onrender.com/risk/getAll');
-	const dados = await response.json();
-	return dados;
+	todosRegistros = await response.json();
+  console.log('coletar dados');
+  popularTabela(todosRegistros);
 }
+
+window.addEventListener('DOMContentLoaded', coletarDados);
 
 async function coletarVeiculos(){
 	const response  = await fetch('https://api-risk-manager-renault.onrender.com/Risk/filters_project');
@@ -48,9 +62,7 @@ function ajustarTamanhoContainerTable () {
 window.addEventListener('resize', ajustarTamanhoContainerTable);
 window.addEventListener('DOMContentLoaded', ajustarTamanhoContainerTable);
 
-async function popularTabela() {
-  const riscos = await coletarDados();
-
+function popularTabela(riscos) {
   // Incluir cada risco em uma linha da tabela
   riscos.forEach(risco => {
     // Definir os valores das variárveis
@@ -105,6 +117,112 @@ async function popularTabela() {
 
 }
 
-window.addEventListener('DOMContentLoaded', popularTabela);
+async function popularVeiculos(){
+  // Identificar qual o elemento a ter as informações inseridas
+  const elemento = document.getElementById("selectVehicle")
 
-console.log(coletarVeiculos());
+  // Puxar os dados que serão inseridos
+  const dados = await coletarVeiculos();
+
+  // Adicionar os elementos carregados na Select
+  for (let i = 0; i < dados.length; i++) {
+    addOption(elemento, i+1, dados[i]);
+  }
+}
+
+window.addEventListener('DOMContentLoaded', popularVeiculos);
+
+async function popularMetier(){
+  // Identificar qual o elemento a ter as informações inseridas
+  const elemento = document.getElementById("selectMetier")
+
+  // Puxar os dados que serão inseridos
+  const dados = await coletarMetiers();
+
+  // Adicionar os elementos carregados na Select
+  for (let i = 0; i < dados.length; i++) {
+    addOption(elemento, i+1, dados[i]);
+  }
+}
+
+window.addEventListener('DOMContentLoaded', popularMetier);
+
+function coletarFiltros(){
+  // Obter o valor do risco
+  let risco = document.getElementById("selectRisk").value;
+
+  // Obter valor do Veículo
+  let veiculo = devolverValorSelect("selectVehicle");
+
+  // Obter valor do Impacto
+  let impacto = devolverValorSelect("selectImpact");
+
+  // Obter valor do Metier
+  let metier = devolverValorSelect("selectMetier");
+
+  // Obter valor do Metier
+  let jalon = devolverValorSelect("selectJalon");
+
+  // Obter valor do Metier
+  let status = devolverValorSelect("selectStatus");
+
+  arrayFiltro.descricaoRisco = risco;
+  arrayFiltro.projeto = veiculo;
+  arrayFiltro.impacto = impacto;
+  arrayFiltro.metier = metier;
+  arrayFiltro.jalonAfetado = jalon;
+  arrayFiltro.status = status;
+  filtrarResultados(arrayFiltro);
+}
+
+function filtrarResultados(filtros){
+  // Copiar dados do risco
+  let riscosFiltrados = todosRegistros;
+
+  // Verificar se tem algum elemento diferente de Vazio ou "selecione" nos filtros
+  for (var chave in filtros) {
+    if (filtros.hasOwnProperty(chave)) {
+      if (filtros[chave] !== '' && filtros[chave] !== 'Selecione'){
+        // Verificar quais os resultados que tem o filtro selecionado
+        if (chave === 'descricaoRisco') {
+          riscosFiltrados = riscosFiltrados.filter((valorAtual) => {
+            return valorAtual.descricaoRisco.includes(filtros[chave]);
+          })
+        } else {
+          riscosFiltrados = riscosFiltrados.filter((valorAtual) => {
+            return valorAtual[chave] == filtros[chave];
+          })
+        }
+      };
+    }
+  }
+  limparTabela();
+  popularTabela(riscosFiltrados);
+}
+
+function limparTabela(){
+  var tabela = document.querySelectorAll('#tableRisks tbody');
+
+  // Itera sobre todos os elementos tbody encontrados
+  tabela.forEach(function(tbody) {
+      // Limpa todas as linhas dentro do tbody
+      while (tbody.firstChild) {
+          tbody.removeChild(tbody.firstChild);
+      }
+  });
+
+}
+
+function devolverValorSelect(nomeId){
+  let elemento = document.getElementById(nomeId);
+  let valor = elemento.selectedIndex;
+  valor = elemento.options[valor].text
+  return valor
+}
+
+function addOption(elemento, valor, texto){
+  const option = document.createElement("option");
+  option.value = valor;
+  option.textContent = texto;
+  elemento.appendChild(option);
+}
