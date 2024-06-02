@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -43,7 +43,7 @@
     <!-- Link CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body id="corpo" class="transicao">
     <div class="container m-0 p-0 text-center principal">
       <div class="row m-0 p-0 h-100">
         <!-- Menu a esquerda -->
@@ -99,7 +99,8 @@
               </div>
             </div>
           </div>
-          <div class="container position-absolute content-ajuda">
+          <!-- Menu inferior -->
+          <div class="container position-absolute content-ajuda">            
             <!-- Menu Ajuda -->
             <div class="row my-5 menu-button text-menu">
               <div class="col-3 text-end">
@@ -136,16 +137,19 @@
             <div class="col-md-12 m-0 p-0 pe-4 superior-bar">
               <div class="row h-100 w-100 p-0 m-0">
                 <div class="col-md-6 p-0">
-                  <p class="m-0 pt-2 text-start" id="welcomeUser">
+                  <p class="m-0 pt-2 text-start transicao" id="welcomeUser">
                     Olá, <span class="nome"></span>
                   </p>
-                  <p class="m-0 pt-2 text-start welcome">Bem vindo!</p>
+                  <p class="m-0 pt-2 text-start welcome transicao" id="welcome">Bem vindo!</p>
                 </div>
                 <div class="col-md-6">
                   <div
                     class="d-flex justify-content-end h-100 align-items-center"
                     id="profile"
                   >
+                    <span class="pe-3">
+                      <input onclick="" id="toggle" class="toggle dark" type="checkbox">
+                    </span>
                     <span class="pe-2 nome" id="testeNome"></span>
                     <img
                       src="../images/home/foto-perfil.png"
@@ -206,22 +210,23 @@
                   </div>
                 </div>
                 <!-- Área gráfico -->
-                <div id="containerGrafico" class="position-absolute w-100" style="bottom: 0px">
-                  <p class="text-start risks">Riscos recentes</p>
-                  <div id="grafico" class="rounded-3 shadow-container " style="height: 360px">
+                <div id="containerGrafico" class="position-absolute w-100 transicao" style="bottom: 0px">
+                  <p class="text-start risks transicao">Riscos recentes</p>
+                  <div id="grafico" class="rounded-3 shadow-container transicao" style="height: 360px">
                     <canvas id="myChart" class="w-100 px-2"></canvas>
                   </div>
                 </div>
               </div>
               <!-- Área Table -->
               <div class="col-md-5 m-0 mh-100" id="containerTable">
-                <div id="containerInfoTable" class="rounded-3 shadow-container h-100 px-4" style="overflow: auto; max-height: 735px;">
+                <div id="containerInfoTable" class="rounded-3 shadow-container h-100 px-4 transicao" style="overflow: auto; max-height: 735px; ">
+                  <p class="py-auto my-4 transicao" id="tableLegend">Meus riscos</p>
                   <table class="table table-hover" id="tbVeiculos">
                     <thead>
                       <tr>
-                        <th scope="col" class="text-start">Veículo</th>
-                        <th scope="col">Risco</th>
-                        <th scope="col" class="text-end">Data Final</th>
+                        <th scope="col" class="text-cente transicao">Veículo</th>
+                        <th scope="col" class="transicao">Risco</th>
+                        <th scope="col" class="text-end transicao">Data Final</th>
                       </tr>
                     </thead>
                     <tbody>

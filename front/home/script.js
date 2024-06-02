@@ -132,7 +132,10 @@ async function popularTabela(){
 		cellData.innerHTML = dataFinal;
 
 		// Incluir classe
-		cellRisco.className = "text-start";
+		cellRisco.className = 'text-start transicao';
+		linha.className = 'transicao';
+		cellImage.className = 'transicao';
+		cellData.className = 'transicao';
 
 		// Incluir Atributo
 		cellImage.setAttribute('scope', 'row');
@@ -163,3 +166,53 @@ function ajustarTamanhoContainerTable () {
 // Evento para quando alterar o tamanho da tela ajustar o tamanho do container
 window.addEventListener('resize', ajustarTamanhoContainerTable);
 window.addEventListener('DOMContentLoaded', ajustarTamanhoContainerTable);
+
+
+
+let modo = document.getElementById('toggle')
+
+modo.addEventListener('change', () =>{
+	alterarDarkMode();
+})
+
+function verificarDarkMode(){
+	if (modo.checked){
+		alterarDarkMode();
+	}
+}
+
+function alterarDarkMode() {
+	// Alterar o Background color do Body
+	let elemento = document.getElementById('corpo');
+	elemento.classList.toggle('background-dark');
+
+	// Alterar o Background color da tabela
+	elemento = document.getElementById('tbVeiculos');
+	elemento.classList.toggle('custom-bg');
+
+	// ALTERAR CORES DA FONTE //
+	// Alterar o Bem Vindo
+	elemento = document.getElementById('welcomeUser');
+	elemento.classList.toggle('color-dark');
+
+	// Alterar o Bem Vindo
+	elemento = document.getElementById('welcome');
+	elemento.classList.toggle('color-dark');
+
+	// Alterar parágrafo de Risco Recente
+	elemento = document.querySelector('#containerGrafico p');
+	elemento.classList.toggle('color-dark');
+
+	// Alterar Legenda tabela
+	elemento = document.getElementById('tableLegend');
+	elemento.classList.toggle('color-dark');
+
+	// ALTERAR BORDAS DAS DIVS
+	// Alterar borda dos riscos
+	elemento = document.getElementById('grafico');
+	elemento.classList.toggle('border-dark');
+
+	// Alterar borda dos riscos
+	elemento = document.getElementById('containerInfoTable');
+	elemento.classList.toggle('border-dark');
+}
