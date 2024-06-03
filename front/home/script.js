@@ -171,15 +171,21 @@ window.addEventListener('DOMContentLoaded', ajustarTamanhoContainerTable);
 
 let modo = document.getElementById('toggle')
 
-modo.addEventListener('change', () =>{
-	alterarDarkMode();
-})
+modo.addEventListener('change', () => {
+  alterarDarkMode();
+});
 
-function verificarDarkMode(){
-	if (modo.checked){
-		alterarDarkMode();
-	}
+function verificarDarkMode(valor){	
+  let elemento = document.getElementById('toggle');
+  if (valor == 'false'){
+    elemento.checked = false;
+    elemento.dispatchEvent(new Event('change'));
+	} else {
+    elemento.checked = true;
+  }
 }
+
+window.addEventListener('DOMContentLoaded', verificarDarkMode(localStorage.getItem('lightMode')));
 
 function alterarDarkMode() {
 	// Alterar o Background color do Body

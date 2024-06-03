@@ -3,3 +3,7 @@ function coletarNomeUsuario() {
   const nome = sessionStorage.getItem('nome');
   return nome;
 }
+
+function salvarDarkMode(valor) {
+  localStorage.setItem('lightMode', valor);
+}

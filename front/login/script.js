@@ -33,7 +33,7 @@ function autoFill() {
 
     if(dados != null) {
         document.getElementById("login").value = dados.usuario;
-        document.getElementById("senha").value = dados.senha;
+        document.getElementById("password").value = dados.senha;
         document.getElementById("rememberMe").checked = true;
     }
 }
