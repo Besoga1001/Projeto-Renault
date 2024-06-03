@@ -183,3 +183,6 @@ td > img {
   color: #BBBBBB !important;
 }
 
+.custom-bg {
+  --bs-table-hover-bg: #343434;
+}
