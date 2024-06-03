@@ -12,7 +12,6 @@ var arrayFiltro = {
 async function coletarDados(){
 	const response  = await fetch('https://api-risk-manager-renault.onrender.com/risk/getAll');
 	todosRegistros = await response.json();
-  console.log('coletar dados');
   popularTabela(todosRegistros);
 }
 
@@ -100,14 +99,14 @@ function popularTabela(riscos) {
     cellAcessar.innerHTML = `<img src="../images/riscos/acessar_risco.png" alt="Ícone de acessar risco"></img>`
   
     // Incluir classe
-    cellImage.className = "text-center";
-    cellDescricao.className = "align-middle";
-    cellVeiculo.className = "secondary-color align-middle text-center";
-    cellImpacto.className = "secondary-color align-middle text-center";
-    cellMetier.className = "secondary-color align-middle text-center";
-    cellJalon.className = "secondary-color align-middle text-center";
-    cellStatus.className = "secondary-color align-middle text-center";
-    cellAcessar.className = "align-middle text-end pe-4"
+    cellImage.className = "text-center transicao";
+    cellDescricao.className = "align-middle transicao";
+    cellVeiculo.className = "secondary-color align-middle text-center transicao";
+    cellImpacto.className = "secondary-color align-middle text-center transicao";
+    cellMetier.className = "secondary-color align-middle text-center transicao";
+    cellJalon.className = "secondary-color align-middle text-center transicao";
+    cellStatus.className = "secondary-color align-middle text-center transicao";
+    cellAcessar.className = "align-middle text-end pe-4 transicao"
   
     // Incluir Atributo
     cellImage.setAttribute('scope', 'row');
@@ -225,4 +224,57 @@ function addOption(elemento, valor, texto){
   option.value = valor;
   option.textContent = texto;
   elemento.appendChild(option);
+}
+
+let modo = document.getElementById('toggle')
+
+modo.addEventListener('change', () => {
+  alterarDarkMode();
+});
+
+function verificarDarkMode(valor){	
+  let elemento = document.getElementById('toggle');
+  if (valor == 'false'){
+    elemento.checked = false;
+    elemento.dispatchEvent(new Event('change'));
+	} else {
+    elemento.checked = true;
+  }
+}
+
+window.addEventListener('DOMContentLoaded', verificarDarkMode(localStorage.getItem('lightMode')));
+
+function alterarDarkMode() {
+	// Alterar o Background color do Body
+	let elemento = document.getElementById('corpo');
+	elemento.classList.toggle('background-dark');
+
+	// Alterar o Background color da tabela
+	elemento = document.getElementById('tableRisks');
+	elemento.classList.toggle('custom-bg');
+
+	// ALTERAR CORES DA FONTE //
+	// Alterar o Titulo
+	elemento = document.getElementById('title-menu');
+	elemento.classList.toggle('color-dark');
+
+	// Alterar o Sub-Titulo
+	elemento = document.getElementById('sub-title-menu');
+	elemento.classList.toggle('color-dark');
+
+	// Alterar a label dos filtros
+	elementos = document.getElementsByClassName('name-filter');
+  for (elemento of elementos) {
+    elemento.classList.toggle('color-dark');
+  }
+
+  // Alterar o campo de pesquisa Input
+	elemento = document.getElementById('selectRisk');
+  elemento.classList.toggle('background-dark-filter');
+
+  // Alterar o campo de pesquisa Select
+	elementos = document.getElementsByClassName('form-select');
+  for (elemento of elementos) {
+    elemento.classList.toggle('background-dark-filter');
+  } 
 }

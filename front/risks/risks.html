@@ -31,7 +31,7 @@
     <!-- Link css -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body id="corpo" class="transicao">
     <div class="container m-0 p-0 text-center principal">
       <div class="row m-0 p-0 h-100">
         <!-- Menu a esquerda -->
@@ -129,8 +129,8 @@
             <div class="col-md-12 m-0 p-0 superior-bar">
               <div class="row h-100 w-100 p-0 m-0">
                 <div class="col-md-6 p-0">
-                  <p class="m-0 pt-2 text-start title-menu">Riscos</p>
-                  <p class="m-0 pt-2 text-start sub-title-menu">
+                  <p class="m-0 pt-2 text-start title-menu transicao" id="title-menu">Riscos</p>
+                  <p class="m-0 pt-2 text-start sub-title-menu transicao" id="sub-title-menu">
                     Histórico de riscos registrados</span>
                   </p>
                 </div>
@@ -139,6 +139,9 @@
                     class="d-flex justify-content-end h-100 align-items-center"
                     id="profile"
                   >
+                    <span class="pe-3">
+                      <input onclick="salvarDarkMode(this.checked)" id="toggle" class="toggle dark" type="checkbox">
+                    </span>
                     <span class="pe-2 nome" id="testeNome"></span>
                     <img
                       src="../images/home/foto-perfil.png"
@@ -159,12 +162,12 @@
                     <div class="col h-100">
                       <div class="row h-50 w-100">
                         <div class="col d-flex align-items-center justify-content-center" >
-                          <label class="p-0 m-0 name-filter" for="selectRisk">Risco</label>
+                          <label class="p-0 m-0 name-filter transicao" for="selectRisk">Risco</label>
                         </div>
                       </div>
                       <div class="row h-50 w-100">
                         <div class="col d-flex align-items-center justify-content-center pe-0" >
-                          <input id="selectRisk" class="form-control" type="text" placeholder="Digite..." aria-label="default input example">
+                          <input id="selectRisk" class="form-control transicao" type="text" placeholder="Digite..." aria-label="default input example">
                         </div>
                       </div>
                     </div>
@@ -172,12 +175,12 @@
                     <div class="col h-100">
                       <div class="row h-50 w-100">
                         <div class="col d-flex align-items-center justify-content-center">
-                          <label class="p-0 m-0 name-filter" for="selectVehicle">Veículo</label>
+                          <label class="p-0 m-0 name-filter transicao" for="selectVehicle">Veículo</label>
                         </div>
                       </div>
                       <div class="row h-50 w-100">
                         <div class="col d-flex align-items-center justify-content-center pe-0">
-                          <select class="form-select" aria-label="Default select example" id="selectVehicle">
+                          <select class="form-select transicao" aria-label="Default select example" id="selectVehicle">
                             <option value="0" selected>Selecione</option>
                             <!-- Opções de Veículos -->
                           </select>
@@ -188,12 +191,12 @@
                     <div class="col h-100">
                       <div class="row h-50 w-100">
                         <div class="col d-flex align-items-center justify-content-center">
-                          <label class="p-0 m-0 name-filter" for="selectImpact">Impacto</label>
+                          <label class="p-0 m-0 name-filter transicao" for="selectImpact">Impacto</label>
                         </div>
                       </div>
                       <div class="row h-50 w-100">
                         <div class="col d-flex align-items-center justify-content-center pe-0">
-                          <select class="form-select" aria-label="Default select example" id="selectImpact">
+                          <select class="form-select transicao" aria-label="Default select example" id="selectImpact">
                             <option value="0" selected>Selecione</option>
                             <option value="1">Muito baixo</option>
                             <option value="2">Baixo</option>
@@ -208,12 +211,12 @@
                     <div class="col h-100">
                       <div class="row h-50 w-100">
                         <div class="col d-flex align-items-center justify-content-center">
-                          <label class="p-0 m-0 name-filter" for="selectMetier">Metier</label>
+                          <label class="p-0 m-0 name-filter transicao" for="selectMetier">Metier</label>
                         </div>
                       </div>
                       <div class="row h-50 w-100">
                         <div class="col d-flex align-items-center justify-content-center pe-0">
-                          <select class="form-select" aria-label="Default select example" id="selectMetier">
+                          <select class="form-select transicao" aria-label="Default select example" id="selectMetier">
                             <option value="0" selected>Selecione</option>
                             <!-- Opções de Metier -->
                           </select>
@@ -224,12 +227,12 @@
                     <div class="col h-100">
                       <div class="row h-50 w-100">
                         <div class="col d-flex align-items-center justify-content-center">
-                          <label class="p-0 m-0 name-filter" for="selectJalon">Jalón</ç>
+                          <label class="p-0 m-0 name-filter transicao" for="selectJalon">Jalón</ç>
                         </div>
                       </div>
                       <div class="row h-50 w-100">
                         <div class="col d-flex align-items-center justify-content-center pe-0">
-                          <select class="form-select" aria-label="Default select example" id="selectJalon">
+                          <select class="form-select transicao" aria-label="Default select example" id="selectJalon">
                             <option value="0" selected>Selecione</option>
                             <!-- Opções de Jalón -->
                           </select>
@@ -240,12 +243,12 @@
                     <div class="col h-100">
                       <div class="row h-50 w-100">
                         <div class="col d-flex align-items-center justify-content-center">
-                          <label class="p-0 m-0 name-filter" for="selectStatus">Status</ç>
+                          <label class="p-0 m-0 name-filter transicao" for="selectStatus">Status</ç>
                         </div>
                       </div>
                       <div class="row h-50 w-100">
                         <div class="col d-flex align-items-center justify-content-center pe-0">
-                          <select class="form-select" aria-label="Default select example" id="selectStatus">
+                          <select class="form-select transicao" aria-label="Default select example" id="selectStatus">
                             <option value="0" selected>Selecione</option>
                             <option value="1">Em aberto</option>
                             <option value="2">Solucionado</option>
@@ -265,17 +268,17 @@
               </div>
               <!-- Tabela de riscos -->
               <div class="w-100 py-4 px-3 h-100 box-sizing-content-box" id="containerTable" style="overflow: auto;">
-                <table class="table table-hover px-5" id="tableRisks">
+                <table class="table table-hover px-5 transicao" id="tableRisks">
                   <thead>
                     <tr>
-                      <th scope="col" class="col-1 text-center"></th>
-                      <th scope="col" class="col-4 text-start title">Risco</th>
-                      <th scope="col" class="col-2 text-center title">Veículo</th>
-                      <th scope="col" class="col-1 text-center title">Impacto</th>
-                      <th scope="col" class="col-1 text-center title">Metier</th>
-                      <th scope="col" class="col-1 text-center title">Jalón</th>
-                      <th scope="col" class="col-1 text-center title">Status</th>
-                      <th scope="col" class="col-1 text-center"></th>
+                      <th scope="col" class="col-1 text-center transicao"></th>
+                      <th scope="col" class="col-4 text-start title transicao">Risco</th>
+                      <th scope="col" class="col-2 text-center title transicao">Veículo</th>
+                      <th scope="col" class="col-1 text-center title transicao">Impacto</th>
+                      <th scope="col" class="col-1 text-center title transicao">Metier</th>
+                      <th scope="col" class="col-1 text-center title transicao">Jalón</th>
+                      <th scope="col" class="col-1 text-center title transicao">Status</th>
+                      <th scope="col" class="col-1 text-center transicao"></th>
                     </tr>
                   </thead>
                   <tbody class="text-start">
