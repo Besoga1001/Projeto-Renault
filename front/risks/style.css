@@ -110,7 +110,7 @@ tr:hover{
 /* Style  dark mode button */
 
 .toggle {
-  --size: 3rem;
+  --size: 2rem;
   --ray-size: calc(var(--size) * -0.4);
   --offset-orthogonal: calc(var(--size) * 0.65);
   --offset-diagonal: calc(var(--size) * 0.45);

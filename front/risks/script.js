@@ -18,13 +18,19 @@ async function coletarDados(){
 window.addEventListener('DOMContentLoaded', coletarDados);
 
 async function coletarVeiculos(){
-	const response  = await fetch('https://api-risk-manager-renault.onrender.com/Risk/filters_project');
+	const response  = await fetch('https://api-risk-manager-renault.onrender.com/risk/filters_project');
 	const dados = await response.json();
 	return dados;
 }
 
 async function coletarMetiers(){
-	const response  = await fetch('https://api-risk-manager-renault.onrender.com/Risk/filters_metier');
+	const response  = await fetch('https://api-risk-manager-renault.onrender.com/risk/filters_metier');
+	const dados = await response.json();
+	return dados;
+}
+
+async function coletarJalon(){
+	const response  = await fetch('https://api-risk-manager-renault.onrender.com/risk/filters_jalon');
 	const dados = await response.json();
 	return dados;
 }
@@ -110,10 +116,9 @@ function popularTabela(riscos) {
   
     // Incluir Atributo
     cellImage.setAttribute('scope', 'row');
-    linha.setAttribute('onclick', 'location.href="inicio2.html"');
-    linha.id = qtdLinhas+1;
+    linha.setAttribute('onclick', `location.href="../solucao/index.html?id=${risco.id}"`);
+    linha.id = risco.id;
   });
-
 }
 
 async function popularVeiculos(){
@@ -145,6 +150,21 @@ async function popularMetier(){
 }
 
 window.addEventListener('DOMContentLoaded', popularMetier);
+
+async function popularJalon(){
+  // Identificar qual o elemento a ter as informações inseridas
+  const elemento = document.getElementById("selectJalon")
+
+  // Puxar os dados que serão inseridos
+  const dados = await coletarJalon();
+
+  // Adicionar os elementos carregados na Select
+  for (let i = 0; i < dados.length; i++) {
+    addOption(elemento, i+1, dados[i]);
+  }
+}
+
+window.addEventListener('DOMContentLoaded', popularJalon);
 
 function coletarFiltros(){
   // Obter o valor do risco
