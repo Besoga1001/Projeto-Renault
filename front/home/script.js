@@ -113,7 +113,8 @@ async function popularTabela(){
 		// Definir os valores das variárveis
 		var image = risco.projeto.replace(" ", "");
 		var descricao = risco.descricaoRisco;
-		var dataFinal = risco.dataFinal;
+		var dataFinal = risco.dataFinalRisco;
+		dataFinal = formatISODateToDDMMYYYY(dataFinal);
 
 		
 		// Criar nova linha na memoria
@@ -147,6 +148,19 @@ async function popularTabela(){
 // Evento para rodar a função quando a página carregar
 window.addEventListener('DOMContentLoaded', popularTabela);
 
+function formatISODateToDDMMYYYY(isoDate) {
+	// Criar um objeto Date a partir da string ISO
+	const date = new Date(isoDate);
+
+	// Obter o dia, mês e ano
+	const day = String(date.getDate()).padStart(2, '0');
+	const month = String(date.getMonth() + 1).padStart(2, '0'); // Mês é 0-indexado
+	const year = date.getFullYear();
+
+	// Formatar a data no formato dd/mm/aaaa
+	return `${day}/${month}/${year}`;
+}
+
 function ajustarTamanhoContainerTable () {
   // Coletar o elemento do Container Table
   const containerTabela = document.getElementById("containerTable");
@@ -175,6 +189,8 @@ modo.addEventListener('change', () => {
   alterarDarkMode();
 });
 
+verificarDarkMode(localStorage.getItem('lightMode'));
+
 function verificarDarkMode(valor){	
   let elemento = document.getElementById('toggle');
   if (valor == 'false'){
@@ -185,7 +201,7 @@ function verificarDarkMode(valor){
   }
 }
 
-window.addEventListener('DOMContentLoaded', verificarDarkMode(localStorage.getItem('lightMode')));
+// window.addEventListener('DOMContentLoaded', verificarDarkMode(localStorage.getItem('lightMode')));
 
 function alterarDarkMode() {
 	// Alterar o Background color do Body

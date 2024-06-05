@@ -124,6 +124,7 @@ function popularTabela(riscos) {
 async function popularVeiculos(){
   // Identificar qual o elemento a ter as informações inseridas
   const elemento = document.getElementById("selectVehicle")
+  console.log(elemento);
 
   // Puxar os dados que serão inseridos
   const dados = await coletarVeiculos();
@@ -245,6 +246,22 @@ function addOption(elemento, valor, texto){
   option.textContent = texto;
   elemento.appendChild(option);
 }
+
+
+document.getElementById('formFilter').addEventListener('submit', function(event) {
+  event.preventDefault(); // Impede o comportamento padrão de envio do formulário
+});
+
+
+
+
+
+
+
+
+
+
+
 
 let modo = document.getElementById('toggle')
 
