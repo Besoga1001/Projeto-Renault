@@ -107,6 +107,10 @@ tr:hover{
   cursor: pointer;
 }
 
+.btn {
+  font-weight: 500;
+}
+
 /* Style  dark mode button */
 
 .toggle {

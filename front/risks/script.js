@@ -253,13 +253,13 @@ document.getElementById('formFilter').addEventListener('submit', function(event)
 });
 
 
+document.getElementById('download').addEventListener('mouseover', function() {
+  document.getElementById('download-icon').src = '../images/riscos/download-preto.png'; // Coloque o caminho da nova imagem aqui
+});
 
-
-
-
-
-
-
+document.getElementById('download').addEventListener('mouseout', function() {
+  document.getElementById('download-icon').src = '../images/riscos/download-amarelo.png';
+});
 
 
 
