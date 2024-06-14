@@ -32,56 +32,138 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Menu lateral -->
-    <nav class="nav flex-column h-100 ps-3 pe-4" style="max-width:300px; border: 2px solid green;">
-      <img
-        src="../images/renault/logo-com-nome-branco.png"
-        class="mt-5 mb-4 mx-auto"
-        alt="Logo Renault"
-        style="max-width: 185px;"
-      />
-      <!-- Menu Início -->
-      <!-- Parte superior -->
-      <div class="menu-top">
-        <ul class="p-0">
-          <li class="nav-item my-4 ms-3 align-items-center">
-            <img src="../images/menu-lateral/inicio-branco.png" alt="Ícone Home">
-            <a class="nav-link" href="../home/home.html">Inicio</a>
-          </li>
-          <!-- Menu Cadastro de risco -->
-          <li class="nav-item my-4 ms-3 align-items-center">
-            <img src="../images/menu-lateral/cadastro-risco-branco.png" alt="Ícone cadastro">
-            <a class="nav-link" href="../cad_risc/cdr.html">Cadastro de Risco</a>
-          </li>
-          <!-- Menu de histórico de riscos -->
-          <li class="nav-item my-4 ms-3 align-items-center">
-            <img src="../images/menu-lateral/riscos-branco.png" alt="">
-            <a class="nav-link" href="../risks/risks.html">Riscos</a>
-          </li>
-          <!-- Menu de Dashboard -->
-          <li class="nav-item my-4 ms-3 align-items-center">
-            <img src="../images/menu-lateral/dashboard-amarelo.png" alt="">
-            <a class="nav-link active" href="../dashboard/dashboard.html">Dashboard</a>
-          </li>
-        </ul>
+    <div class="d-flex h-100">
+      <!-- Menu lateral -->
+      <nav class="nav flex-column h-100 p-0 ps-4" style="width:325px">
+        <img
+          src="../images/renault/logo-com-nome-branco.png"
+          class="mt-5 mb-4 mx-auto"
+          alt="Logo Renault"
+          style="max-width: 185px;"
+        />
+        <!-- Menu Início -->
+        <!-- Parte superior -->
+        <div class="menu-top">
+          <ul class="p-0">
+            <li class="nav-item my-4 ms-3 align-items-center">
+              <img src="../images/menu-lateral/inicio-branco.png" alt="Ícone Home">
+              <a class="nav-link" href="../home/home.html">Inicio</a>
+            </li>
+            <!-- Menu Cadastro de risco -->
+            <li class="nav-item my-4 ms-3 align-items-center">
+              <img src="../images/menu-lateral/cadastro-risco-branco.png" alt="Ícone cadastro">
+              <a class="nav-link" href="../cad_risc/cdr.html">Cadastro de Risco</a>
+            </li>
+            <!-- Menu de histórico de riscos -->
+            <li class="nav-item my-4 ms-3 align-items-center">
+              <img src="../images/menu-lateral/riscos-branco.png" alt="">
+              <a class="nav-link" href="../risks/risks.html">Riscos</a>
+            </li>
+            <!-- Menu de Dashboard -->
+            <li class="nav-item my-4 ms-3 align-items-center">
+              <img src="../images/menu-lateral/dashboard-amarelo.png" alt="">
+              <a class="nav-link active" href="../dashboard/dashboard.html">Dashboard</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Parte inferior -->
+        <div class="mt-auto mb-4">
+          <ul class="p-0">
+            <!-- Menu Ajuda -->
+            <li class="nav-item my-4 ms-3 align-items-center">
+              <img src="../images/menu-lateral/ajuda_branco.png" alt="">
+              <a class="nav-link" href="#">Ajuda</a>
+            </li>
+            <!-- Menu Sair -->
+            <li class="nav-item my-4 ms-3 align-items-center">
+              <img src="../images/menu-lateral/sair-branco.png" alt="">
+              <a class="nav-link" href="../login/login.html">Sair</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Conteudo -->
+      <div class="container p-0 m-0 d-block" style="border: 2px solid red;">
+        <!-- Cabeçalho -->
+        <div id="cabecalho" class="row mx-5" style="border: 2px solid blue;">
+          <div class="col-md-6 p-0">
+            <p class="m-0 pt-2 text-start title-menu transicao" id="title-menu">Dashboard</p>
+            <p class="m-0 pt-2 text-start sub-title-menu transicao" id="sub-title-menu">
+              Análise dos riscos</span>
+            </p>
+          </div>
+          <div class="col-md-6 p-0">
+            <div
+              class="d-flex justify-content-end h-100 align-items-center"
+              id="profile"
+            >
+              <span class="pe-3">
+                <input onclick="salvarDarkMode(this.checked)" id="toggle" class="toggle dark" type="checkbox">
+              </span>
+              <span class="pe-2 nome" id="testeNome">Natasha </span>
+              <img
+                src="../images/home/foto-perfil.png"
+                alt="Foto de perfil"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Conteúdo -->
+        <div id="conteudo" class="row mx-5 pt-3" style="border: 2px solid brown;">
+          <!-- Cards -->
+          <div class="row m-0 p-0" style="border: 2px solid aqua;">
+            <!-- Card 1 -->
+            <div class="col p-0 pe-2">
+              <div class="card">
+                <div class="card-body text-center">
+                  <p class="card-title">Riscos Totais</p>
+                  <p class="card-text" id="valueCard1">40</p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col p-0 pe-2 ps-2">
+              <div class="card">
+                <div class="card-body text-center">
+                  <p class="card-title">Riscos da semana</p>
+                  <p class="card-text" id="valueCard2">20</p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col p-0 pe-2  ps-2">
+              <div class="card">
+                <div class="card-body text-center">
+                  <p class="card-title">Seus Riscos</p>
+                  <p class="card-text" id="valueCard3">5</p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col p-0 pe-2  ps-2">
+              <div class="card">
+                <div class="card-body text-center">
+                  <p class="card-title">Jalon mais impactado</p>
+                  <p class="card-text" id="valueCard4">ABPT</p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="col p-0 ps-2">
+              <div class="card">
+                <div class="card-body text-center">
+                  <p class="card-title">Metier com mais riscos</p>
+                  <p class="card-text" id="valueCard5">DEA-VD</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row m-0 p-0">
+            
+          </div>
+        </div>
       </div>
-
-      <!-- Parte inferior -->
-      <div class="mt-auto mb-4">
-        <ul class="p-0">
-          <!-- Menu Ajuda -->
-          <li class="nav-item my-4 ms-3 align-items-center">
-            <img src="../images/menu-lateral/ajuda_branco.png" alt="">
-            <a class="nav-link" href="#">Ajuda</a>
-          </li>
-          <!-- Menu Sair -->
-          <li class="nav-item my-4 ms-3 align-items-center">
-            <img src="../images/menu-lateral/sair-branco.png" alt="">
-            <a class="nav-link" href="../login/login.html">Sair</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    </div>
   </body>
   <!-- Script Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

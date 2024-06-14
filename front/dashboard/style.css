@@ -1,7 +1,6 @@
 /* Configurações gerais */
 
 :root {
-  --sombreamento: rgba(0, 0, 0, 0.30) 0px 2px 10px 0px;
   --poppins: 'Poppins', sans-serif;
   --roboto: 'Roboto', sans-serif;
 }
@@ -12,13 +11,8 @@ body {
   max-width: none;
 }
 
-.shadow-container {
-  box-shadow: var(--sombreamento);
-}
-
-.content-ajuda{
-  bottom: 0;
-	right: 0;
+.container{
+  max-width: none;
 }
 
 /* Menu */
@@ -51,4 +45,59 @@ ul li {
 ul li img{
   height: 22px;
   width: 22px;
+}
+
+/* Cabeçalho */
+#cabecalho {
+  height: 100px;
+}
+
+.sub-title-menu {
+  font-family: var(--roboto);
+  font-size: 17px;
+  color: #818181;
+}
+
+.title-menu{
+  font-family: var(--poppins);
+  font-size: 30px;
+  font-weight: 600;
+  color: #1A1A1A;
+}
+
+#profile{
+  font-family: var(--poppins);
+  font-size: 16px;
+  font-weight: 400;
+  color: #818181;
+}
+
+#profile img{
+  height: 40px;
+  width: 40px;
+}
+
+/* Conteudo */
+
+#conteudo{
+  height: calc(100% - 100px);
+}
+
+/* Cards */
+
+.card{
+  background-color: #FFB800;
+  border: none;
+  max-height: 150px;
+}
+
+.card-title{
+  font-family: var(--poppins);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.card-text {
+  font-size: 50px ;
+  font-weight: bold;
 }
