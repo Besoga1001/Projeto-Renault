@@ -21,19 +21,36 @@
 	right: 0;
 }
 
-/* Área Menu */
+/* Menu */
+nav{
+  background-color: #1a1a1a;
+}
 
-.text-menu {
+.nav-item{
   font-family: var(--poppins);
   font-size: 17px;
 }
 
-.menu-selected {
-  color:#FFB800;
+.nav-link {
+  color: #F0F0F0;
 }
 
-.menu-button {
-  cursor: pointer;
+.nav-link:hover {
+  color: #c0c0c0;
+}
+
+.active,
+.active:hover{
+  color: #FFB800;
+}
+
+ul li {
+  display: flex;
+}
+
+ul li img{
+  height: 22px;
+  width: 22px;
 }
 
 /* Cabeçalho */
@@ -122,6 +139,7 @@ td > img {
   height: 47px;
   width: 71px;
 }
+
 /* Style  dark mode button */
 
 .toggle {

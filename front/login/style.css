@@ -53,3 +53,13 @@ body,
 .btn:hover {
   background-color: #FFB80090;
 }
+
+#error {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-align: center; 
+  background-color: rgb(224, 0, 0); 
+  color: white; 
+  border-radius: 5px;
+}
