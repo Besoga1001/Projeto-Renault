@@ -11,16 +11,16 @@ body {
   max-width: none;
 }
 
-.container{
+.container {
   max-width: none;
 }
 
 /* Menu */
-nav{
+nav {
   background-color: #1a1a1a;
 }
 
-.nav-item{
+.nav-item {
   font-family: var(--poppins);
   font-size: 17px;
 }
@@ -34,7 +34,7 @@ nav{
 }
 
 .active,
-.active:hover{
+.active:hover {
   color: #FFB800;
 }
 
@@ -42,7 +42,7 @@ ul li {
   display: flex;
 }
 
-ul li img{
+ul li img {
   height: 22px;
   width: 22px;
 }
@@ -58,46 +58,139 @@ ul li img{
   color: #818181;
 }
 
-.title-menu{
+.title-menu {
   font-family: var(--poppins);
   font-size: 30px;
   font-weight: 600;
   color: #1A1A1A;
 }
 
-#profile{
+#profile {
   font-family: var(--poppins);
   font-size: 16px;
   font-weight: 400;
   color: #818181;
 }
 
-#profile img{
+#profile img {
   height: 40px;
   width: 40px;
 }
 
 /* Conteudo */
 
-#conteudo{
+#conteudo {
   height: calc(100% - 100px);
 }
 
 /* Cards */
 
-.card{
+#containerCard {
+  background-color: aqua;
+  max-height: 145px;
+}
+
+.card {
   background-color: #FFB800;
   border: none;
   max-height: 150px;
 }
 
-.card-title{
+.card-title {
   font-family: var(--poppins);
   font-size: 18px;
   font-weight: 500;
 }
 
 .card-text {
-  font-size: 50px ;
+  font-size: 50px;
   font-weight: bold;
+}
+
+/* Graficos */
+
+#containerAreaGraficos{
+  height: calc(100% - 141px);
+}
+
+.paragrafo-grafico{
+  height: 30px;
+  color: white;
+}
+
+.container-grafico {
+  height: calc(100% - 30px); 
+  width: 100%;
+}
+
+.area-grafico{
+  background-color: brown;
+  margin: auto;
+  height: 90%;
+  width: 98%;
+}
+
+/* Style  dark mode button */
+
+.toggle {
+  --size: 2rem;
+  --ray-size: calc(var(--size) * -0.4);
+  --offset-orthogonal: calc(var(--size) * 0.65);
+  --offset-diagonal: calc(var(--size) * 0.45);
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  width: var(--size);
+  height: var(--size);
+  box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
+  border-radius: 999px;
+  color: #a2a2e0;
+  transition: all 500ms;
+  opacity: 1 !important;
+  position: revert !important;
+  pointer-events: revert !important;
+}
+
+.toggle:checked {
+  transform: scale(0.75);
+  color: rgb(243, 228, 14);
+  box-shadow: inset 0 0 0 var(--size),
+    calc(var(--offset-orthogonal) * -1) 0 0 var(--ray-size),
+    var(--offset-orthogonal) 0 0 var(--ray-size),
+    0 calc(var(--offset-orthogonal) * -1) 0 var(--ray-size),
+    0 var(--offset-orthogonal) 0 var(--ray-size),
+    calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1) 0 var(--ray-size),
+    var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size),
+    calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size),
+    var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
+}
+
+/* Style dark */
+
+.transicao {
+  transition: 0.9s;
+}
+
+.background-dark {
+  background-color: #1a1a1a;
+}
+
+.color-dark {
+  color: #ECECEC !important;
+}
+
+.border-dark {
+  box-shadow: 0px 0px 0px 0px;
+  border: 2px solid #747474 !important;
+}
+
+.custom-bg th,
+.custom-bg td {
+  background-color: #1a1a1a;
+  /* Aplicar a cor de fundo às células */
+  color: #BBBBBB !important;
+}
+
+.custom-bg {
+  --bs-table-hover-bg: #343434;
 }

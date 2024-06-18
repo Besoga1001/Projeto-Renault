@@ -83,9 +83,9 @@
         </div>
       </nav>
       <!-- Conteudo -->
-      <div class="container p-0 m-0 d-block" style="border: 2px solid red;">
+      <div class="container p-0 m-0 d-block">
         <!-- Cabeçalho -->
-        <div id="cabecalho" class="row mx-5" style="border: 2px solid blue;">
+        <div id="cabecalho" class="row mx-5">
           <div class="col-md-6 p-0">
             <p class="m-0 pt-2 text-start title-menu transicao" id="title-menu">Dashboard</p>
             <p class="m-0 pt-2 text-start sub-title-menu transicao" id="sub-title-menu">
@@ -100,7 +100,7 @@
               <span class="pe-3">
                 <input onclick="salvarDarkMode(this.checked)" id="toggle" class="toggle dark" type="checkbox">
               </span>
-              <span class="pe-2 nome" id="testeNome">Natasha </span>
+              <span class="pe-2 nome"></span>
               <img
                 src="../images/home/foto-perfil.png"
                 alt="Foto de perfil"
@@ -111,7 +111,7 @@
         <!-- Conteúdo -->
         <div id="conteudo" class="row mx-5 pt-3" style="border: 2px solid brown;">
           <!-- Cards -->
-          <div class="row m-0 p-0" style="border: 2px solid aqua;">
+          <div class="row m-0 p-0" id="containerCard">
             <!-- Card 1 -->
             <div class="col p-0 pe-2">
               <div class="card">
@@ -158,8 +158,48 @@
               </div>
             </div>
           </div>
-          <div class="row m-0 p-0">
-            
+          <!-- Conteudo -->
+          <div class="row m-0 p-0" id="containerAreaGraficos" style="border: 2px solid blueviolet;">
+            <div class="row m-0 p-0" style="background-color: black;">
+              <!-- Gráfico 1 -->
+              <div class="col m-0 p-0">
+                <p class="m-0 paragrafo-grafico">Gráfico 1</p>
+                <div class="d-flex container-grafico">
+                  <div class="area-grafico">
+
+                  </div>
+                </div>
+              </div>
+              <!-- Gráfico 2 -->
+              <div class="col m-0 p-0">
+                <p class="m-0 paragrafo-grafico">Gráfico 2</p>
+                <div class="d-flex container-grafico">
+                  <div class="area-grafico">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Gráfico 3 -->
+            <div class="row m-0 p-0" style="background-color: black;">
+              <div class="col m-0 p-0">
+                <p class="m-0 paragrafo-grafico">Gráfico 3</p>
+                <div class="d-flex container-grafico">
+                  <div class="area-grafico">
+
+                  </div>
+                </div>
+              </div>
+              <!-- Gráfico 4 -->
+              <div class="col m-0 p-0">
+                <p class="m-0 paragrafo-grafico">Gráfico 4</p>
+                <div class="d-flex container-grafico">
+                  <div class="area-grafico">
+
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
