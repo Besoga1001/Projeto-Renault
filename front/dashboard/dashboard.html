@@ -12,7 +12,6 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    
 
     <!-- Link Fonte Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,6 +26,9 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Link Chart.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- Link css -->
     <link rel="stylesheet" href="style.css" />
@@ -109,7 +111,7 @@
           </div>
         </div>
         <!-- Conteúdo -->
-        <div id="conteudo" class="row mx-5 pt-3" style="border: 2px solid brown;">
+        <div id="conteudo" class="row mx-5 pt-3">
           <!-- Cards -->
           <div class="row m-0 p-0" id="containerCard">
             <!-- Card 1 -->
@@ -159,14 +161,14 @@
             </div>
           </div>
           <!-- Conteudo -->
-          <div class="row m-0 p-0" id="containerAreaGraficos" style="border: 2px solid blueviolet;">
-            <div class="row m-0 p-0" style="background-color: black;">
+          <div class="row m-0 p-0" id="containerAreaGraficos">
+            <div class="row m-0 p-0">
               <!-- Gráfico 1 -->
               <div class="col m-0 p-0">
                 <p class="m-0 paragrafo-grafico">Gráfico 1</p>
                 <div class="d-flex container-grafico">
                   <div class="area-grafico">
-
+                    <canvas id="grafico1"></canvas>
                   </div>
                 </div>
               </div>
@@ -175,18 +177,18 @@
                 <p class="m-0 paragrafo-grafico">Gráfico 2</p>
                 <div class="d-flex container-grafico">
                   <div class="area-grafico">
-
+                    <canvas id="grafico2"></canvas>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- Gráfico 3 -->
-            <div class="row m-0 p-0" style="background-color: black;">
+            <div class="row m-0 p-0">
+              <!-- Gráfico 3 -->
               <div class="col m-0 p-0">
                 <p class="m-0 paragrafo-grafico">Gráfico 3</p>
                 <div class="d-flex container-grafico">
                   <div class="area-grafico">
-
+                    <canvas id="grafico3"></canvas>
                   </div>
                 </div>
               </div>
@@ -195,7 +197,7 @@
                 <p class="m-0 paragrafo-grafico">Gráfico 4</p>
                 <div class="d-flex container-grafico">
                   <div class="area-grafico">
-
+                    <canvas id="grafico4"></canvas>
                   </div>
                 </div>
               </div>
