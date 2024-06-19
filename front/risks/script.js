@@ -1,4 +1,5 @@
 let todosRegistros;
+var listaId = [];
 
 var arrayFiltro = {
   'descricaoRisco': '', 
@@ -68,6 +69,9 @@ window.addEventListener('resize', ajustarTamanhoContainerTable);
 window.addEventListener('DOMContentLoaded', ajustarTamanhoContainerTable);
 
 function popularTabela(riscos) {
+  // Resetar o array
+  listaId = []
+
   // Incluir cada risco em uma linha da tabela
   riscos.forEach(risco => {
     // Definir os valores das variárveis
@@ -118,13 +122,16 @@ function popularTabela(riscos) {
     cellImage.setAttribute('scope', 'row');
     linha.setAttribute('onclick', `location.href="../solucao/index.html?id=${risco.id}"`);
     linha.id = risco.id;
-  });
+
+    // Adicionar o ID da linha na variável
+    listaId.push(risco.id);
+  })
+  console.log(listaId);
 }
 
 async function popularVeiculos(){
   // Identificar qual o elemento a ter as informações inseridas
   const elemento = document.getElementById("selectVehicle")
-  console.log(elemento);
 
   // Puxar os dados que serão inseridos
   const dados = await coletarVeiculos();
@@ -252,7 +259,13 @@ document.getElementById('formFilter').addEventListener('submit', function(event)
   event.preventDefault(); // Impede o comportamento padrão de envio do formulário
 });
 
+document.getElementById('download').addEventListener('mouseover', function() {
+  document.getElementById('download-icon').src = '../images/riscos/download-preto.png';
+});
 
+document.getElementById('download').addEventListener('mouseout', function() {
+  document.getElementById('download-icon').src = '../images/riscos/download-amarelo.png';
+});
 
 
 
