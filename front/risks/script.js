@@ -272,10 +272,83 @@ document.getElementById('download').addEventListener('mouseout', function() {
 
 
 
+// DOwnload CSV
+
+document.getElementById('download').addEventListener('click', function() {
+  // Exemplo de chamada à API para obter dados JSON
+  fetch('https://api-risk-manager-renault.onrender.com/risk/getAll')
+      .then(response => response.json())
+      .then(data => {
+
+        const datateste = [
+              {
+                  "carro": "Toyota Corolla",
+                  "peca_estragada": "Bateria",
+                  "data": "2023-01-15"
+              },
+              {
+                  "carro": "Honda Civic",
+                  "peca_estragada": "Freios",
+                  "data": "2023-02-20"
+              },
+              {
+                  "carro": "Ford Focus",
+                  "peca_estragada": "Suspensão",
+                  "data": "2023-03-10"
+              },
+              {
+                  "carro": "Chevrolet Cruze",
+                  "peca_estragada": "Radiador",
+                  "data": "2023-04-05"
+              }
+          ];
+
+
+          console.log('pronto para ir pro CSV');          
+          const csv = convertToCSV(datateste);
+          console.log('pronto para ir pro download');
+          downloadCSV(csv, 'relatorio.csv');
+      })
+      .catch(error => console.error('Erro ao obter dados:', error));
+});
+
+function convertToCSV(objArray) {
+  const array = Array.isArray(objArray) ? objArray : [objArray];
+  const headers = Object.keys(array[0]);
+
+  const csvRows = [];
+  // Adicionar cabeçalhos
+  csvRows.push(headers.join(';'));
+
+  // Adicionar dados
+  for (const row of array) {
+      const values = headers.map(header => {
+          const escaped = ('' + row[header]).replace(/"/g, '\\"');
+          return `"${escaped}"`;
+      });
+      csvRows.push(values.join(';'));
+  }
+
+  return csvRows.join('\n');
+}
+
+function downloadCSV(csv, filename) {
+  const BOM = '\uFEFF'; // Byte Order Mark
+  const csvBlob = new Blob([BOM + csv], { type: 'text/csv;charset=utf-8;' });
+  const url = window.URL.createObjectURL(csvBlob);
+  const a = document.createElement('a');
+  a.setAttribute('hidden', '');
+  a.setAttribute('href', url);
+  a.setAttribute('download', filename);
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
 
 
 
 
+// Dark - mode
 let modo = document.getElementById('toggle')
 
 modo.addEventListener('change', () => {
