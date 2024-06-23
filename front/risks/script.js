@@ -99,7 +99,7 @@ async function popularTabela() {
   
     // Incluir Atributo
     cellImage.setAttribute('scope', 'row');
-    linha.setAttribute('onclick', 'location.href="inicio2.html"');
+    linha.setAttribute('onclick', 'location.href="../editar_risco/index.html"');
     linha.id = qtdLinhas+1;
   });
 

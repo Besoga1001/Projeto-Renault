@@ -1,0 +1,199 @@
+body{
+  background-color: #FCFCFB;
+  height: 100vh;
+}
+
+/*HEADER*/
+  
+header{
+  font-family: Poppins, Arial;
+  padding-top: 30px;
+}
+
+h1{
+  font-weight: 600;
+}
+
+p{
+  color: #818181;
+}
+
+span{
+  font-weight: 500;
+  color: #818181;
+}
+
+.fotoPerfil{
+  margin-left: 5px;
+}
+
+/*FORMULARIO*/
+
+label{
+  font-size: 18px;
+  font-family: Roboto, Arial;
+}
+
+a{
+  text-decoration: none;
+}
+
+.input{
+  height: 45px;
+  margin-bottom: 40px;
+  color: #818181;
+  font-size: 17px;
+  font-family: Roboto, Arial;
+  background-color: #ECECEC;
+  border: rgba(0, 0, 0, 0.164) 1px solid;
+  transition-duration: 0.2s;
+}
+
+#jalon, #impactoConsequencia, #metier{
+  margin-bottom: 20px;
+}
+
+/* ACESSAR SOLUÇÃO */
+
+.irSolucao span{
+  margin-right: 10px;
+  font-family: Poppins, Arial;
+  font-size: 18px;
+  color: #FFB800;
+}
+
+.irSolucao img{
+  height: 17px;
+}
+
+/* BOTOES */
+
+.btnEdit{
+  height: 50px;
+  width: 120px;
+  background-color: transparent;
+  border: #FFB800 2px solid;
+  border-radius: 4px;
+  transition-duration: 0.2s;
+}
+
+.btnEdit span{
+  color: #FFB800;
+  font-family: Poppins, Arial;
+  font-weight: 500;
+}
+
+.icone{
+  margin-right: 8px;
+}
+
+.btnSolu{
+  height: 50px;
+  width: 120px;
+  margin-left: 10px;
+  padding: 2px;
+  background-color: #FDECC1;
+  border: none;
+  border-radius: 4px;
+  transition-duration: 0.2s;
+}
+
+.btnSolu span{
+  color: #D89C00;
+  font-family: Poppins, Arial;
+  font-weight: 500;
+}
+
+.icone2{
+  margin-right: 5px;
+  margin-left: 10px;
+}
+
+.btnSave{
+  height: 50px;
+  width: 190px;
+  margin-left: 10px;
+  background-color: #FFB800;
+  color: #1A1A1A;
+  border: none;
+  border-radius: 4px;
+  font-family: Poppins, Arial;
+  font-weight: 500;
+  transition-duration: 0.2s;
+}
+
+.btnVoltar span{
+  font-family: Poppins, Arial;
+  font-size: 18px;
+  color: #FFB800;
+  margin-left: 10px;
+  transition-duration: 0.2s;
+}
+
+.btnVoltar img{
+  height: 17px;
+}
+
+.btnEdit:hover{
+  background-color: #fad4732a;
+  border: 2px solid #fad4732a;
+  color: #fad473;
+}
+
+.btnSolu:hover{
+  background-color: #faeed1dc;
+  color: #e9bc4bd3;
+  text-decoration: none;
+}
+
+.btnSave:hover{
+  background-color: #ffb700bc;
+  color: #1a1a1ae7;
+}
+
+.btnVoltar:hover, .irSolucao:hover{
+  text-decoration: none;
+}
+
+.input:focus {
+  background-color: transparent;
+  box-shadow: none;
+  border: 1px solid rgba(61, 61, 61, 0.616);
+}
+
+.btnSolu:focus, .btnEdit:focus, .btnSave:focus {
+  outline: none;
+}
+
+/* MENU */
+nav{
+  background-color: #1a1a1a;
+}
+
+.nav-item{
+  font-family: Poppins, Arial;
+  font-size: 17px;
+  margin-left: 25px;
+}
+
+.nav-link {
+  color: #F0F0F0;
+}
+
+.nav-link:hover {
+  color: #c0c0c0;
+}
+
+.active,
+.active:hover{
+  color: #FFB800;
+}
+
+ul li {
+  display: flex;
+}
+
+ul li img{
+  height: 22px;
+  width: 22px;
+}

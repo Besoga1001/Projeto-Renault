@@ -9,7 +9,7 @@ function substituirNomeUsuario() {
   var nome = coletarNomeUsuario();
 
   // Selecionar todos os elementos com a classe 'nome'
-  var elementos = document.querySelectorAll(".nome");
+  var elementos = document.querySelectorAll("nome");
 
   // Substituir o texto dentro de cada elemento pelo nome
   elementos.forEach(function(elemento) {
