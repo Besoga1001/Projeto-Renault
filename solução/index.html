@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solução</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="modal"></div>
+        <div style="text-align: end;
+        margin-right: 20px;" class="cabeçalho">
+            <div class="headinginfo">
+                <div class="infoonhead">
+                    <div class="cadastrarrisco">
+                        <h1>Solução</h1>
+                    </div>
+                    <p>Certifique-se de preencher todas as informações.</p>
+                </div>
+                <a href="https://www.youtube.com/watch?v=HZli8pArLSE" target="_blank">
+                    <div class="perfil">
+                        <p>Seu Perfil</p>
+                        <div class="imagem"><img style="width: 30px;" height="30px" margin-left: 5px; src="foto-perfil.png" alt="img foto do pefil"></div>
+                    </div>
+                </a>
+            </div>
+         </div>
+        <div class="principal">
+            <div class = "formulario">
+                <div class="linha1">
+                    <div class="descrisco">
+                        <p>Estratégia</p>
+                        <label for="imsg">
+                            <select class="select" name="Risk" id="Risco">
+                                <option value="Selecione" selected class="escrita">Selecione Uma Opção</option>
+                                <option value="acc">Accept</option>
+                                <option value="avo">Avoid</option>
+                                <option value="mit">Mitigate</option>
+                                <option value="trans">Transfer</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div>
+                        <p>Probabilidade Residual</p>
+                        <label for="imsg">
+                            <select class="select" name="Risk" id="Risco">
+                                <option value="Selecione" selected class="escrita">Selecione Uma Opção</option>
+                                <option value="hi">High</option>
+                                <option value="low">Low</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div>
+                        <p>Impacto Residual</p>
+                        <label for="imsg">
+                            <select  class="select" name="Probabilidade" id="Prob">
+                                <option value="Selecione" selected class="escrita">Selecione Uma Opção</option>
+                                <option value="L">Low</option>
+                                <option value="Med">Medium</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <div class="linha2">
+                    <div>
+                        <p>Validação da Ação</p>
+                        <label for="imsg">
+                            <select class="select" name="area resp" id="aresp">
+                                <option value="Selecione" selected class="escrita">Selecione Uma Opção</option>
+                                <option value="dnay">Does Not Apply Yet</option>
+                                <option value="res">Resolved</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div>
+                        <p>Validação do Risco</p>
+                        <label for="imsg">
+                            <select class="select" name="Classificação do risco" id="cla-risc">
+                                <option value="Selecione" selected>Selecione Uma Opção</option>
+                                <option value="prob">Problem</option>
+                                <option value="resol">Resolved</option>
+                        </select>
+                        </label>
+                    </div>
+                    <div>
+                        <p>Data do Alerta</p>
+                        <input class="select2" type="datetime-local" placeholder="DD/MM/AAAA">
+                    </div>
+                </div>
+                    <div class="linha3">
+                        <div class="name">
+                            <p>Nome do Piloto</p>
+                            <label for="imsg">
+                                <input class="nomepiloto" type="text" placeholder="Digite o nome do piloto">
+                            </label>
+                        </div>
+                        <div class="switchinput">
+                            <div class="idpilot">
+                            <p>ID do Piloto</p>
+                            <label for="imsg">
+                                <input class="id" type="text" placeholder="ID">
+                            </label>
+                            </div>
+                            <div class="switch">
+                                <P class="cap">Capitalização</P>
+                                <label class="switch">
+                                <input type="checkbox" onclick="toggleSwitch()">
+                                <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="actplan">
+                        <p>Inicio do Plano de ação</p>
+                            <label for="imsg">
+                                <input class="select2" type="datetime-local" placeholder="DD/MM/AAAA">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="linha4">
+                        <div class="impcons">
+                            <label class="ação" for="imsg">Ação</label><br>
+                            <textarea class="input" name="comments" id=""></textarea>
+                        </div>
+                        <div class="jalon">
+                        <p class="Comentário">Comentário</p>
+                        <label for="jalon">
+                            <textarea class="input" name="comments" id=""></textarea>
+                        </label>
+                        </div>
+                        <div class="metier">
+                        <p>Data da Resolução</p>
+                        <label for="imsg">
+                            <input class="select2" type="datetime-local" placeholder="DD/MM/AAAA">
+                        </label>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <a href="https://www.youtube.com/watch?v=XXYlFuWEuKI" target="_blank"><button class="button">CADASTRAR </button></a>
+                    </div>
+            </div>
+        </div>
+       
+    </div>
+</body>
+</html>

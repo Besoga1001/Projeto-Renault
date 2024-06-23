@@ -113,7 +113,8 @@ async function popularTabela(){
 		// Definir os valores das variárveis
 		var image = risco.projeto.replace(" ", "");
 		var descricao = risco.descricaoRisco;
-		var dataFinal = risco.dataFinal;
+		var dataFinal = risco.dataFinalRisco;
+		dataFinal = formatISODateToDDMMYYYY(dataFinal);
 
 		
 		// Criar nova linha na memoria
@@ -132,7 +133,10 @@ async function popularTabela(){
 		cellData.innerHTML = dataFinal;
 
 		// Incluir classe
-		cellRisco.className = "text-start";
+		cellRisco.className = 'text-start transicao';
+		linha.className = 'transicao';
+		cellImage.className = 'transicao';
+		cellData.className = 'transicao';
 
 		// Incluir Atributo
 		cellImage.setAttribute('scope', 'row');
@@ -143,6 +147,19 @@ async function popularTabela(){
 
 // Evento para rodar a função quando a página carregar
 window.addEventListener('DOMContentLoaded', popularTabela);
+
+function formatISODateToDDMMYYYY(isoDate) {
+	// Criar um objeto Date a partir da string ISO
+	const date = new Date(isoDate);
+
+	// Obter o dia, mês e ano
+	const day = String(date.getDate()).padStart(2, '0');
+	const month = String(date.getMonth() + 1).padStart(2, '0'); // Mês é 0-indexado
+	const year = date.getFullYear();
+
+	// Formatar a data no formato dd/mm/aaaa
+	return `${day}/${month}/${year}`;
+}
 
 function ajustarTamanhoContainerTable () {
   // Coletar o elemento do Container Table
@@ -163,3 +180,61 @@ function ajustarTamanhoContainerTable () {
 // Evento para quando alterar o tamanho da tela ajustar o tamanho do container
 window.addEventListener('resize', ajustarTamanhoContainerTable);
 window.addEventListener('DOMContentLoaded', ajustarTamanhoContainerTable);
+
+
+
+let modo = document.getElementById('toggle')
+
+modo.addEventListener('change', () => {
+  alterarDarkMode();
+});
+
+verificarDarkMode(localStorage.getItem('lightMode'));
+
+function verificarDarkMode(valor){	
+  let elemento = document.getElementById('toggle');
+  if (valor == 'false'){
+    elemento.checked = false;
+    elemento.dispatchEvent(new Event('change'));
+	} else {
+    elemento.checked = true;
+  }
+}
+
+// window.addEventListener('DOMContentLoaded', verificarDarkMode(localStorage.getItem('lightMode')));
+
+function alterarDarkMode() {
+	// Alterar o Background color do Body
+	let elemento = document.getElementById('corpo');
+	elemento.classList.toggle('background-dark');
+
+	// Alterar o Background color da tabela
+	elemento = document.getElementById('tbVeiculos');
+	elemento.classList.toggle('custom-bg');
+
+	// ALTERAR CORES DA FONTE //
+	// Alterar o Bem Vindo
+	elemento = document.getElementById('welcomeUser');
+	elemento.classList.toggle('color-dark');
+
+	// Alterar o Bem Vindo
+	elemento = document.getElementById('welcome');
+	elemento.classList.toggle('color-dark');
+
+	// Alterar parágrafo de Risco Recente
+	elemento = document.querySelector('#containerGrafico p');
+	elemento.classList.toggle('color-dark');
+
+	// Alterar Legenda tabela
+	elemento = document.getElementById('tableLegend');
+	elemento.classList.toggle('color-dark');
+
+	// ALTERAR BORDAS DAS DIVS
+	// Alterar borda dos riscos
+	elemento = document.getElementById('grafico');
+	elemento.classList.toggle('border-dark');
+
+	// Alterar borda dos riscos
+	elemento = document.getElementById('containerInfoTable');
+	elemento.classList.toggle('border-dark');
+}

@@ -1,17 +1,37 @@
+let todosRegistros;
+var listaId = [];
+
+var arrayFiltro = {
+  'descricaoRisco': '', 
+  'projeto': 'Selecione',
+  'impacto': 'Selecione',
+  'metier': 'Selecione',
+  'jalonAfetado': 'Selecione',
+  'status': 'Selecione',
+};
+
 async function coletarDados(){
 	const response  = await fetch('https://api-risk-manager-renault.onrender.com/risk/getAll');
-	const dados = await response.json();
-	return dados;
+	todosRegistros = await response.json();
+  popularTabela(todosRegistros);
 }
 
+window.addEventListener('DOMContentLoaded', coletarDados);
+
 async function coletarVeiculos(){
-	const response  = await fetch('https://api-risk-manager-renault.onrender.com/Risk/filters_project');
+	const response  = await fetch('https://api-risk-manager-renault.onrender.com/risk/filters_project');
 	const dados = await response.json();
 	return dados;
 }
 
 async function coletarMetiers(){
-	const response  = await fetch('https://api-risk-manager-renault.onrender.com/Risk/filters_metier');
+	const response  = await fetch('https://api-risk-manager-renault.onrender.com/risk/filters_metier');
+	const dados = await response.json();
+	return dados;
+}
+
+async function coletarJalon(){
+	const response  = await fetch('https://api-risk-manager-renault.onrender.com/risk/filters_jalon');
 	const dados = await response.json();
 	return dados;
 }
@@ -48,8 +68,9 @@ function ajustarTamanhoContainerTable () {
 window.addEventListener('resize', ajustarTamanhoContainerTable);
 window.addEventListener('DOMContentLoaded', ajustarTamanhoContainerTable);
 
-async function popularTabela() {
-  const riscos = await coletarDados();
+function popularTabela(riscos) {
+  // Resetar o array
+  listaId = []
 
   // Incluir cada risco em uma linha da tabela
   riscos.forEach(risco => {
@@ -88,23 +109,295 @@ async function popularTabela() {
     cellAcessar.innerHTML = `<img src="../images/riscos/acessar_risco.png" alt="Ícone de acessar risco"></img>`
   
     // Incluir classe
-    cellImage.className = "text-center";
-    cellDescricao.className = "align-middle";
-    cellVeiculo.className = "secondary-color align-middle text-center";
-    cellImpacto.className = "secondary-color align-middle text-center";
-    cellMetier.className = "secondary-color align-middle text-center";
-    cellJalon.className = "secondary-color align-middle text-center";
-    cellStatus.className = "secondary-color align-middle text-center";
-    cellAcessar.className = "align-middle text-end pe-4"
+    cellImage.className = "text-center transicao";
+    cellDescricao.className = "align-middle transicao";
+    cellVeiculo.className = "secondary-color align-middle text-center transicao";
+    cellImpacto.className = "secondary-color align-middle text-center transicao";
+    cellMetier.className = "secondary-color align-middle text-center transicao";
+    cellJalon.className = "secondary-color align-middle text-center transicao";
+    cellStatus.className = "secondary-color align-middle text-center transicao";
+    cellAcessar.className = "align-middle text-end pe-4 transicao"
   
     // Incluir Atributo
     cellImage.setAttribute('scope', 'row');
-    linha.setAttribute('onclick', 'location.href="../editar_risco/index.html"');
-    linha.id = qtdLinhas+1;
+    linha.setAttribute('onclick', `location.href="../solucao/index.html?id=${risco.id}"`);
+    linha.id = risco.id;
+
+    // Adicionar o ID da linha na variável
+    listaId.push(risco.id);
+  })
+  console.log(listaId);
+}
+
+async function popularVeiculos(){
+  // Identificar qual o elemento a ter as informações inseridas
+  const elemento = document.getElementById("selectVehicle")
+
+  // Puxar os dados que serão inseridos
+  const dados = await coletarVeiculos();
+
+  // Adicionar os elementos carregados na Select
+  for (let i = 0; i < dados.length; i++) {
+    addOption(elemento, i+1, dados[i]);
+  }
+}
+
+window.addEventListener('DOMContentLoaded', popularVeiculos);
+
+async function popularMetier(){
+  // Identificar qual o elemento a ter as informações inseridas
+  const elemento = document.getElementById("selectMetier")
+
+  // Puxar os dados que serão inseridos
+  const dados = await coletarMetiers();
+
+  // Adicionar os elementos carregados na Select
+  for (let i = 0; i < dados.length; i++) {
+    addOption(elemento, i+1, dados[i]);
+  }
+}
+
+window.addEventListener('DOMContentLoaded', popularMetier);
+
+async function popularJalon(){
+  // Identificar qual o elemento a ter as informações inseridas
+  const elemento = document.getElementById("selectJalon")
+
+  // Puxar os dados que serão inseridos
+  const dados = await coletarJalon();
+
+  // Adicionar os elementos carregados na Select
+  for (let i = 0; i < dados.length; i++) {
+    addOption(elemento, i+1, dados[i]);
+  }
+}
+
+window.addEventListener('DOMContentLoaded', popularJalon);
+
+function coletarFiltros(){
+  // Obter o valor do risco
+  let risco = document.getElementById("selectRisk").value;
+
+  // Obter valor do Veículo
+  let veiculo = devolverValorSelect("selectVehicle");
+
+  // Obter valor do Impacto
+  let impacto = devolverValorSelect("selectImpact");
+
+  // Obter valor do Metier
+  let metier = devolverValorSelect("selectMetier");
+
+  // Obter valor do Metier
+  let jalon = devolverValorSelect("selectJalon");
+
+  // Obter valor do Metier
+  let status = devolverValorSelect("selectStatus");
+
+  arrayFiltro.descricaoRisco = risco;
+  arrayFiltro.projeto = veiculo;
+  arrayFiltro.impacto = impacto;
+  arrayFiltro.metier = metier;
+  arrayFiltro.jalonAfetado = jalon;
+  arrayFiltro.status = status;
+  filtrarResultados(arrayFiltro);
+}
+
+function filtrarResultados(filtros){
+  // Copiar dados do risco
+  let riscosFiltrados = todosRegistros;
+
+  // Verificar se tem algum elemento diferente de Vazio ou "selecione" nos filtros
+  for (var chave in filtros) {
+    if (filtros.hasOwnProperty(chave)) {
+      if (filtros[chave] !== '' && filtros[chave] !== 'Selecione'){
+        // Verificar quais os resultados que tem o filtro selecionado
+        if (chave === 'descricaoRisco') {
+          riscosFiltrados = riscosFiltrados.filter((valorAtual) => {
+            return valorAtual.descricaoRisco.includes(filtros[chave]);
+          })
+        } else {
+          riscosFiltrados = riscosFiltrados.filter((valorAtual) => {
+            return valorAtual[chave] == filtros[chave];
+          })
+        }
+      };
+    }
+  }
+  limparTabela();
+  popularTabela(riscosFiltrados);
+}
+
+function limparTabela(){
+  var tabela = document.querySelectorAll('#tableRisks tbody');
+
+  // Itera sobre todos os elementos tbody encontrados
+  tabela.forEach(function(tbody) {
+      // Limpa todas as linhas dentro do tbody
+      while (tbody.firstChild) {
+          tbody.removeChild(tbody.firstChild);
+      }
   });
 
 }
 
-window.addEventListener('DOMContentLoaded', popularTabela);
+function devolverValorSelect(nomeId){
+  let elemento = document.getElementById(nomeId);
+  let valor = elemento.selectedIndex;
+  valor = elemento.options[valor].text
+  return valor
+}
 
-console.log(coletarVeiculos());
+function addOption(elemento, valor, texto){
+  const option = document.createElement("option");
+  option.value = valor;
+  option.textContent = texto;
+  elemento.appendChild(option);
+}
+
+
+document.getElementById('formFilter').addEventListener('submit', function(event) {
+  event.preventDefault(); // Impede o comportamento padrão de envio do formulário
+});
+
+document.getElementById('download').addEventListener('mouseover', function() {
+  document.getElementById('download-icon').src = '../images/riscos/download-preto.png';
+});
+
+document.getElementById('download').addEventListener('mouseout', function() {
+  document.getElementById('download-icon').src = '../images/riscos/download-amarelo.png';
+});
+
+
+
+
+
+
+// DOwnload CSV
+
+document.getElementById('download').addEventListener('click', function() {
+  // Exemplo de chamada à API para obter dados JSON
+  fetch('https://api-risk-manager-renault.onrender.com/risk/getAll')
+      .then(response => response.json())
+      .then(data => {
+
+        const datateste = [
+              {
+                  "carro": "Toyota Corolla",
+                  "peca_estragada": "Bateria",
+                  "data": "2023-01-15"
+              },
+              {
+                  "carro": "Honda Civic",
+                  "peca_estragada": "Freios",
+                  "data": "2023-02-20"
+              },
+              {
+                  "carro": "Ford Focus",
+                  "peca_estragada": "Suspensão",
+                  "data": "2023-03-10"
+              },
+              {
+                  "carro": "Chevrolet Cruze",
+                  "peca_estragada": "Radiador",
+                  "data": "2023-04-05"
+              }
+          ];
+
+
+          console.log('pronto para ir pro CSV');          
+          const csv = convertToCSV(datateste);
+          console.log('pronto para ir pro download');
+          downloadCSV(csv, 'relatorio.csv');
+      })
+      .catch(error => console.error('Erro ao obter dados:', error));
+});
+
+function convertToCSV(objArray) {
+  const array = Array.isArray(objArray) ? objArray : [objArray];
+  const headers = Object.keys(array[0]);
+
+  const csvRows = [];
+  // Adicionar cabeçalhos
+  csvRows.push(headers.join(';'));
+
+  // Adicionar dados
+  for (const row of array) {
+      const values = headers.map(header => {
+          const escaped = ('' + row[header]).replace(/"/g, '\\"');
+          return `"${escaped}"`;
+      });
+      csvRows.push(values.join(';'));
+  }
+
+  return csvRows.join('\n');
+}
+
+function downloadCSV(csv, filename) {
+  const BOM = '\uFEFF'; // Byte Order Mark
+  const csvBlob = new Blob([BOM + csv], { type: 'text/csv;charset=utf-8;' });
+  const url = window.URL.createObjectURL(csvBlob);
+  const a = document.createElement('a');
+  a.setAttribute('hidden', '');
+  a.setAttribute('href', url);
+  a.setAttribute('download', filename);
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
+
+
+
+// Dark - mode
+let modo = document.getElementById('toggle')
+
+modo.addEventListener('change', () => {
+  alterarDarkMode();
+});
+
+function verificarDarkMode(valor){	
+  let elemento = document.getElementById('toggle');
+  if (valor == 'false'){
+    elemento.checked = false;
+    elemento.dispatchEvent(new Event('change'));
+	} else {
+    elemento.checked = true;
+  }
+}
+
+window.addEventListener('DOMContentLoaded', verificarDarkMode(localStorage.getItem('lightMode')));
+
+function alterarDarkMode() {
+	// Alterar o Background color do Body
+	let elemento = document.getElementById('corpo');
+	elemento.classList.toggle('background-dark');
+
+	// Alterar o Background color da tabela
+	elemento = document.getElementById('tableRisks');
+	elemento.classList.toggle('custom-bg');
+
+	// ALTERAR CORES DA FONTE //
+	// Alterar o Titulo
+	elemento = document.getElementById('title-menu');
+	elemento.classList.toggle('color-dark');
+
+	// Alterar o Sub-Titulo
+	elemento = document.getElementById('sub-title-menu');
+	elemento.classList.toggle('color-dark');
+
+	// Alterar a label dos filtros
+	elementos = document.getElementsByClassName('name-filter');
+  for (elemento of elementos) {
+    elemento.classList.toggle('color-dark');
+  }
+
+  // Alterar o campo de pesquisa Input
+	elemento = document.getElementById('selectRisk');
+  elemento.classList.toggle('background-dark-filter');
+
+  // Alterar o campo de pesquisa Select
+	elementos = document.getElementsByClassName('form-select');
+  for (elemento of elementos) {
+    elemento.classList.toggle('background-dark-filter');
+  } 
+}

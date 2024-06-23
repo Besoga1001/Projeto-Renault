@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -62,7 +62,7 @@
             />
           </div>
           <div class="w-100 mt-5">
-            <form class="mx-auto" action="../home/home.html">
+            <form class="mx-auto" id="loginForm">
               <div class="mb-5">
                 <div class="form-floating mb-3">
                   <input type="text form-label" class="form-control" id="login" placeholder="Matrícula">
@@ -73,16 +73,17 @@
                   <input type="password" class="form-control" id="password" placeholder="Senha">
                   <label for="password">Senha</label>
                 </div>
-              <div class="mb-5 form-check">
-                <input
-                  type="checkbox"
-                  class="form-check-input"
-                  id="rememberMe"
-                />
-                <label class="form-check-label" for="rememberMe"
-                  >Lembre de mim</label
-                >
-              </div>
+                <p id="error"></p>
+                <div class="mb-5 form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="rememberMe"
+                  />
+                  <label class="form-check-label" for="rememberMe"
+                    >Lembre de mim</label
+                  >
+                </div>
               <button class="btn w-100 py-3 mt-5" onclick="rememberMeState()">ENTRAR</button>
             </form>
           </div>

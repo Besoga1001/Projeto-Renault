@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -43,221 +43,164 @@
     <!-- Link CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div class="container m-0 p-0 text-center principal">
-      <div class="row m-0 p-0 h-100">
-        <!-- Menu a esquerda -->
-        <div
-          class="col-md-3 m-0 p-0 position-relative"
-          style="background-color: #1a1a1a; max-width: 300px; color: white"
-        >
-          <!-- Logo principal -->
-          <img
-            src="../images/renault/logo-com-nome-branco.png"
-            class="mt-5"
-            alt="Logo Renault"
-          />
-          <div class="container mt-5 mb-auto">
-            <!-- Menu Inicio -->
-            <div class="row menu-selected my-5 menu-button text-menu"
-            onclick='location.href="../home/home.html"'>
-              <div class="col-3 text-end">
-                <img
-                  src="../images/menu-lateral/inicio-amarelo.png"
-                  alt="Ícone Início"
-                />
-              </div>
-              <div class="col-9 align-items-center">
-                <p class="text-start align-items-center m-0">Inicio</p>
-              </div>
-            </div>
-            <!-- Menu Cadastro de Risco -->
-            <div class="row my-5 menu-button text-menu">
-              <div class="col-3 text-end">
-                <img
-                  src="../images/menu-lateral/cadastro-risco-branco.png"
-                  alt="Ícone de alerta"
-                />
-              </div>
-              <div class="col-9">
-                <p class="text-start align-items-center m-0">
-                  Cadastro de Risco
-                </p>
-              </div>
-            </div>
-            <!-- Menu Riscos (Histórico) -->
-            <div class="row my-5 menu-button text-menu"
-            onclick='location.href="../risks/risks.html"'>
-              <div class="col-3 text-end">
-                <img
-                  src="../images/menu-lateral/riscos-branco.png"
-                  alt="Ícone Histórico"
-                />
-              </div>
-              <div class="col-9">
-                <p class="text-start align-items-center m-0">Riscos</p>
-              </div>
-            </div>
-          </div>
-          <div class="container position-absolute content-ajuda">
-            <!-- Menu Ajuda -->
-            <div class="row my-5 menu-button text-menu">
-              <div class="col-3 text-end">
-                <img
-                  src="../images/menu-lateral/ajuda_branco.png"
-                  alt="Ícone Ajuda"
-                />
-              </div>
-              <div class="col-9">
-                <p class="text-start align-items-center m-0">Ajuda</p>
-              </div>
-            </div>
-            <!-- Menu Sair -->
-            <div
-              class="row my-5 menu-button text-menu"
-              onclick='location.href="../login/login.html"'
-            >
-              <div class="col-3 text-end">
-                <img
-                  src="../images/menu-lateral/sair-branco.png"
-                  alt="Ícone Sair"
-                />
-              </div>
-              <div class="col-9">
-                <p class="text-start align-items-center m-0">Sair</p>
-              </div>
-            </div>
-          </div>
+  <body id="corpo" class="transicao">
+    <div class="d-flex">
+      <!-- Menu lateral -->
+      <nav class="nav flex-column p-0 ps-4" style="width:325px">
+        <img
+          src="../images/renault/logo-com-nome-branco.png"
+          class="mt-5 mb-4 mx-auto"
+          alt="Logo Renault"
+          style="max-width: 185px;"
+        />
+        <!-- Menu Início -->
+        <!-- Parte superior -->
+        <div class="menu-top">
+          <ul class="p-0">
+            <li class="nav-item my-4 ms-3 align-items-center">
+              <img src="../images/menu-lateral/inicio-amarelo.png" alt="Ícone Home">
+              <a class="nav-link active" href="../home/home.html">Inicio</a>
+            </li>
+            <!-- Menu Cadastro de risco -->
+            <li class="nav-item my-4 ms-3 align-items-center">
+              <img src="../images/menu-lateral/cadastro-risco-branco.png" alt="Ícone cadastro">
+              <a class="nav-link" href="../cad_risc/cdr.html">Cadastro de Risco</a>
+            </li>
+            <!-- Menu de histórico de riscos -->
+            <li class="nav-item my-4 ms-3 align-items-center">
+              <img src="../images/menu-lateral/riscos-branco.png" alt="Ícone histórico">
+              <a class="nav-link" href="../risks/risks.html">Riscos</a>
+            </li>
+            <!-- Menu de Dashboard -->
+            <li class="nav-item my-4 ms-3 align-items-center">
+              <img src="../images/menu-lateral/dashboard-branco.png" alt="Ícone dashboard">
+              <a class="nav-link" href="../dashboard/dashboard.html">Dashboard</a>
+            </li>
+          </ul>
         </div>
-        <!-- Container conteudo principal -->
-        <div class="col-md-10 m-0 p-0">
-          <div class="row m-0 pt-2 pb-5 px-5 h-100 w-100">
-            <!-- Cabeçalho -->
-            <div class="col-md-12 m-0 p-0 pe-4 superior-bar">
-              <div class="row h-100 w-100 p-0 m-0">
-                <div class="col-md-6 p-0">
-                  <p class="m-0 pt-2 text-start" id="welcomeUser">
-                    Olá, <span class="nome"></span>
-                  </p>
-                  <p class="m-0 pt-2 text-start welcome">Bem vindo!</p>
-                </div>
-                <div class="col-md-6">
-                  <div
-                    class="d-flex justify-content-end h-100 align-items-center"
-                    id="profile"
-                  >
-                    <span class="pe-2 nome" id="testeNome"></span>
-                    <img
-                      src="../images/home/foto-perfil.png"
-                      alt="Foto de perfil"
-                    />
+        <!-- Parte inferior -->
+        <div class="mt-auto mb-4">
+          <ul class="p-0">
+            <!-- Menu Ajuda -->
+            <li class="nav-item my-4 ms-3 align-items-center">
+              <img src="../images/menu-lateral/ajuda_branco.png" alt="">
+              <a class="nav-link" href="#">Ajuda</a>
+            </li>
+            <!-- Menu Sair -->
+            <li class="nav-item my-4 ms-3 align-items-center">
+              <img src="../images/menu-lateral/sair-branco.png" alt="">
+              <a class="nav-link" href="../login/login.html">Sair</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Conteúdo -->
+      <div class="container m-0 p-0 text-center principal">
+        <div class="row m-0 p-0 h-100">
+          <!-- Container conteudo principal -->
+          <div class="col-md-10 m-0 p-0 w-100">
+            <div class="row m-0 pt-2 pb-5 px-5 h-100 w-100">
+              <!-- Cabeçalho -->
+              <div class="col-md-12 m-0 p-0 pe-4 superior-bar">
+                <div class="row h-100 w-100 p-0 m-0">
+                  <div class="col-md-6 p-0">
+                    <p class="m-0 pt-2 text-start transicao" id="welcomeUser">
+                      Olá, <span class="nome"></span>
+                    </p>
+                    <p class="m-0 pt-2 text-start welcome transicao" id="welcome">Bem vindo!</p>
+                  </div>
+                  <div class="col-md-6">
+                    <div
+                      class="d-flex justify-content-end h-100 align-items-center"
+                      id="profile"
+                    >
+                      <span class="pe-3">
+                        <input onclick="salvarDarkMode(this.checked)" id="toggle" class="toggle dark" type="checkbox">
+                      </span>
+                      <span class="pe-2 nome" id="testeNome"></span>
+                      <img
+                        src="../images/home/foto-perfil.png"
+                        alt="Foto de perfil"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- Área de conteudo -->
-            <div class="row pt-5" style="height: calc(100% - 100px)">
-              <!-- Área Card e Gráfico -->
-              <div
-              id="containerConteudo"  
-              class="col-md-7 m-0 py-0 px-4 position-relative"
-              >
-                <!-- Área dos cards -->
-                <div id="containerCard">
-                  <div class="row m-0 w-100 p-0">
-                    <!-- Card 1 -->
-                    <div class="col-6 p-0 pe-2">
-                      <div class="card shadow-container">
-                        <div class="card-body">
-                          <p class="card-title">Riscos da semana</p>
-                          <p class="card-text" id="valueCard1">36</p>
+              <!-- Área de conteudo -->
+              <div class="row pt-5" style="height: calc(100% - 100px)">
+                <!-- Área Card e Gráfico -->
+                <div
+                id="containerConteudo"
+                class="col-md-7 m-0 py-0 px-4 position-relative"
+                >
+                  <!-- Área dos cards -->
+                  <div id="containerCard">
+                    <div class="row m-0 w-100 p-0">
+                      <!-- Card 1 -->
+                      <div class="col-6 p-0 pe-2">
+                        <div class="card shadow-container">
+                          <div class="card-body">
+                            <p class="card-title">Riscos da semana</p>
+                            <p class="card-text" id="valueCard1">36</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Card 2 -->
+                      <div class="col-6 p-0 ps-2">
+                        <div class="card shadow-container">
+                          <div class="card-body">
+                            <p class="card-title">Riscos críticos</p>
+                            <p class="card-text" id="valueCard2">15</p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <!-- Card 2 -->
-                    <div class="col-6 p-0 ps-2">
-                      <div class="card shadow-container">
-                        <div class="card-body">
-                          <p class="card-title">Riscos críticos</p>
-                          <p class="card-text" id="valueCard2">15</p>
+                    <div class="row pt-4 m-0 w-100">
+                      <!-- Card 3 -->
+                      <div class="col-6 p-0 pe-2">
+                        <div class="card shadow-container">
+                          <div class="card-body">
+                            <p class="card-title">Card 3</p>
+                            <p class="card-text" id="valueCard3">22</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Card 4 -->
+                      <div class="col-6 p-0 ps-2">
+                        <div class="card shadow-container">
+                          <div class="card-body">
+                            <p class="card-title">Card 4</p>
+                            <p class="card-text" id="valueCard4">48</p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="row pt-4 m-0 w-100">
-                    <!-- Card 3 -->
-                    <div class="col-6 p-0 pe-2">
-                      <div class="card shadow-container">
-                        <div class="card-body">
-                          <p class="card-title">Card 3</p>
-                          <p class="card-text" id="valueCard3">22</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Card 4 -->
-                    <div class="col-6 p-0 ps-2">
-                      <div class="card shadow-container">
-                        <div class="card-body">
-                          <p class="card-title">Card 4</p>
-                          <p class="card-text" id="valueCard4">48</p>
-                        </div>
-                      </div>
+                  <!-- Área gráfico -->
+                  <div id="containerGrafico" class="position-absolute w-100 transicao" style="bottom: 0px">
+                    <p class="text-start risks transicao">Riscos recentes</p>
+                    <div id="grafico" class="rounded-3 shadow-container transicao" style="height: 360px">
+                      <canvas id="myChart" class="w-100 px-2"></canvas>
                     </div>
                   </div>
                 </div>
-                <!-- Área gráfico -->
-                <div id="containerGrafico" class="position-absolute w-100" style="bottom: 0px">
-                  <p class="text-start risks">Riscos recentes</p>
-                  <div id="grafico" class="rounded-3 shadow-container " style="height: 360px">
-                    <canvas id="myChart" class="w-100 px-2"></canvas>
+                <!-- Área Table -->
+                <div class="col-md-5 m-0 mh-100" id="containerTable">
+                  <div id="containerInfoTable" class="rounded-3 shadow-container h-100 px-4 transicao" style="overflow: auto; max-height: 735px; ">
+                    <p class="py-auto my-4 transicao" id="tableLegend">Meus riscos</p>
+                    <table class="table table-hover" id="tbVeiculos">
+                      <thead>
+                        <tr>
+                          <th scope="col" class="text-center transicao">Veículo</th>
+                          <th scope="col" class="transicao">Risco</th>
+                          <th scope="col" class="text-center transicao">Data Final</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Lista de todos os riscos do usuário -->
+                      </tbody>
+                    </table>
                   </div>
-                </div>
-              </div>
-              <!-- Área Table -->
-              <div class="col-md-5 m-0 mh-100" id="containerTable" style="border: 2px solid green;">
-                <div id="containerInfoTable" class="rounded-3 shadow-container h-100 px-4" style="overflow: auto; max-height: 735px;">
-                  <table class="table table-hover" id="tbVeiculos">
-                    <thead>
-                      <tr>
-                        <th scope="col" class="text-start">Veículo</th>
-                        <th scope="col">Risco</th>
-                        <th scope="col" class="text-end">Data Final</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <!-- <tr id="1">
-                        <td scope="row"><img src="../images/veiculos/Projeto1.png" alt="Imagem Projeto1"></td>
-                        <td class="text-start">Descrição do risco 1</td>
-                        <td>undefined</td>
-                      </tr>
-                      <tr id="1">
-                        <td scope="row"><img src="../images/veiculos/Projeto1.png" alt="Imagem Projeto1"></td>
-                        <td class="text-start">Descrição do risco 1</td>
-                        <td>undefined</td>
-                      </tr>
-                      <tr id="1">
-                        <td scope="row"><img src="../images/veiculos/Projeto1.png" alt="Imagem Projeto1"></td>
-                        <td class="text-start">Descrição do risco 1</td>
-                        <td>undefined</td>
-                      </tr>
-                      <tr id="1">
-                        <td scope="row"><img src="../images/veiculos/Projeto1.png" alt="Imagem Projeto1"></td>
-                        <td class="text-start">Descrição do risco 1</td>
-                        <td>undefined</td>
-                      </tr>
-                      <tr id="1">
-                        <td scope="row"><img src="../images/veiculos/Projeto1.png" alt="Imagem Projeto1"></td>
-                        <td class="text-start">Descrição do risco 1</td>
-                        <td>undefined</td>
-                      </tr>
-                      <tr id="1">
-                        <td scope="row"><img src="../images/veiculos/Projeto1.png" alt="Imagem Projeto1"></td>
-                        <td class="text-start">Descrição do risco 1</td>
-                        <td>undefined</td>
-                      </tr> -->
-                      <!-- Lista de todos os riscos do usuário -->
-                    </tbody>
-                  </table>
                 </div>
               </div>
             </div>
