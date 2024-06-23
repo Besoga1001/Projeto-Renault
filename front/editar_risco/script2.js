@@ -13,3 +13,4 @@ function Inputs(editar) {
 document.getElementById('editButton').addEventListener('click', () => Inputs(true));
 //Torna o parametro da função 'Inputs' como False então o input.disabled vai ser verdadeiro e os inputs não podem ser mais editados
 document.getElementById('saveButton').addEventListener('click', () => Inputs(false));
+

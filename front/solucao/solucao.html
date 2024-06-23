@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Editar Solução</title>
+  <title>Adicionar Solução</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style2.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -81,7 +81,7 @@
             <div class="row pt-3 py-4">
                 <div class="col-md-4">
                     <label for="estrategia">Estratégia</label>
-                    <select disabled class="form-control form-select input editarInput" id="estrategia">
+                    <select class="form-control form-select input editarInput" id="estrategia">
                       <option selected>Selecione uma opção</option>
                       <option>Tipo 1</option>
                       <option>Tipo 2</option>
@@ -91,7 +91,7 @@
                   </div>
                 <div class="col-md-4">
                   <label for="probabilidadeResidual">Probabilidade residual</label>
-                  <select disabled class="form-control form-select input editarInput" id="probabilidadeResidual">
+                  <select class="form-control form-select input editarInput" id="probabilidadeResidual">
                     <option selected>Selecione uma opção</option>
                     <option>Tipo 1</option>
                     <option>Tipo 2</option>
@@ -101,7 +101,7 @@
                 </div>
                 <div class="col-md-4">
                   <label for="impactoResidual">Impacto residual</label>
-                  <select disabled class="form-control form-select input editarInput" id="impactoResidual">
+                  <select class="form-control form-select input editarInput" id="impactoResidual">
                     <option selected>Selecione uma opção</option>
                     <option>Muito baixo</option>
                     <option>Baixo</option>
@@ -112,7 +112,7 @@
                 </div>
               <div class="col-md-4">
                 <label for="validacaoAcao">Validação da ação</label>
-                <select disabled class="form-control form-select input editarInput" id="validacaoAcao">
+                <select class="form-control form-select input editarInput" id="validacaoAcao">
                   <option selected>Selecione uma opção</option>
                   <option>Área 1</option>
                   <option>Área 2</option>
@@ -122,7 +122,7 @@
               </div>
               <div class="col-md-4">
                 <label for="validacaoRisco">Validação do risco</label>
-                <select disabled class="form-control form-select input editarInput" id="validacaoRisco">
+                <select class="form-control form-select input editarInput" id="validacaoRisco">
                   <option selected>Selecione uma opção</option>
                   <option>Área 1</option>
                   <option>Área 2</option>
@@ -132,16 +132,16 @@
               </div>
               <div class="col-md-4">
                 <label for="dataAlerta">Data do alerta</label>
-                <input disabled type="date" class="form-control input editarInput" id="dataAlerta">
+                <input type="date" class="form-control input editarInput" id="dataAlerta">
               </div>
               <div class="col-md-4">
                 <label for="nomePiloto">Nome do Piloto</label>
-                <input type="text" disabled class="form-control input editar editarInput" id="nomePiloto" placeholder="Digite o nome">
+                <input type="text" class="form-control input editar editarInput" id="nomePiloto" placeholder="Digite o nome">
               </div>
               <div class="col-md-4 d-flex">
                 <div class="pr-4">
                   <label for="idPiloto">Id do piloto</label>
-                  <input type="text" disabled class="form-control input editar editarInput" id="idPiloto" placeholder="ID">
+                  <input type="text" class="form-control input editar editarInput" id="idPiloto" placeholder="ID">
                 </div>
                 <div>
                   <div class="switch-container">
@@ -155,39 +155,46 @@
               </div>
               <div class="col-md-4">
                 <label for="dataPlanoAcao">Início Plano de Ação</label>
-                <input disabled type="date" class="form-control input editarInput" id="dataPlanoAcao">
+                <input type="date" class="form-control input editarInput" id="dataPlanoAcao">
               </div>
               <div class="col-md-4">
                 <label for="acao">Ação</label>
-                <textarea disabled placeholder="Digite um plano de ação" id="acao" cols="30" rows="5" class="form-control input editarInput"></textarea>
+                <textarea placeholder="Digite um plano de ação" id="acao" cols="30" rows="5" class="form-control input editarInput"></textarea>
               </div>
               <div class="col-md-4">
                 <label for="Ação">Comentário</label>
-                <textarea disabled placeholder="Digite um plano de ação" id="comentario" cols="30" rows="5" class="form-control input editarInput"></textarea>
+                <textarea placeholder="Digite um plano de ação" id="comentario" cols="30" rows="5" class="form-control input editarInput"></textarea>
               </div>
               <div class="col-md-4">
                 <label for="data">Data de Resolução</label>
-                <input disabled type="date" class="form-control input editarInput" id="dataResolucao">
+                <input type="date" class="form-control input editarInput" id="dataResolucao">
               </div>
             </div>
           </form>
-
-          <!--Acessar risco-->
-          <div class="d-flex justify-content-start mb-5">
-            <a href="../editar_risco/index.html" class="d-flex align-items-center irRisco">
-              <img src="../images/editar-risco/voltar.png" alt="">
-              <span>Acessar Risco</span>
-            </a>
-          </div>
+          <!---->
 
           <!--Botoes-->
           <div class="d-flex justify-content-end align-items-center">
-            <button class="btnEdit" id="editButton">
-              <img src="../images/editar-risco/buttonEdit.png" class="icone" alt="icone">
-              <span>EDITAR</span>
-            </button>
-            <a class="btnSave d-flex align-items-center justify-content-center" id="saveButton">SALVAR</a>
+            <a href="#" class="mr-auto d-flex align-items-center btnVoltar">
+                <img src="../images/editar-risco/voltar.png" alt="">
+                <span>Voltar para risco</span>
+              </a>
+            <a class="d-flex justify-content-center align-items-center btnSave" id="saveButton">SALVAR</a>
           </div>
+          <!---->
+
+          <!--Modal-->
+          <dialog>
+            <div class="d-flex flex-column align-items-center modalConteudo">
+              <img src="../images/editar-risco/check.png" alt="">
+              <h3>Solução adicionada!</h3>
+              <p>Agora você pode visualizar sua solução na página de riscos.</p>
+              <div class="btnModal">
+                <a href="#" id="closeModal" class="newSolu">Fechar</a>
+                <a href="../risks/risks.html" class="risks">Ir para histórico</a>
+             </div>
+            </div>
+          </dialog>
           <!---->
       </div>
     </div>
@@ -195,5 +202,5 @@
   </div>
 </body>
 <script src="../scriptGeral.js"></script>
-<script src="script2.js"></script>
+<script src="script.js"></script>
 </html>
