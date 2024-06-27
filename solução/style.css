@@ -11,7 +11,7 @@
 }
 .modal {
     background-color: rgb(0, 0, 0);
-    width: 300px;
+    width: 195px;
     grid-row-start: 1;
     grid-row-end: 5;
     display: grid;
@@ -42,27 +42,30 @@ body {
 .linha1 {
     display: flex;
     justify-content: space-evenly;
+    margin-right: 70px;
     color: #818181;
-    margin-left: 130px;
 }
 .linha2 {
     display: flex;
     justify-content: space-evenly;
+    margin-right: 70px;
     color: #818181;
-    margin-left: 130px;
 }
 .linha3 {
     display: flex;
     justify-content: space-evenly;
+    margin-right: 180px;
     color: #818181;
+    margin-left: 18px;
 }
 .linha4 {
     display: flex;
     justify-content: center;
     color: #818181;
+    
 }
 .input {
-    width: 350px;
+    width: 358px;
     height: 200px;
     border-radius: 10px;
     margin-top: 10px;
@@ -93,7 +96,7 @@ body {
     margin-right: 130px;
 }
 .metier {
-    
+    margin-right: 198px;
     margin-left: 130px;
     margin-bottom: 130px;
 }
@@ -103,7 +106,7 @@ body {
 .btn {
     display: flex;
     justify-content: end;
-    margin-right: 50px;
+    margin-right: 250px;
     align-items: end;
 }
 .button {
@@ -132,6 +135,7 @@ body {
     display: inline-flex;
     width: 200px;
     margin-top: 50px;
+    margin-right: 100px;
 }
 .infoonhead {
     justify-content: center;
@@ -140,8 +144,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     flex-wrap: nowrap;
-    margin-left: 165px;
-    height: 150px;
+    margin-left: 40px;
 }
 .imagem {
     margin-top: 10px;
@@ -154,11 +157,9 @@ body {
     font-family: sans-serif;
     font-weight: 600;
     margin-left: 15px;
-    margin-bottom: 0px;
 }
 p {
     margin-left: 17px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .select1 {
@@ -270,8 +271,8 @@ input:focus + .slider {
   }
   .switchinput {
     display: flex;
-    margin-left: 30px;
-    margin-right: 127px;
+    margin-left: 43px;
+    margin-right: 68px;
   }
   .Comentário {
     margin-bottom: 4px;
@@ -286,19 +287,12 @@ input:focus + .slider {
     margin-left: 0px;
   }
   .name {
-    margin-left: 132px;
+    margin-left: 92px;
     margin-right: 66px
   }
+  .idpilot {
+    margin-right: 50px;
+  }
   .actplan {
-    margin-left: 10px;
-  }
-  .solution{
-    margin-bottom: 0px;
-    font-size: 1.5em;
-  }
-  .coluna1{
-    margin-left: 90px;
-  }
-  .coluna2{
-    margin-left: 90px;
+    margin-left:45px;
   }
