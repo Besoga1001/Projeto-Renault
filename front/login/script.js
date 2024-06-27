@@ -49,6 +49,7 @@ async function verificarSenha(){
     if (validacao == true){
         saveDataSession(nome);
         rememberMeState(user, password);
+        localStorage.setItem('id_user', resposta.id);
         window.location.href = '../home/home.html';
     } else {
         const error = document.getElementById('error');
@@ -79,7 +80,8 @@ async function requisitarNome(user, senha){
         // Retornar o nome e a resposta
         return {
             name: resp.nome,
-            valido: resp.sessaoValida
+            valido: resp.sessaoValida,
+            id: resp.id_usuario
         };
 
     } catch {

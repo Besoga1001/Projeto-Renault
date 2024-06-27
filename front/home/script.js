@@ -9,12 +9,11 @@ function substituirNomeUsuario() {
   var nome = coletarNomeUsuario();
 
   // Selecionar todos os elementos com a classe 'nome'
-  var elementos = document.querySelectorAll("nome");
+  var element = document.getElementById("nome1")
+	element.textContent = nome;
 
-  // Substituir o texto dentro de cada elemento pelo nome
-  elementos.forEach(function(elemento) {
-      elemento.textContent = nome;
-  });
+	var elemento = document.getElementById("nome2")
+	elemento.textContent = nome;
 }
 
 // Evento para rodar a função quando a página carregar
@@ -108,11 +107,18 @@ async function popularTabela(){
 	// Obter dados
 	const riscos = await coletarDados();
 
+
+
 	// Incluir cada risco em uma linha da tabela
 	riscos.forEach(risco => {
 		// Definir os valores das variárveis
 		var image = risco.projeto.replace(" ", "");
 		var descricao = risco.descricaoRisco;
+		if (descricao.length > 70) {
+			descricao = descricao.substring(0, 70) + "...";
+		} else {
+			descricao = descricao.substring(0, 70);
+		}
 		var dataFinal = risco.dataFinalRisco;
 		dataFinal = formatISODateToDDMMYYYY(dataFinal);
 
@@ -140,8 +146,8 @@ async function popularTabela(){
 
 		// Incluir Atributo
 		cellImage.setAttribute('scope', 'row');
-		linha.setAttribute('onclick', 'location.href="../editar_risco/index.html"');
-		linha.id = qtdLinhas+1;
+		linha.setAttribute('onclick', `location.href="../editar_risco/index.html?id=${risco.id}"`);
+		linha.id = risco.id;
 	});
 }
 

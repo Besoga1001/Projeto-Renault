@@ -120,7 +120,7 @@ function popularTabela(riscos) {
   
     // Incluir Atributo
     cellImage.setAttribute('scope', 'row');
-    linha.setAttribute('onclick', `location.href="../solucao/index.html?id=${risco.id}"`);
+    linha.setAttribute('onclick', `location.href="../editar_risco/index.html?id=${risco.id}"`);
     linha.id = risco.id;
 
     // Adicionar o ID da linha na variável

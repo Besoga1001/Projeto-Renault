@@ -29,13 +29,13 @@
           </li>
           <!-- Menu Cadastro de risco -->
           <li class="nav-item my-4 align-items-center">
-            <img src="../images/menu-lateral/cadastro-risco-branco.png" alt="Ícone cadastro">
-            <a class="nav-link" href="../cad_risc/cdr.html">Cadastro de Risco</a>
+            <img src="../images/menu-lateral/cadastro-risco-amarelo.png" alt="Ícone cadastro">
+            <a class="nav-link active" href="../cad_risc/cad_risc.html">Cadastro de Risco</a>
           </li>
           <!-- Menu de histórico de riscos -->
           <li class="nav-item my-4 align-items-center">
-            <img src="../images/menu-lateral/riscos-amarelo.png" alt="">
-            <a class="nav-link active" href="../risks/risks.html">Riscos</a>
+            <img src="../images/menu-lateral/riscos-branco.png" alt="">
+            <a class="nav-link" href="../risks/risks.html">Riscos</a>
           </li>
           <!-- Menu de Dashboard -->
           <li class="nav-item my-4 align-items-center">
@@ -88,10 +88,7 @@
                   <label for="tipoRisco">Tipo de risco</label>
                   <select class="form-control form-select input editarInput" id="tipoRisco">
                     <option selected>Selecione uma opção</option>
-                    <option>Tipo 1</option>
-                    <option>Tipo 2</option>
-                    <option>Tipo 3</option>
-                    <option>Tipo 4</option>
+                    <!-- Opções de Tipo de Risco -->
                   </select>
                 </div>
                 <div class="col-md-4">
@@ -106,58 +103,42 @@
                   </select>
                 </div>
               <div class="col-md-4">
-                <label for="responsavel">Área Responsável</label>
+                <label for="area">Área Responsável</label>
                 <select class="form-control form-select input editarInput" id="area">
                   <option selected>Selecione uma opção</option>
-                  <option>Área 1</option>
-                  <option>Área 2</option>
-                  <option>Área 3</option>
-                  <option>Área 4</option>
+                  <!-- Opções de Área -->
                 </select>
               </div>
               <div class="col-md-4">
                 <label for="jalon">Jalón Afetado</label>
                 <select class="form-control form-select input" id="jalon">
                   <option selected>Selecione uma opção</option>
-                  <option>Jalon 1</option>
-                  <option>Jalon 2</option>
-                  <option>Jalon 3</option>
-                  <option>Jalon 4</option>
+
+                  <!-- Opções de Classificação -->
+
                 </select>
               </div>
               <div class="col-md-4">
                 <label for="projeto">Projeto</label>
                 <select class="form-control form-select input editarInput" id="projeto">
                   <option selected>Selecione uma opção</option>
-                  <option>Projeto 1</option>
-                  <option>Projeto 2</option>
-                  <option>Projeto 3</option>
-                  <option>Projeto 4</option>
+                  <!-- Opções de Projeto -->
                 </select>
-              </div>
-              <div class="col-md-4">
-                <label for="data">Data do alerta</label>
-                <input type="date" class="form-control input editarInput" id="data">
               </div>
               <div class="col-md-4">
                 <label for="impacto">Impacto</label>
                 <select class="form-control form-select input editarInput" id="impacto">
                   <option selected>Selecione uma opção</option>
-                  <option>Muito baixo</option>
-                  <option>Baixo</option>
-                  <option>Médio</option>
-                  <option>Alto</option>
-                  <option>Crítico</option>
+                  <!-- Opções de Impacto Normal -->
                 </select>
               </div>
               <div class="col-md-4">
                 <label for="metier">Metier</label>
                 <select class="form-control form-select input editarInput" id="metier">
                   <option selected>Selecione uma opção</option>
-                  <option>Metier 1</option>
-                  <option>Metier 2</option>
-                  <option>Metier 3</option>
-                  <option>Metier 4</option>
+
+                  <!-- Opções de Impacto Renault -->
+
                 </select>
               </div>
               <div class="col-md-4">
@@ -168,32 +149,25 @@
                 <label for="classificacao">Classificação do risco</label>
                 <select class="form-control form-select input" id="classificacao">
                   <option selected>Selecione uma opção</option>
-                  <option>Classe 1</option>
-                  <option>Classe 2</option>
-                  <option>Classe 3</option>
-                  <option>Classe 4</option>
+
+                  <!-- Opções de Jalón -->
+
                 </select>
               </div>
               <div class="col-md-4">
                 <label for="impactoRenault">Impacto (Renault)</label>
                 <select class="form-control form-select input editarInput" id="impactoRenault">
                   <option selected>Selecione uma opção</option>
-                  <option>Muito baixo</option>
-                  <option>Baixo</option>
-                  <option>Médio</option>
-                  <option>Alto</option>
-                  <option>Crítico</option>
+
+                  <!-- Opções de Metier -->
                 </select>
               </div>
             </div>
+            <!--Botão-->
+            <div class="d-flex justify-content-end">
+              <a class="d-flex align-items-center justify-content-center btnCadastro" id="cadastroButton">CADASTRAR</a>
+            </div>
           </form>
-          <!---->
-
-          <!--Botão-->
-          <div class="d-flex justify-content-end">
-            <a class="d-flex align-items-center justify-content-center btnCadastro" id="cadastroButton">CADASTRAR</a>
-          </div>
-          <!---->
 
           <!--Modal-->
           <dialog>
