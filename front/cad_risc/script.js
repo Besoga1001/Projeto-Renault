@@ -8,39 +8,39 @@ const modal = document.querySelector("dialog");
 const fecharModal = document.getElementById("closeModal");
 
 // Adiciona um evento de clique ao botão de cadastro
-abrirModal.onclick = function (){
+abrirModal.onclick = function () {
   // Abre o modal usando o método showModal() do elemento <dialog>
   modal.showModal();
 }
 
 // Adiciona um evento de clique ao botão de fechar modal
-fecharModal.onclick = function (){
+fecharModal.onclick = function () {
   // Fecha o modal usando o método close() do elemento <dialog>
   modal.close();
 }
 
 
 /* FUNCIONALIDADES */
-async function coletarDados(){
-	let response  = await fetch('https://api-risk-manager-renault.onrender.com/risk/getAll');
-	let dados = await response.json();
-	return dados;
+async function coletarDados() {
+  let response = await fetch('https://api-risk-manager-renault.onrender.com/risk/getAll');
+  let dados = await response.json();
+  return dados;
 }
 
-function gerarOpcaoUnica(riscos, chave){
-	// Coletar apenas os nomes únicos
-	const unicosObj = new Set(riscos.map(risco => risco[chave]));
-	const unicosArr = Array.from(unicosObj);
-	return unicosArr;
+function gerarOpcaoUnica(riscos, chave) {
+  // Coletar apenas os nomes únicos
+  const unicosObj = new Set(riscos.map(risco => risco[chave]));
+  const unicosArr = Array.from(unicosObj);
+  return unicosArr;
 }
 
-function popularSelect(id, dados){
+function popularSelect(id, dados) {
   const select = document.getElementById(id);
 
   dados.forEach(dado => {
     // Criar novo elemento de Option
     let novaOpcao = document.createElement("option");
-  
+
     // Definir valor e texto da nova opção
     novaOpcao.text = dado;
 
@@ -49,7 +49,7 @@ function popularSelect(id, dados){
   })
 }
 
-async function carregarSelect(){
+async function carregarSelect() {
   // Obter todos os dados
   const dados = await coletarDados();
 
@@ -92,36 +92,36 @@ async function carregarSelect(){
 
 window.addEventListener('DOMContentLoaded', carregarSelect);
 
-async function cadastrarRisco(){
+async function cadastrarRisco() {
   let dataAtual = coletarDataAtual()
   let id_user = localStorage.getItem('id_user');
 
   const registro = {
-		"descricaoRisco": document.getElementById('descRisco').value,
-		"tipo": document.getElementById('tipoRisco').value,
-		"probabilidade": document.getElementById('probabilidade').value,
-		"areaResponsavel": document.getElementById('area').value,
-		"classificacaoRisco": document.getElementById('classificacao').value,
-		"projeto": document.getElementById('projeto').value,
-		"dataEntradaRisco": dataAtual,
-		"dataFinalRisco": dataAtual, 
-		"impacto": document.getElementById('impacto').value,
-		"impactoRenault": document.getElementById('impactoRenault').value,
-		"consequencias": document.getElementById('impactoConsequencia').value,
-		"jalonAfetado": document.getElementById('jalon').value,
-		"metier": document.getElementById('metier').value,
-		"status": 1,
+    "descricaoRisco": document.getElementById('descRisco').value,
+    "tipo": document.getElementById('tipoRisco').value,
+    "probabilidade": document.getElementById('probabilidade').value,
+    "areaResponsavel": document.getElementById('area').value,
+    "classificacaoRisco": document.getElementById('classificacao').value,
+    "projeto": document.getElementById('projeto').value,
+    "dataEntradaRisco": dataAtual,
+    "dataFinalRisco": dataAtual,
+    "impacto": document.getElementById('impacto').value,
+    "impactoRenault": document.getElementById('impactoRenault').value,
+    "consequencias": document.getElementById('impactoConsequencia').value,
+    "jalonAfetado": document.getElementById('jalon').value,
+    "metier": document.getElementById('metier').value,
+    "status": 1,
     "id_usuario": id_user
-	};
+  };
 
-  try{
+  try {
     // Criar requisição com o corpo
-    let response = await fetch('https://api-risk-manager-renault.onrender.com/risk',{
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json' // Informar que o corpo da requisição é JSON
-        },
-        body: JSON.stringify(registro)
+    let response = await fetch('https://api-risk-manager-renault.onrender.com/risk', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json' // Informar que o corpo da requisição é JSON
+      },
+      body: JSON.stringify(registro)
     });
 
     // Transformar a resposta de JSON para Dict
@@ -129,10 +129,10 @@ async function cadastrarRisco(){
 
     console.log(resp);
 
-} catch {
+  } catch {
     // Retornar erro
     console.log('não registrado')
-}
+  }
 }
 
 document.getElementById("cadastroButton").addEventListener("click", cadastrarRisco);
@@ -141,10 +141,10 @@ document.getElementById("cadastroButton").addEventListener("click", cadastrarRis
 function coletarDataAtual() {
   // Cria um objeto Date para a data e hora atuais
   const data = new Date();
-  
+
   // Função auxiliar para adicionar zero à esquerda, se necessário
   function adicionarZero(numero) {
-      return numero < 10 ? '0' + numero : numero;
+    return numero < 10 ? '0' + numero : numero;
   }
 
   // Coleta os componentes da data
@@ -163,45 +163,54 @@ function coletarDataAtual() {
   // Exibe a data formatada em um elemento <p> ou realiza outra ação
   return dataFormatada;
 }
-  ///////////////////////////////////////////////
+///////////////////////////////////////////////
 
-  //Parte da IA
+//Parte da IA
 
-function UpdateIA(){
+// precisa apenas fazer a verificação se os dados da tabela ja existem, após isso esta finalizado
 
-  document.getElementById('predictionForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+function UpdateIA() {
 
-    // Get the input values
-    const area = document.getElementById('area').value;
-    const jalon = document.getElementById('jalon').value;
-    const projeto = document.getElementById('projeto').value;
+  // const area = document.getElementById('area').value;
+  // const jalon = document.getElementById('jalon').value;
+  // const projeto = document.getElementById('projeto').value;
+  const area = "DEA-TD"
+  const projeto = "CARRO 6"
+  const jalon = "CO"
 
-    // Create the data object
-    const data = {
-        area: parseFloat(area),
-        projeto: parseFloat(projeto),
-        jalon: parseFloat(jalon),
-    };
+  const data = {
+    area: area,
+    projeto: projeto,
+    jalon: jalon,
+  };
 
-    // Send the data to the Flask server
-    fetch('http://localhost:5000/predict', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => response.json())
+  fetch('http://localhost:5000/predict', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data),
+  })
+    .then(response => response.json(), console.log("0"))
     .then(data => {
-        if (data.error) {
-            document.getElementById('result').textContent = `Error: ${data.error}`;
-        } else {
-            document.getElementById('result').textContent = `Prediction: ${data.prediction}`;
+      if (data.error) {
+        console.log("1")
+        console.error(`Error from server: ${data.error}`);
+    } else {
+        console.log(data.prediction)
+        const classificacaoSelect = document.getElementById('classificacao');
+        const options = classificacaoSelect.options;
+        for (let i = 0; i < options.length; i++) {
+          if (options[i].value == data.prediction) {
+                classificacaoSelect.selectedIndex = i;
+                break;
+            }
         }
+    }
     })
     .catch(error => {
-        document.getElementById('result').textContent = `Error: ${error}`;
+        console.log("3")
+        console.error(`Error fetching data: ${error}`);
     });
-  });
 }
+

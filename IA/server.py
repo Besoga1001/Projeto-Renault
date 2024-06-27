@@ -1,11 +1,20 @@
 from flask import Flask, request, jsonify
 import joblib
 import pandas as pd
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 preprocessor = joblib.load('IA/models/preprocessor.joblib')
 model = joblib.load('IA/models/model.joblib')
+
+# # Lista de valores válidos para a coluna 'jalon'
+# valores_validos_jalon = ['CO']
+
+# # Função para verificar se o valor de 'jalon' é válido
+# def check_supported_jalon(value):
+#     return value in valores_validos_jalon
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -30,7 +39,7 @@ def predict():
         predictions = model.predict(oneHotEncode)
         predictions_list = predictions.tolist()
 
-        return jsonify({'prediction': predictions_list}), 200
+        return jsonify({'prediction': predictions_list,}), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
