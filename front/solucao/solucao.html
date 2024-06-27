@@ -83,20 +83,22 @@
                     <label for="estrategia">Estratégia</label>
                     <select class="form-control form-select input editarInput" id="estrategia">
                       <option selected>Selecione uma opção</option>
-                      <option>Tipo 1</option>
-                      <option>Tipo 2</option>
-                      <option>Tipo 3</option>
-                      <option>Tipo 4</option>
+                      <option>AVOID</option>
+                      <option>TRANSFER</option>
+                      <option>MITIGATE</option>
+                      <option>ACCEPT</option>
                     </select>
                   </div>
                 <div class="col-md-4">
                   <label for="probabilidadeResidual">Probabilidade residual</label>
                   <select class="form-control form-select input editarInput" id="probabilidadeResidual">
                     <option selected>Selecione uma opção</option>
-                    <option>Tipo 1</option>
-                    <option>Tipo 2</option>
-                    <option>Tipo 3</option>
-                    <option>Tipo 4</option>
+                    <option>Very Low</option>
+                    <option>Low</option>
+                    <option>Medium</option>
+                    <option>High</option>
+                    <option>Very High</option>
+                    <option>Critical</option>
                   </select>
                 </div>
                 <div class="col-md-4">
@@ -114,20 +116,16 @@
                 <label for="validacaoAcao">Validação da ação</label>
                 <select class="form-control form-select input editarInput" id="validacaoAcao">
                   <option selected>Selecione uma opção</option>
-                  <option>Área 1</option>
-                  <option>Área 2</option>
-                  <option>Área 3</option>
-                  <option>Área 4</option>
+                  <option>Resolved</option>
+                  <option>Does not apply yet</option>
                 </select>
               </div>
               <div class="col-md-4">
                 <label for="validacaoRisco">Validação do risco</label>
                 <select class="form-control form-select input editarInput" id="validacaoRisco">
                   <option selected>Selecione uma opção</option>
-                  <option>Área 1</option>
-                  <option>Área 2</option>
-                  <option>Área 3</option>
-                  <option>Área 4</option>
+                  <option>Resolved</option>
+                  <option>Problem</option>
                 </select>
               </div>
               <div class="col-md-4">
@@ -147,10 +145,10 @@
                   <div class="switch-container">
                     <div class="switch-label">Capitalização</div>
                     <label class="switch">
-                        <input type="checkbox">
+                        <input type="checkbox" id="capitalizacao">
                         <span class="slider"></span>
                     </label>
-                </div>
+                  </div>
                 </div>
               </div>
               <div class="col-md-4">
@@ -190,7 +188,6 @@
               <h3>Solução adicionada!</h3>
               <p>Agora você pode visualizar sua solução na página de riscos.</p>
               <div class="btnModal">
-                <a href="#" id="closeModal" class="newSolu">Fechar</a>
                 <a href="../risks/risks.html" class="risks">Ir para histórico</a>
              </div>
             </div>

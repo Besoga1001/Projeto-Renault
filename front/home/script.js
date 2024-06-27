@@ -146,7 +146,7 @@ async function popularTabela(){
 
 		// Incluir Atributo
 		cellImage.setAttribute('scope', 'row');
-		linha.setAttribute('onclick', `location.href="../editar_risco/index.html?id=${risco.id}"`);
+		linha.setAttribute('onclick', `location.href="../solucao/solucao.html?id=${risco.id}"`);
 		linha.id = risco.id;
 	});
 }
