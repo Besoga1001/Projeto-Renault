@@ -163,3 +163,45 @@ function coletarDataAtual() {
   // Exibe a data formatada em um elemento <p> ou realiza outra ação
   return dataFormatada;
 }
+  ///////////////////////////////////////////////
+
+  //Parte da IA
+
+function UpdateIA(){
+
+  document.getElementById('predictionForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Get the input values
+    const area = document.getElementById('area').value;
+    const jalon = document.getElementById('jalon').value;
+    const projeto = document.getElementById('projeto').value;
+
+    // Create the data object
+    const data = {
+        area: parseFloat(area),
+        projeto: parseFloat(projeto),
+        jalon: parseFloat(jalon),
+    };
+
+    // Send the data to the Flask server
+    fetch('http://localhost:5000/predict', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            document.getElementById('result').textContent = `Error: ${data.error}`;
+        } else {
+            document.getElementById('result').textContent = `Prediction: ${data.prediction}`;
+        }
+    })
+    .catch(error => {
+        document.getElementById('result').textContent = `Error: ${error}`;
+    });
+  });
+}

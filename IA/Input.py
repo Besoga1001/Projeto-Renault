@@ -14,7 +14,6 @@ problema = pd.DataFrame({
     'Área responsável pela identificação': [R1],
     'Projeto': [R2],
     'Jalón Afetado': [R3],
-    'Impacto (Renault)': [R4],
 })
 
 print("Colunas do new_data:", problema.columns)
