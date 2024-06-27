@@ -167,16 +167,39 @@ function coletarDataAtual() {
 
 //Parte da IA
 
-// precisa apenas fazer a verificação se os dados da tabela ja existem, após isso esta finalizado
+function checkSupported(value, listaTema) {
+  for (let lista of listaTema) {
+    if (value === lista) {
+      return lista;
+    }
+  }
+  return listaTema[1];
+}
 
 function UpdateIA() {
+  const valores_validos_area = ['APO', 'DEA-TD'];
+  const valores_validos_projeto = ['CARRO 1', 'CARRO 2', 'CARRO 3', 'CARRO 4', 'CARRO 5', 'CARRO 6', 'CARRO 7', 'CARRO 8', 'CARRO 9', 'CARRO 10', 'CARRO 11', 'CARRO 12', 'CARRO 13', 'CARRO 14', 'CARRO 15'];
+  const valores_validos_jalon = ['ABDLot-cp', 'ABP', 'ABPT', 'ABVC', 'CO', 'Cp', 'Doc Completion', 'Doc Série', 'MA', 'Nenhum', 'PPC', 'TDU', 'TGA'];
 
-  // const area = document.getElementById('area').value;
-  // const jalon = document.getElementById('jalon').value;
-  // const projeto = document.getElementById('projeto').value;
-  const area = "DEA-TD"
-  const projeto = "CARRO 6"
-  const jalon = "CO"
+  let area = document.getElementById('area').value;
+  let jalon = document.getElementById('jalon').value;
+  let projeto = document.getElementById('projeto').value;
+
+  console.log(area);
+  console.log(jalon);
+  console.log(projeto);
+
+  area = checkSupported(area, valores_validos_area);
+  projeto = checkSupported(projeto, valores_validos_projeto);
+  jalon = checkSupported(jalon, valores_validos_jalon);
+
+  console.log(area);
+  console.log(jalon);
+  console.log(projeto);
+
+  document.getElementById('area').value = area;
+  document.getElementById('jalon').value = jalon;
+  document.getElementById('projeto').value = projeto;
 
   const data = {
     area: area,
