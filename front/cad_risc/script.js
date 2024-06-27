@@ -129,10 +129,10 @@ async function cadastrarRisco(){
 
     console.log(resp);
 
-} catch {
-    // Retornar erro
-    console.log('não registrado')
-}
+  } catch {
+      // Retornar erro
+      console.log('não registrado')
+  }
 }
 
 document.getElementById("cadastroButton").addEventListener("click", cadastrarRisco);
