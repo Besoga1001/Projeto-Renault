@@ -130,8 +130,8 @@ async function cadastrarRisco() {
     console.log(resp);
 
   } catch {
-    // Retornar erro
-    console.log('não registrado')
+      // Retornar erro
+      console.log('não registrado')
   }
 }
 
