@@ -1,8 +1,8 @@
 import pandas as pd
 from joblib import load
 
-preprocessor = load('IA/models/preprocessor.pkl')
-model = load('IA/models/model.pkl')
+preprocessor = load('IA/models/preprocessor.joblib')
+model = load('IA/models/model.joblib')
 
 print("Digite a seguir as informações solicitadas")
 R1 = input("Área responsável pela identificação: ")

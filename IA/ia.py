@@ -30,7 +30,7 @@ try:
             "Início do Plano de Ação", "Data de Alerta", "Tempo de Resolução", "Hora", "Comentários", "Data de Resolução", 
             "Status", "Capitalização", 'Probabilidade', 'Impacto', 'Impacto/Consequências', 'Jalón Impactado no Futuro', 
             'Estratégia', 'Probabilidade Residual', 'Impacto Residual', 'Classificação de Risco Residual', 'Validação da Ação', 
-            'Validação do Risco'
+            'Validação do Risco', 'Impacto (Renault)'
         ],
         axis=1,
         inplace=True
@@ -60,8 +60,8 @@ try:
     model = RandomForestClassifier()
     model.fit(X_train, Y_train)
 
-    dump(preprocessor, 'IA/models/preprocessor.pkl')
-    dump(model, 'IA/models/model.pkl')
+    dump(preprocessor, 'IA/models/preprocessor.joblib')
+    dump(model, 'IA/models/model.joblib')
 
     train_predictions = model.predict(X_train)
     test_predictions = model.predict(X_test)
