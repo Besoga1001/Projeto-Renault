@@ -392,7 +392,7 @@ document.getElementById('saveButton').addEventListener('click', async function()
         metier: document.getElementById('metier').value,
         status: document.getElementById('status').value,
         id_usuario: document.getElementById('idUsuario').value,
-        id_solution: document.getElementById('idSolucao').value
+        id_solution: 0
     };
 
     // Chamar função para atualizar os dados no banco de dados
@@ -433,7 +433,6 @@ async function atualizarDados(novoRisco) {
         }
     } catch(error) {
         console.log(response);
-        alert('Erro durante a requisição. Verifique o console para mais detalhes.');
     }
 }
 
