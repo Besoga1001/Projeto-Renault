@@ -108,8 +108,6 @@ async function popularTabela(){
 	// Obter dados
 	const riscos = await coletarDados();
 
-
-
 	// Incluir cada risco em uma linha da tabela
 	riscos.forEach(risco => {
 		// Definir os valores das variárveis
@@ -120,8 +118,8 @@ async function popularTabela(){
 		} else {
 			descricao = descricao.substring(0, 70);
 		}
-		var dataFinal = risco.dataFinalRisco;
-		dataFinal = formatISODateToDDMMYYYY(dataFinal);
+		// var dataFinal = risco.dataFinalRisco;
+		// dataFinal = formatISODateToDDMMYYYY(dataFinal);
 
 		
 		// Criar nova linha na memoria
@@ -132,18 +130,18 @@ async function popularTabela(){
 		// Identificar as colunas
 		var cellImage = linha.insertCell(0);
 		var cellRisco = linha.insertCell(1);
-		var cellData = linha.insertCell(2);
+		// var cellData = linha.insertCell(2);
 
 		// Atribuir valor nas colunas
 		cellImage.innerHTML = `<td scope="row"><img src="../images/veiculos/${image}.png" alt="Imagem ${image}"></td>`;
 		cellRisco.innerHTML = descricao;
-		cellData.innerHTML = dataFinal;
+		// cellData.innerHTML = dataFinal;
 
 		// Incluir classe
 		cellRisco.className = 'text-start transicao';
 		linha.className = 'transicao';
 		cellImage.className = 'transicao';
-		cellData.className = 'transicao';
+		// cellData.className = 'transicao';
 
 		// Incluir Atributo
 		cellImage.setAttribute('scope', 'row');
