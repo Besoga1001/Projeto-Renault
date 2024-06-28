@@ -82,6 +82,13 @@ function popularTabela(riscos) {
     var metier = risco.metier;
     var jalon = risco.jalonAfetado;
     var status = risco.status;
+    if (status == 0){
+      status = "Abandonado";
+    } else if(status == 1) {
+      status = "Em aberto";
+    } else if(status == 2) {
+      status = "Solucionado";
+    }
     
     // Criar nova linha na memoria
     const tb = document.querySelector('#tableRisks tbody');
@@ -120,13 +127,12 @@ function popularTabela(riscos) {
   
     // Incluir Atributo
     cellImage.setAttribute('scope', 'row');
-    linha.setAttribute('onclick', `location.href="../solucao/index.html?id=${risco.id}"`);
+    linha.setAttribute('onclick', `location.href="../editar_risco/index.html?id=${risco.id}"`);
     linha.id = risco.id;
 
     // Adicionar o ID da linha na variável
     listaId.push(risco.id);
   })
-  console.log(listaId);
 }
 
 async function popularVeiculos(){
@@ -175,6 +181,8 @@ async function popularJalon(){
 window.addEventListener('DOMContentLoaded', popularJalon);
 
 function coletarFiltros(){
+  limparTabela();
+
   // Obter o valor do risco
   let risco = document.getElementById("selectRisk").value;
 
@@ -187,11 +195,11 @@ function coletarFiltros(){
   // Obter valor do Metier
   let metier = devolverValorSelect("selectMetier");
 
-  // Obter valor do Metier
+  // Obter valor do Jalon
   let jalon = devolverValorSelect("selectJalon");
 
-  // Obter valor do Metier
-  let status = devolverValorSelect("selectStatus");
+  // Obter valor do Status
+  let status = document.getElementById("selectStatus").value;
 
   arrayFiltro.descricaoRisco = risco;
   arrayFiltro.projeto = veiculo;
@@ -304,9 +312,7 @@ document.getElementById('download').addEventListener('click', function() {
           ];
 
 
-          console.log('pronto para ir pro CSV');          
           const csv = convertToCSV(datateste);
-          console.log('pronto para ir pro download');
           downloadCSV(csv, 'relatorio.csv');
       })
       .catch(error => console.error('Erro ao obter dados:', error));
