@@ -66,6 +66,10 @@ a{
   height: 17px;
 }
 
+.irSolucao:hover{
+  text-decoration: none;
+}
+
 /* BOTOES */
 
 .btnEdit{
@@ -120,6 +124,7 @@ a{
   font-family: Poppins, Arial;
   font-weight: 500;
   transition-duration: 0.2s;
+  display: none;
 }
 
 .btnVoltar span{
@@ -131,7 +136,7 @@ a{
 }
 
 .btnVoltar img{
-  height: 17px;
+  border: none;
 }
 
 .btnEdit:hover{
@@ -151,7 +156,7 @@ a{
   color: #1a1a1ae7;
 }
 
-.btnVoltar:hover, .irSolucao:hover{
+.btnVoltar:hover{
   text-decoration: none;
 }
 
@@ -163,6 +168,22 @@ a{
 
 .btnSolu:focus, .btnEdit:focus, .btnSave:focus {
   outline: none;
+}
+
+#idRisco{
+  display: none;
+}
+
+#status{
+  display: none;
+}
+
+#idUsuario{
+  display: none;
+}
+
+#idSolucao{
+  display: none;
 }
 
 /* MENU */

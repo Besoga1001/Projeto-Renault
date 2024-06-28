@@ -108,6 +108,7 @@ body{
     font-family: Poppins, Arial;
     font-weight: 500;
     transition-duration: 0.2s;
+    display: none;
   }
   
   .btnEdit:hover{
@@ -130,6 +131,14 @@ body{
   
   .btnEdit:focus, .btnSave:focus {
     outline: none;
+  }
+
+  #idSolucao{
+    display: none;
+  }
+
+  #idRisco{
+    display: none;
   }
   
   /* MENU */

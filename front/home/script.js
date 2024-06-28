@@ -73,6 +73,7 @@ function gerarLabel(riscos){
 	// Coletar apenas os nomes únicos
 	const projetosUnicosObj = new Set(riscos.map(risco => risco.projeto));
 	const projetosUnicosArr = Array.from(projetosUnicosObj);
+	console.log(projetosUnicosArr);
 	return projetosUnicosArr;
 }
 
