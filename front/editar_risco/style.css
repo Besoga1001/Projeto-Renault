@@ -55,11 +55,13 @@ a{
 
 /* ACESSAR SOLUÇÃO */
 
+
 .irSolucao span{
   margin-right: 10px;
   font-family: Poppins, Arial;
   font-size: 18px;
   color: #FFB800;
+  border: none;
 }
 
 .irSolucao img{

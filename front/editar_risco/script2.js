@@ -55,7 +55,7 @@ async function solucao(){
     projetoUnico = opcoes(infoSolucao, "validacao_Risco");
     adicionarOpcoes(projetoUnico, 'validacaoRisco');
     
-    infoSolucao = infoSolucao[0];
+    infoSolucao = infoSolucao[10];
     console.log(infoSolucao);
     
     //NOME PILOTO
@@ -126,7 +126,7 @@ document.getElementById('saveButton').addEventListener('click', async function()
         id_Solution: document.getElementById('idSolucao').value,
         estrategia: document.getElementById('estrategia').value,
         probabilidade_Residual: document.getElementById('probabilidadeResidual').value,
-        impacto_Resudual: document.getElementById('impactoResidual').value,
+        impacto_Residual: document.getElementById('impactoResidual').value,
         validacao_Acao: document.getElementById('validacaoAcao').value,
         validacao_Risco: document.getElementById('validacaoRisco').value,
         id_Piloto: document.getElementById('idPiloto').value,

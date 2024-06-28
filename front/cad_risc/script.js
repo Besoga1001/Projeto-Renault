@@ -111,7 +111,7 @@ async function cadastrarRisco() {
     "jalonAfetado": document.getElementById('jalon').value,
     "metier": document.getElementById('metier').value,
     "status": 1,
-    "id_usuario": id_user
+    "id_usuario": 1
   };
 
   try {
