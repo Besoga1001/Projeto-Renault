@@ -222,10 +222,13 @@ function UpdateIA() {
     } else {
         console.log(data.prediction)
         const classificacaoSelect = document.getElementById('classificacao');
+        const impactoSelect = document.getElementById('impactoRenault');
         const options = classificacaoSelect.options;
+        const impactooptions = impactoSelect.options;
         for (let i = 0; i < options.length; i++) {
           if (options[i].value == data.prediction) {
                 classificacaoSelect.selectedIndex = i;
+                impactooptions.selectedIndex = i
                 break;
             }
         }
